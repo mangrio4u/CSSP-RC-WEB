@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANZIL – Youth Leadership & Livelihoods | RC Sindhri</title>
+  <meta name="description" content="MANZIL is a youth-focused program in which RC Sindhri participated, covering youth leadership, livelihoods, entrepreneurship, employment, climate action and community development across 8 youth groups in UC Sindhri." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================================
+       MANZIL PAGE — LOCAL STYLES
+       ============================================================ */
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .manzil-hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(160deg, #0d2b1a 0%, #1a5c2e 35%, #145228 60%, #0a1f14 100%);
+    }
+
+    .manzil-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 35%, rgba(76,175,80,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 70%, rgba(13,43,26,.7) 0%, transparent 65%);
+      z-index: 1;
+    }
+
+    .manzil-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(-45deg,
+          transparent, transparent 28px,
+          rgba(255,255,255,.018) 28px, rgba(255,255,255,.018) 29px);
+      z-index: 2;
+    }
+
+    .manzil-hero-inner {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: var(--space-20) var(--space-6) var(--space-16);
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .manzil-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: var(--radius-full);
+      padding: var(--space-2) var(--space-5);
+      color: var(--green-accent);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-6);
+      backdrop-filter: blur(8px);
+    }
+
+    .manzil-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      margin-bottom: var(--space-4);
+      text-shadow: 0 4px 30px rgba(0,0,0,.4);
+    }
+
+    .manzil-hero-subtitle {
+      font-size: clamp(0.9rem, 2.2vw, 1.15rem);
+      color: var(--yellow);
+      font-weight: 600;
+      margin-bottom: var(--space-8);
+      letter-spacing: 0.04em;
+    }
+
+    .manzil-hero-desc {
+      color: rgba(255,255,255,.85);
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      max-width: 760px;
+      margin: 0 auto var(--space-8);
+    }
+
+    .hero-source-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-full);
+      padding: var(--space-2) var(--space-5);
+      color: rgba(255,255,255,.7);
+      font-size: var(--text-sm);
+      backdrop-filter: blur(4px);
+      margin-top: var(--space-4);
+    }
+
+    .scroll-down-arrow {
+      position: absolute;
+      bottom: var(--space-8);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      color: rgba(255,255,255,.55);
+      font-size: var(--text-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    /* ── ABOUT SECTION ────────────────────────────────────────── */
+    .about-manzil {
+      padding: var(--space-20) 0;
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .info-card {
+      background: var(--off-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .info-card-header {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-secondary));
+      color: var(--white);
+      padding: var(--space-5) var(--space-6);
+    }
+
+    .info-card-header h3 {
+      color: var(--white);
+      font-size: var(--text-xl);
+      font-weight: 700;
+    }
+
+    .info-card-body {
+      padding: var(--space-6);
+    }
+
+    .info-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+
+    .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .info-label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--green-secondary);
+    }
+
+    .info-value {
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .source-badge {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      padding: 3px var(--space-3);
+      border-radius: var(--radius-full);
+      margin-top: var(--space-2);
+    }
+
+    .source-blue {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .source-yellow {
+      background: #fff8e1;
+      color: #f57f17;
+    }
+
+    /* ── FOCUS AREAS ──────────────────────────────────────────── */
+    .focus-areas {
+      padding: var(--space-20) 0;
+      background: var(--off-white);
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .focus-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8) var(--space-6);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .focus-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .focus-icon {
+      font-size: 2.75rem;
+      margin-bottom: var(--space-4);
+      line-height: 1;
+    }
+
+    .focus-card h3 {
+      font-size: var(--text-xl);
+      color: var(--green-dark);
+      margin-bottom: var(--space-2);
+      font-family: var(--font-heading);
+    }
+
+    .focus-card p {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* ── TIMELINE ─────────────────────────────────────────────── */
+    .timeline-section {
+      padding: var(--space-20) 0;
+      background: var(--white);
+    }
+
+    .timeline-note {
+      display: inline-block;
+      background: #fff8e1;
+      border: 1px solid #f9a825;
+      color: #795548;
+      font-size: var(--text-sm);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-10);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--green-secondary), var(--green-accent));
+      border-radius: var(--radius-full);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 74px;
+      margin-bottom: var(--space-10);
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 16px;
+      top: 4px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--green-secondary);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 3px var(--green-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .timeline-dot i {
+      color: var(--white);
+      font-size: 11px;
+    }
+
+    .timeline-content {
+      background: var(--off-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-8);
+    }
+
+    .timeline-content h3 {
+      font-size: var(--text-xl);
+      color: var(--green-dark);
+      margin-bottom: var(--space-3);
+    }
+
+    .timeline-content p {
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-3);
+      line-height: var(--leading-relaxed);
+    }
+
+    .timeline-content p:last-of-type { margin-bottom: 0; }
+
+    .event-note {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2);
+      background: #fff8e1;
+      border-left: 3px solid #f9a825;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: var(--space-3) var(--space-4);
+      font-size: var(--text-sm);
+      color: #795548;
+      margin: var(--space-3) 0;
+    }
+
+    .event-note i { color: #f9a825; margin-top: 2px; flex-shrink: 0; }
+
+    .timeline-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+
+    /* ── TRAINING ─────────────────────────────────────────────── */
+    .training-section {
+      padding: var(--space-20) 0;
+      background: var(--off-white);
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .training-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8) var(--space-6);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .training-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .training-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-md);
+      background: var(--green-xpale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-5);
+    }
+
+    .training-icon i {
+      font-size: 1.4rem;
+      color: var(--green-secondary);
+    }
+
+    .training-card h3 {
+      font-size: var(--text-lg);
+      color: var(--green-dark);
+      margin-bottom: var(--space-4);
+      font-family: var(--font-heading);
+    }
+
+    .training-bullets {
+      list-style: none;
+      margin-bottom: var(--space-5);
+    }
+
+    .training-bullets li {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      padding: var(--space-2) 0;
+      padding-left: var(--space-5);
+      position: relative;
+      border-bottom: 1px solid var(--gray-light);
+      line-height: 1.5;
+    }
+
+    .training-bullets li:last-child { border-bottom: none; }
+
+    .training-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green-secondary);
+    }
+
+    /* ── YOUTH GROUPS ─────────────────────────────────────────── */
+    .youth-groups-section {
+      padding: var(--space-20) 0;
+      background: linear-gradient(135deg, #0d2b1a 0%, #1a5c2e 50%, #145228 100%);
+      color: var(--white);
+    }
+
+    .youth-groups-section .section-header h2 { color: var(--white); }
+    .youth-groups-section .section-header p  { color: rgba(255,255,255,.8); }
+
+    .youth-stats {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-12);
+      margin-bottom: var(--space-10);
+      flex-wrap: wrap;
+    }
+
+    .youth-stat {
+      text-align: center;
+      padding: var(--space-8) var(--space-10);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(8px);
+      min-width: 200px;
+    }
+
+    .youth-stat .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      color: var(--yellow);
+      line-height: 1;
+      display: block;
+    }
+
+    .youth-stat .stat-label {
+      color: rgba(255,255,255,.75);
+      font-size: var(--text-base);
+      font-weight: 500;
+      margin-top: var(--space-2);
+      display: block;
+    }
+
+    .youth-groups-desc {
+      max-width: 720px;
+      margin: 0 auto var(--space-8);
+      text-align: center;
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,.85);
+      line-height: var(--leading-relaxed);
+    }
+
+    .amber-note {
+      max-width: 760px;
+      margin: 0 auto;
+      background: rgba(255,183,77,.12);
+      border: 2px solid rgba(255,183,77,.45);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-8);
+      color: rgba(255,255,255,.9);
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+    }
+
+    .amber-note .note-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .amber-note strong { color: var(--yellow); }
+
+    .youth-source {
+      text-align: center;
+      margin-top: var(--space-6);
+      color: rgba(255,255,255,.6);
+      font-size: var(--text-sm);
+    }
+
+    /* ── CLIMATE HIGHLIGHT ────────────────────────────────────── */
+    .climate-highlight {
+      padding: var(--space-20) 0;
+      background: var(--white);
+    }
+
+    .climate-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      border: 2px solid var(--green-pale);
+      border-radius: var(--radius-xl);
+      padding: var(--space-12) var(--space-12);
+      display: flex;
+      gap: var(--space-8);
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .climate-card-icon {
+      font-size: 4rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .climate-card-body h2 {
+      font-size: var(--text-2xl);
+      color: var(--green-dark);
+      margin-bottom: var(--space-4);
+    }
+
+    .climate-card-body p {
+      color: var(--text-secondary);
+      font-size: var(--text-lg);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+    }
+
+    /* ── MANAGEMENT BODY ──────────────────────────────────────── */
+    .management-section {
+      padding: var(--space-20) 0;
+      background: var(--off-white);
+    }
+
+    .demo-warning-banner {
+      background: linear-gradient(135deg, #b71c1c, #d32f2f);
+      border: 2px solid #7f0000;
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-8);
+      margin-bottom: var(--space-12);
+      color: var(--white);
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      box-shadow: 0 4px 20px rgba(183,28,28,.35);
+    }
+
+    .demo-warning-banner .warn-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      animation: pulse-warn 1.8s infinite;
+    }
+
+    @keyframes pulse-warn {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .6; }
+    }
+
+    .demo-warning-banner .warn-body strong {
+      display: block;
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+      color: var(--yellow);
+    }
+
+    .demo-warning-banner .warn-body p {
+      color: rgba(255,255,255,.9);
+      font-size: var(--text-base);
+      margin: 0;
+      line-height: var(--leading-relaxed);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+      margin-bottom: var(--space-10);
+    }
+
+    .profile-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6) var(--space-5);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      position: relative;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .profile-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .demo-badge {
+      position: absolute;
+      top: var(--space-3);
+      right: var(--space-3);
+      background: #b71c1c;
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px var(--space-2);
+      border-radius: var(--radius-full);
+    }
+
+    .profile-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      margin: 0 auto var(--space-4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--white);
+      box-shadow: var(--shadow-md);
+      flex-shrink: 0;
+    }
+
+    .profile-card h3 {
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: var(--space-1);
+      font-family: var(--font-body);
+    }
+
+    .profile-position {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--green-secondary);
+      margin-bottom: var(--space-1);
+      line-height: 1.4;
+    }
+
+    .profile-urdu {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-bottom: var(--space-3);
+      direction: rtl;
+    }
+
+    .profile-resp {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      line-height: 1.5;
+      border-top: 1px solid var(--gray-light);
+      padding-top: var(--space-3);
+    }
+
+    .demo-repeat-note {
+      background: #fff3e0;
+      border: 2px solid #ff8f00;
+      border-radius: var(--radius-md);
+      padding: var(--space-5) var(--space-6);
+      text-align: center;
+      color: #5d4037;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,.75);
+      padding: var(--space-16) 0 var(--space-8);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-10);
+      margin-bottom: var(--space-12);
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,.6);
+      font-size: var(--text-sm);
+      line-height: var(--leading-relaxed);
+      margin: var(--space-4) 0 var(--space-6);
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-logo-text span { color: var(--green-accent); }
+
+    .footer-social {
+      display: flex;
+      gap: var(--space-3);
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.7);
+      font-size: var(--text-sm);
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .footer-social a:hover {
+      background: var(--green-secondary);
+      color: var(--white);
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-5);
+      font-family: var(--font-body);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.6);
+      font-size: var(--text-sm);
+      transition: color var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .footer-links a:hover { color: var(--green-accent); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: var(--space-8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .footer-bottom p {
+      color: rgba(255,255,255,.5);
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .footer-bottom-links a {
+      color: rgba(255,255,255,.45);
+      font-size: var(--text-xs);
+      transition: color var(--transition-fast);
+    }
+
+    .footer-bottom-links a:hover { color: var(--green-accent); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .profile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+      .training-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+    }
+
+    @media (max-width: 680px) {
+      .focus-grid { grid-template-columns: 1fr; }
+      .training-grid { grid-template-columns: 1fr; }
+      .profile-grid { grid-template-columns: 1fr; }
+      .youth-stats { gap: var(--space-6); }
+      .youth-stat { min-width: 160px; padding: var(--space-6) var(--space-8); }
+      .climate-card {
+        flex-direction: column;
+        padding: var(--space-8);
+        text-align: center;
+      }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .demo-warning-banner { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .hamburger { display: flex; }
+      .nav-list  { display: none; }
+    }
+
+    /* Avatar colour palette */
+    .av-1 { background: linear-gradient(135deg, #1565c0, #1976d2); }
+    .av-2 { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
+    .av-3 { background: linear-gradient(135deg, #2e7d32, #43a047); }
+    .av-4 { background: linear-gradient(135deg, #e65100, #fb8c00); }
+    .av-5 { background: linear-gradient(135deg, #c62828, #e53935); }
+    .av-6 { background: linear-gradient(135deg, #00695c, #00897b); }
+    .av-7 { background: linear-gradient(135deg, #37474f, #546e7a); }
+    .av-8 { background: linear-gradient(135deg, #4527a0, #5e35b1); }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="10" fill="#2e7d32"/>
+          <path d="M10 32 L22 12 L34 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M14 26 L30 26" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="22" cy="10" r="3" fill="#81c784"/>
+        </svg>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#fff;line-height:1.1;">RC SINDHRI</div>
+          <div style="font-size:0.62rem;color:#81c784;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;">Rozgar Center</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About <span class="arrow">▾</span></a>
+            <div class="dropdown">
+              <a href="about.html">About RC Sindhri</a>
+              <a href="about.html#team">Our Team</a>
+              <a href="about.html#mission">Mission & Vision</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="projects.html" class="nav-link active">Projects <span class="arrow">▾</span></a>
+            <div class="dropdown">
+              <a href="pty.html">Power to Youth (PTY)</a>
+              <a href="manzil.html">MANZIL Program</a>
+              <a href="outreach.html">Community Outreach</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="programs.html" class="nav-link">Programs <span class="arrow">▾</span></a>
+            <div class="dropdown">
+              <a href="programs.html#youth">Youth Programs</a>
+              <a href="programs.html#women">Women Empowerment</a>
+              <a href="programs.html#livelihood">Livelihood Programs</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <div class="mobile-nav-group-title">About</div>
+        <div class="mobile-nav-sub">
+          <a href="about.html">About RC Sindhri</a>
+          <a href="about.html#team">Our Team</a>
+          <a href="about.html#mission">Mission &amp; Vision</a>
+        </div>
+      </li>
+      <li>
+        <div class="mobile-nav-group-title">Projects</div>
+        <div class="mobile-nav-sub">
+          <a href="pty.html">Power to Youth (PTY)</a>
+          <a href="manzil.html" style="color:#81c784;font-weight:600;">MANZIL Program</a>
+          <a href="outreach.html">Community Outreach</a>
+        </div>
+      </li>
+      <li>
+        <div class="mobile-nav-group-title">Programs</div>
+        <div class="mobile-nav-sub">
+          <a href="programs.html#youth">Youth Programs</a>
+          <a href="programs.html#women">Women Empowerment</a>
+          <a href="programs.html#livelihood">Livelihood Programs</a>
+        </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════ -->
+    <section class="manzil-hero" aria-label="MANZIL Program Hero">
+      <div class="manzil-hero-inner">
+
+        <div class="manzil-hero-eyebrow">
+          <i class="fa-solid fa-star"></i>
+          RC Sindhri Participates In
+        </div>
+
+        <h1>MANZIL</h1>
+
+        <p class="manzil-hero-subtitle">
+          Youth Leadership &nbsp;•&nbsp; Livelihoods &nbsp;•&nbsp; Entrepreneurship &nbsp;•&nbsp; Climate Action &nbsp;•&nbsp; Community Development
+        </p>
+
+        <p class="manzil-hero-desc">
+          MANZIL is a youth-focused program in which RC Sindhri participated, focusing on youth leadership, livelihood opportunities, entrepreneurship, employment, climate action and community development. RC Sindhri's MANZIL activities brought together young people from <strong style="color:#ffd54f;">8 youth groups</strong> in UC Sindhri and surrounding communities.
+        </p>
+
+        <div>
+          <span class="hero-source-badge">🔵 RC Sindhri-provided information</span>
+        </div>
+
+      </div>
+
+      <div class="scroll-down-arrow" aria-hidden="true">
+        <i class="fa-solid fa-chevron-down"></i>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1 — ABOUT MANZIL AT RC SINDHRI
+         ═══════════════════════════════════════════ -->
+    <section class="about-manzil" id="about">
+      <div class="container">
+
+        <div class="section-header" style="text-align:left;margin-bottom:var(--space-10);">
+          <span class="section-eyebrow">About</span>
+          <h2>MANZIL at RC Sindhri</h2>
+          <span class="section-divider" style="margin:var(--space-4) 0;"></span>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Left text -->
+          <div class="about-text">
+            <p>
+              RC Sindhri participated in MANZIL activities encompassing <strong>youth leadership development</strong>, livelihood and entrepreneurship programs, climate change awareness and action, employment support, community engagement and organization/documentation activities.
+            </p>
+            <p>
+              Through MANZIL, young people from RC Sindhri's <strong>8 youth groups</strong> worked toward building their capacities, establishing community structures and engaging in meaningful development work across UC Sindhri and surrounding communities.
+            </p>
+          </div>
+
+          <!-- Right info card -->
+          <aside>
+            <div class="info-card">
+              <div class="info-card-header">
+                <h3><i class="fa-solid fa-circle-info" style="margin-right:8px;opacity:.8;"></i>Program at a Glance</h3>
+              </div>
+              <div class="info-card-body">
+
+                <div class="info-row">
+                  <span class="info-label">Program</span>
+                  <span class="info-value">MANZIL</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Focus Areas</span>
+                  <span class="info-value">Youth Leadership, Livelihoods, Entrepreneurship, Climate Action, Community Dev</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Youth Groups Involved</span>
+                  <span class="info-value">8 groups, 175+ members</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Activities</span>
+                  <span class="info-value">Sessions, Events, Training, Community Engagement</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="info-label">Source</span>
+                  <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+                </div>
+
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2 — MANZIL FOCUS AREAS
+         ═══════════════════════════════════════════ -->
+    <section class="focus-areas" id="focus-areas">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow">What We Do</span>
+          <h2>MANZIL Focus Areas</h2>
+          <span class="section-divider"></span>
+          <p>RC Sindhri's MANZIL participation spans across 12 interconnected thematic areas, addressing youth needs holistically.</p>
+        </div>
+
+        <div class="focus-grid">
+
+          <div class="focus-card">
+            <div class="focus-icon">🌱</div>
+            <h3>Youth Leadership</h3>
+            <p>Leadership skills development and youth empowerment through structured training and mentoring</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">💰</div>
+            <h3>Livelihoods</h3>
+            <p>Income generation pathways, livelihood skill-building and economic empowerment for youth</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">💡</div>
+            <h3>Entrepreneurship</h3>
+            <p>Business development skills, self-employment opportunities and entrepreneurial mindset building</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">💼</div>
+            <h3>Employment</h3>
+            <p>Employment facilitation, career guidance and connecting youth with job opportunities</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🌍</div>
+            <h3>Climate Action</h3>
+            <p>Climate change awareness campaigns, community-level environmental action and resilience building</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🗣️</div>
+            <h3>Awareness Sessions</h3>
+            <p>Community awareness sessions on health, environment, rights and multiple development topics</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">👥</div>
+            <h3>Community Meetings</h3>
+            <p>Regular community engagement meetings, coordination and participatory planning activities</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">👪</div>
+            <h3>Youth Groups</h3>
+            <p>Engaging 8 youth groups with 175+ members across UC Sindhri and surrounding areas</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">📝</div>
+            <h3>Trainings</h3>
+            <p>Multiple training sessions and workshops covering diverse skills for youth development</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🎉</div>
+            <h3>Events</h3>
+            <p>Youth and community events celebrating achievements and building solidarity and motivation</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">🏘️</div>
+            <h3>Organization Development</h3>
+            <p>Building youth organizations, community structures and institutional capacity at local level</p>
+          </div>
+
+          <div class="focus-card">
+            <div class="focus-icon">📄</div>
+            <h3>Documentation</h3>
+            <p>Documentation support, report writing skills and maintaining organizational records and activities</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3 — EVENTS TIMELINE
+         ═══════════════════════════════════════════ -->
+    <section class="timeline-section" id="events">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow">Milestones</span>
+          <h2>MANZIL Events &amp; Milestones</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div style="text-align:center;margin-bottom:var(--space-10);">
+          <span class="timeline-note">
+            <i class="fa-solid fa-circle-info" style="margin-right:6px;"></i>
+            Events listed are as reported by RC Sindhri. Specific dates are not verified.
+          </span>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Event 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-star"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>Youth Day</h3>
+              <p>Youth Day was celebrated by RC Sindhri as part of MANZIL activities, bringing together young people from the youth groups for recognition and celebration of youth contributions.</p>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-users"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>Youth Events</h3>
+              <p>Various youth-focused events were conducted as part of MANZIL activities, engaging youth groups in meaningful activities including leadership, awareness and community work.</p>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-building"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>Organization / NGO Development</h3>
+              <p>Young people worked toward establishing their own organizations/NGOs as part of MANZIL activities. Support was provided for organizational development skills.</p>
+              <div class="event-note">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Specific number of NGOs formed is not currently verified.</span>
+              </div>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+                <span class="source-badge source-yellow">🟡 Number to be verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>Documentation Support</h3>
+              <p>Documentation-related support and work took place, helping youth and groups to document their activities and develop organizational records and reports.</p>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-stamp"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>NGO Registration Support</h3>
+              <p>Sessions and support were provided around NGO registration and organizational management, equipping young people with knowledge about formal organizational structures.</p>
+              <div class="event-note">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Official registration status of any NGOs formed is not currently confirmed.</span>
+              </div>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+                <span class="source-badge source-yellow">🟡 To be verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-handshake"></i></div>
+            <div class="timeline-content">
+              <h3><i class="fa-solid fa-calendar-day" style="color:var(--green-secondary);margin-right:8px;font-size:.95rem;"></i>MANZIL Body Formation</h3>
+              <p>A separate MANZIL body/structure was formed as part of the program activities, creating an organizational framework for continued youth and community work beyond the initial program period.</p>
+              <div class="timeline-sources">
+                <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 4 — TRAINING & SESSIONS
+         ═══════════════════════════════════════════ -->
+    <section class="training-section" id="training">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow">Capacity Building</span>
+          <h2>Training &amp; Capacity Building</h2>
+          <span class="section-divider"></span>
+          <p>RC Sindhri's MANZIL participation included multiple structured training programs to build youth skills and organizational capacity.</p>
+        </div>
+
+        <div class="training-grid">
+
+          <!-- Card 1 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <h3>Leadership Training</h3>
+            <ul class="training-bullets">
+              <li>Leadership skills &amp; team dynamics</li>
+              <li>Public speaking &amp; presentation</li>
+              <li>Decision making &amp; problem solving</li>
+              <li>Team building &amp; motivation</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Enterprise / Entrepreneurship Training</h3>
+            <ul class="training-bullets">
+              <li>Business planning &amp; ideation</li>
+              <li>Market analysis &amp; research</li>
+              <li>Self-employment pathways</li>
+              <li>Business management basics</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Digital Skills</h3>
+            <ul class="training-bullets">
+              <li>Basic computer skills</li>
+              <li>Internet literacy &amp; research</li>
+              <li>Digital tools for business</li>
+              <li>Online communication &amp; collaboration</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-file-alt"></i></div>
+            <h3>Documentation Training</h3>
+            <ul class="training-bullets">
+              <li>Report writing &amp; drafting</li>
+              <li>Record keeping practices</li>
+              <li>Organizational documentation</li>
+              <li>Minutes &amp; meeting records</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-building"></i></div>
+            <h3>NGO Registration &amp; Management</h3>
+            <ul class="training-bullets">
+              <li>Legal frameworks for NGOs</li>
+              <li>NGO registration processes</li>
+              <li>Organizational governance</li>
+              <li>Compliance &amp; accountability</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="training-card">
+            <div class="training-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Business Training &amp; Sessions</h3>
+            <ul class="training-bullets">
+              <li>Business development sessions</li>
+              <li>Market linkages &amp; networks</li>
+              <li>Financial literacy basics</li>
+              <li>Savings &amp; investment concepts</li>
+            </ul>
+            <span class="source-badge source-blue">🔵 RC Sindhri-provided</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5 — YOUTH GROUPS
+         ═══════════════════════════════════════════ -->
+    <section class="youth-groups-section" id="youth-groups">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow light">Participation</span>
+          <h2>Youth Groups Engaged in MANZIL</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="youth-stats">
+          <div class="youth-stat">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Youth Groups</span>
+          </div>
+          <div class="youth-stat">
+            <span class="stat-number">175+</span>
+            <span class="stat-label">Youth Members</span>
+          </div>
+        </div>
+
+        <p class="youth-groups-desc">
+          RC Sindhri's 8 youth groups were engaged in MANZIL activities. Representatives from the groups participated in training, events and community work across UC Sindhri and its surrounding communities.
+        </p>
+
+        <div class="amber-note">
+          <span class="note-icon">⚠️</span>
+          <div>
+            <strong>Important Note:</strong> The youth groups currently do not have separate official names. Not all 175+ members attended every activity. Typically, <strong>one or two representatives from each group</strong> participated in particular activities, events and training sessions.
+          </div>
+        </div>
+
+        <p class="youth-source">🔵 RC Sindhri-provided information</p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 6 — CLIMATE ACTION HIGHLIGHT
+         ═══════════════════════════════════════════ -->
+    <section class="climate-highlight" id="climate">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow">Cross-Cutting Theme</span>
+          <h2>Climate Action Highlight</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="climate-card">
+          <div class="climate-card-icon" aria-hidden="true">🌍</div>
+          <div class="climate-card-body">
+            <h2>Climate Change &amp; Community Action</h2>
+            <p>
+              MANZIL activities at RC Sindhri included a strong focus on climate change awareness and community-level climate action. Youth groups were engaged in understanding environmental challenges and taking practical steps toward building climate-resilient communities.
+            </p>
+            <a href="#climate" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-right"></i>
+              View Climate Action Section
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 7 — MANAGEMENT BODY (DEMO)
+         ═══════════════════════════════════════════ -->
+    <section class="management-section" id="management">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow">Leadership</span>
+          <h2>RC Sindhri Management Body</h2>
+          <span class="section-divider"></span>
+          <p>The MANZIL body / management structure formed as part of program activities.</p>
+        </div>
+
+        <!-- BIG WARNING BANNER -->
+        <div class="demo-warning-banner" role="alert" aria-live="assertive">
+          <span class="warn-icon" aria-hidden="true">🚨</span>
+          <div class="warn-body">
+            <strong>⚠️ DEMO TEAM — Fictional Placeholder Names Only</strong>
+            <p>
+              These are <u>fictional placeholder names</u> for website demonstration purposes only. <strong>Replace with officially confirmed names before publication.</strong> None of these are actual RC Sindhri, CSSP, NCA or MANZIL officials. Do not publish this page with these names to any live website or public platform.
+            </p>
+          </div>
+        </div>
+
+        <!-- Profile cards 4 × 2 -->
+        <div class="profile-grid">
+
+          <!-- 1 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-1" aria-hidden="true">AA</div>
+            <h3>Ahsan Ahmed</h3>
+            <p class="profile-position">President</p>
+            <p class="profile-urdu">صدر</p>
+            <p class="profile-resp">Overall leadership and coordination of MANZIL body activities</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-2" aria-hidden="true">SA</div>
+            <h3>Sana Ali</h3>
+            <p class="profile-position">Vice President</p>
+            <p class="profile-urdu">نائب صدر</p>
+            <p class="profile-resp">Program support and women's coordination</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-3" aria-hidden="true">IH</div>
+            <h3>Imran Hussain</h3>
+            <p class="profile-position">General Secretary</p>
+            <p class="profile-urdu">جنرل سیکریٹری</p>
+            <p class="profile-resp">Documentation, correspondence and coordination</p>
+          </div>
+
+          <!-- 4 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-4" aria-hidden="true">BA</div>
+            <h3>Bilal Ahmed</h3>
+            <p class="profile-position">Treasurer</p>
+            <p class="profile-urdu">خزانچی</p>
+            <p class="profile-resp">Financial management and accounts</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-5" aria-hidden="true">HK</div>
+            <h3>Hina Khan</h3>
+            <p class="profile-position">Media Coordinator</p>
+            <p class="profile-urdu">میڈیا کوآرڈینیٹر</p>
+            <p class="profile-resp">Social media management and communications</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-6" aria-hidden="true">SA</div>
+            <h3>Salman Ali</h3>
+            <p class="profile-position">Youth Coordinator</p>
+            <p class="profile-urdu">یوتھ کوآرڈینیٹر</p>
+            <p class="profile-resp">Youth group liaison and mobilization</p>
+          </div>
+
+          <!-- 7 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-7" aria-hidden="true">RA</div>
+            <h3>Rabia Ahmed</h3>
+            <p class="profile-position">Climate &amp; Community Coordinator</p>
+            <p class="profile-urdu">ماحولیاتی کوآرڈینیٹر</p>
+            <p class="profile-resp">Environmental and community development programs</p>
+          </div>
+
+          <!-- 8 -->
+          <div class="profile-card">
+            <span class="demo-badge">DEMO</span>
+            <div class="profile-avatar av-8" aria-hidden="true">FM</div>
+            <h3>Faisal Mangrio</h3>
+            <p class="profile-position">Drama &amp; Cultural Coordinator</p>
+            <p class="profile-urdu">ڈرامہ و ثقافتی کوآرڈینیٹر</p>
+            <p class="profile-resp">Stage drama and cultural event activities</p>
+          </div>
+
+        </div>
+
+        <!-- Repeat disclaimer -->
+        <div class="demo-repeat-note" role="alert">
+          <i class="fa-solid fa-triangle-exclamation" style="color:#e65100;font-size:1.25rem;flex-shrink:0;"></i>
+          <span>
+            <strong>DEMO ONLY</strong> — Not official RC Sindhri office-bearers. Update with confirmed names before launch.
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo-text">RC <span>Sindhri</span></div>
+          <p>Rozgar Center Sindhri — A community development organization working with youth, women and communities in UC Sindhri, Sindh, Pakistan.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> About Us</a>
+            <a href="projects.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Projects</a>
+            <a href="programs.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Programs</a>
+            <a href="gallery.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Gallery</a>
+            <a href="contact.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Contact</a>
+          </nav>
+        </div>
+
+        <!-- Projects -->
+        <div class="footer-col">
+          <h4>Projects</h4>
+          <nav class="footer-links" aria-label="Projects navigation">
+            <a href="pty.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Power to Youth (PTY)</a>
+            <a href="manzil.html" style="color:var(--green-accent);"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> MANZIL Program</a>
+            <a href="outreach.html"><i class="fa-solid fa-chevron-right" style="font-size:10px;"></i> Community Outreach</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color:rgba(255,255,255,.6);font-size:var(--text-sm);display:flex;gap:8px;align-items:flex-start;">
+              <i class="fa-solid fa-location-dot" style="color:var(--green-accent);margin-top:3px;flex-shrink:0;"></i>
+              UC Sindhri, Mirpurkhas District, Sindh, Pakistan
+            </span>
+            <a href="mailto:info@rcsindhri.org">
+              <i class="fa-solid fa-envelope" style="color:var(--green-accent);"></i>
+              info@rcsindhri.org
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024–2025 RC Sindhri (Rozgar Center Sindhri) | Website Demo</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════ -->
+  <script>
+    'use strict';
+
+    /* ── Sticky header shadow ─────────────────── */
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ── Mobile hamburger ─────────────────────── */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileNav  = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    /* Close mobile nav on link click */
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* Close on outside click */
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && !mobileNav.contains(e.target)) {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* ── Intersection Observer — animate-in ────── */
+    const animatables = document.querySelectorAll(
+      '.focus-card, .training-card, .profile-card, .timeline-item, .youth-stat'
+    );
+
+    const fadeIn = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity  = '1';
+          entry.target.style.transform = 'translateY(0)';
+          fadeIn.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    animatables.forEach((el, i) => {
+      el.style.opacity   = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = `opacity 0.45s ease ${(i % 6) * 80}ms, transform 0.45s ease ${(i % 6) * 80}ms`;
+      fadeIn.observe(el);
+    });
+
+    /* ── Active nav link highlight ──────────────── */
+    document.querySelectorAll('.nav-list .nav-link').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+<script src="lang-switcher.js"></script></body>
+</html>

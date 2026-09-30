@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Power to Youth (PTY) | RC Sindhri</title>
+  <meta name="description" content="Power to Youth (PTY) project activities, vocational skills training (240 trainees), youth groups, livelihoods, and community development at RC Sindhri." />
+  <meta name="keywords" content="Power to Youth, PTY, RC Sindhri, CSSP, NCA Pakistan, Vocational Training, Mirpur Khas, Sindh" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a5c2e'/><ellipse cx='16' cy='18' rx='7' ry='9' fill='%234caf50'/><ellipse cx='16' cy='13' rx='5' ry='7' fill='%232e7d32'/><rect x='14' y='24' width='4' height='5' rx='1' fill='%231a5c2e'/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-bg-pty {
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 30%, rgba(76,175,80,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 85% 75%, rgba(13,27,42,.6) 0%, transparent 65%),
+        linear-gradient(155deg, #0d2b1a 0%, #1a5c2e 40%, #163d20 70%, #0d1b2a 100%);
+    }
+
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .source-badge.green { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .source-badge.blue { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+    .source-badge.amber { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+    .trades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .trade-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-left: 5px solid #2e7d32;
+    }
+
+    .trade-card .count {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1a5c2e;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .trade-card .trade-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.25rem;
+    }
+
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .outcomes-grid { grid-template-columns: 1fr; }
+    }
+
+    .outcome-box {
+      background: linear-gradient(135deg, #ffffff, #f0fdf4);
+      border: 1px solid #c8e6c9;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+
+    .outcome-box .big-num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #2e7d32;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .yg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .yg-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Banner -->
+<div class="announcement-banner" role="banner" aria-label="Announcement">
+  🌱 RC Sindhri is actively working with youth and communities in UC Sindhri — Power to Youth (PTY) Project
+  &nbsp;|&nbsp;
+  <a href="mailto:rcsindhri@gmail.com">rcsindhri@gmail.com</a>
+  &nbsp;|&nbsp;
+  <a href="tel:+923130333736">03130333736</a>
+</div>
+
+<!-- Header Navigation -->
+<header class="site-header" id="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="RC Sindhri — Home">
+      <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="RC Sindhri Logo">
+        <g transform="translate(6,8)">
+          <g stroke="#f5a623" stroke-width="2" stroke-linecap="round">
+            <line x1="30" y1="16" x2="30" y2="5"/>
+            <line x1="30" y1="16" x2="17" y2="7"/>
+            <line x1="30" y1="16" x2="11" y2="16"/>
+            <line x1="30" y1="16" x2="43" y2="7"/>
+            <line x1="30" y1="16" x2="49" y2="16"/>
+          </g>
+          <circle cx="30" cy="16" r="5" fill="#f5a623"/>
+          <rect x="27" y="42" width="6" height="11" rx="2" fill="#2e7d32"/>
+          <ellipse cx="30" cy="40" rx="16" ry="9" fill="#4caf50" opacity=".8"/>
+          <ellipse cx="30" cy="33" rx="12" ry="8" fill="#2e7d32"/>
+          <ellipse cx="30" cy="27" rx="8" ry="6" fill="#1a5c2e"/>
+          <g transform="translate(14,51)">
+            <path d="M0,5 Q8,3 16,5 L16,13 Q8,11 0,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <path d="M16,5 Q24,3 32,5 L32,13 Q24,11 16,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <line x1="16" y1="5" x2="16" y2="13" stroke="#2e7d32" stroke-width="1.4"/>
+          </g>
+        </g>
+        <g transform="translate(76,0)">
+          <text x="0" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="2">RC SINDHRI</text>
+          <text x="2" y="56" font-family="Arial,sans-serif" font-weight="500" font-size="12" fill="#81c784" letter-spacing="1">Rozgar Center Sindhri</text>
+          <rect x="0" y="41" width="176" height="2.5" rx="1.5" fill="#f5a623" opacity=".8"/>
+        </g>
+      </svg>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item" role="none">
+        <a href="#projects" class="nav-link active" aria-haspopup="true" aria-expanded="false">
+          Projects <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Projects submenu">
+          <li><a href="pty.html" role="menuitem"><i class="fa-solid fa-bolt" style="color:#2e7d32;width:20px"></i> Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" role="menuitem"><i class="fa-solid fa-route" style="color:#1a2744;width:20px"></i> MANZIL</a></li>
+          <li><a href="outreach.html" role="menuitem"><i class="fa-solid fa-hands-helping" style="color:#4caf50;width:20px"></i> Community Outreach</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none">
+        <a href="#programs" class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Programs <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Programs submenu">
+          <li><a href="pty.html#training" role="menuitem"><i class="fa-solid fa-tools" style="color:#2e7d32;width:20px"></i> Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" role="menuitem"><i class="fa-solid fa-users" style="color:#2e7d32;width:20px"></i> Youth Groups</a></li>
+          <li><a href="education.html" role="menuitem"><i class="fa-solid fa-book-open" style="color:#2e7d32;width:20px"></i> Education Awareness</a></li>
+          <li><a href="outreach.html#drama" role="menuitem"><i class="fa-solid fa-theater-masks" style="color:#2e7d32;width:20px"></i> Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" role="menuitem"><i class="fa-solid fa-shield-halved" style="color:#2e7d32;width:20px"></i> GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" role="menuitem"><i class="fa-solid fa-leaf" style="color:#2e7d32;width:20px"></i> Climate Action</a></li>
+          <li><a href="outreach.html#health" role="menuitem"><i class="fa-solid fa-heart-pulse" style="color:#2e7d32;width:20px"></i> Health Outreach</a></li>
+          <li><a href="outreach.html#nadra" role="menuitem"><i class="fa-solid fa-id-card" style="color:#2e7d32;width:20px"></i> NADRA Facilitation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="reports.html" class="nav-link">Reports</a></li>
+      <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link nav-cta">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <ul class="mobile-nav-list" role="list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> About RC Sindhri</a></li>
+    <div class="mobile-nav-group-title">Projects</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html"><i class="fa-solid fa-bolt"></i> Power to Youth (PTY)</a></li>
+      <li><a href="manzil.html"><i class="fa-solid fa-route"></i> MANZIL</a></li>
+      <li><a href="outreach.html"><i class="fa-solid fa-hands-helping"></i> Community Outreach</a></li>
+    </div>
+    <div class="mobile-nav-group-title">Programs</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html#training"><i class="fa-solid fa-tools"></i> Skills Training</a></li>
+      <li><a href="pty.html#youth-groups"><i class="fa-solid fa-users"></i> Youth Groups</a></li>
+      <li><a href="education.html"><i class="fa-solid fa-book-open"></i> Education Awareness</a></li>
+      <li><a href="reports.html"><i class="fa-solid fa-file-contract"></i> Reports &amp; Documents</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero hero-bg-pty" style="padding: 4.5rem 1rem 4rem; color: #fff; text-align: center;">
+  <div class="container">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #81c784; margin-bottom: 1rem; padding: 6px 16px; border-radius: 20px; font-weight: 600;">
+      <i class="fa-solid fa-bolt"></i> Youth Empowerment Initiative
+    </span>
+    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; color: #ffffff;">
+      POWER TO YOUTH — PTY
+    </h1>
+    <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 780px; margin: 0 auto 1.5rem; color: #e2e8f0; opacity: 0.95;">
+      Skills Development, Youth Leadership &amp; Livelihood Opportunities in UC Sindhri
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#training" class="btn" style="background:#2e7d32;color:#fff;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;">
+        <i class="fa-solid fa-tools"></i> Skills Dashboard
+      </a>
+      <a href="#youth-groups" class="btn" style="background:rgba(255,255,255,0.15);color:#fff;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,0.3);">
+        <i class="fa-solid fa-users"></i> Youth Groups
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main style="background: #f8fafc; padding: 4rem 0;">
+  <div class="container">
+
+    <!-- Section 1: Overview & Partnership Context -->
+    <section id="overview" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 3.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0; font-weight: 700;">
+          Project Background &amp; Context
+        </h2>
+        <span class="source-badge green">
+          🟢 Officially Documented Source
+        </span>
+      </div>
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.25rem;">
+        Power to Youth (PTY) is a youth-focused project associated with CSSP (Civil Society Support Programme) and its partners. CSSP's official newsletter material documents PTY activities including youth empowerment, vocational training and youth participation in Mirpur Khas district. CSSP's December 2023 newsletter describes PTY as an EU-funded project with NCA Pakistan as lead partner.
+      </p>
+      <div style="background:#f0fdf4;border-left:4px solid #22c55e;padding:1rem 1.25rem;border-radius:6px;font-size:0.92rem;color:#166534;">
+        <i class="fa-solid fa-circle-check" style="margin-right:6px;"></i>
+        <strong>Verification Note:</strong> PTY is an officially documented program context. RC Sindhri participated in PTY activities in UC Sindhri, establishing local vocational training and youth engagement.
+      </div>
+    </section>
+
+    <!-- Section 2: Vocational Skills Dashboard -->
+    <section id="training" style="margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            Skills That Create Opportunities
+          </h2>
+          <p style="color: #64748b; margin: 0;">Vocational &amp; Technical Training Dashboard — 240 Total Trainees (2023 &amp; 2025)</p>
+        </div>
+        <span class="source-badge blue">
+          🔵 RC Sindhri-Provided Data
+        </span>
+      </div>
+
+      <div class="trades-grid">
+        <div class="trade-card">
+          <div class="count">15</div>
+          <div class="trade-name">E-Commerce</div>
+          <div style="font-size:0.85rem;color:#64748b;">Digital Business &amp; Online Trade</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">25</div>
+          <div class="trade-name">Beautician</div>
+          <div style="font-size:0.85rem;color:#64748b;">Personal Care &amp; Enterprise</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">50</div>
+          <div class="trade-name">Dress Making</div>
+          <div style="font-size:0.85rem;color:#64748b;">Tailoring &amp; Garment Design</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">50</div>
+          <div class="trade-name">Solar Repairing</div>
+          <div style="font-size:0.85rem;color:#64748b;">Renewable Energy Tech</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">25</div>
+          <div class="trade-name">Mobile Repairing</div>
+          <div style="font-size:0.85rem;color:#64748b;">Hardware &amp; Electronics</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">25</div>
+          <div class="trade-name">Embroidery</div>
+          <div style="font-size:0.85rem;color:#64748b;">Traditional Craftsmanship</div>
+        </div>
+
+        <div class="trade-card">
+          <div class="count">50</div>
+          <div class="trade-name">Masonry</div>
+          <div style="font-size:0.85rem;color:#64748b;">Construction &amp; Building Skills</div>
+        </div>
+      </div>
+
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:1.25rem;border-radius:10px;margin-top:1.5rem;font-size:0.92rem;color:#475569;">
+        <i class="fa-solid fa-circle-info" style="color:#3b82f6;margin-right:6px;"></i>
+        <strong>Data Distinction:</strong> RC-specific trainee numbers (240 total across 7 trades) are based on RC Sindhri-provided records and reflect training conducted through RC Sindhri in UC Sindhri during the 2023 and 2025 cycles.
+      </div>
+    </section>
+
+    <!-- Section 3: Training Outcomes & Livelihoods -->
+    <section id="outcomes" style="margin-bottom: 4rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+          From Skills to Livelihoods
+        </h2>
+        <p style="color: #64748b; max-width: 650px; margin: 0 auto;">
+          Skills development at RC Sindhri has been directly connected with livelihood opportunities and self-employment in the community.
+        </p>
+      </div>
+
+      <div class="outcomes-grid">
+        <div class="outcome-box">
+          <div class="big-num">15+</div>
+          <h3 style="font-size: 1.3rem; color: #166534; font-weight: 700; margin-bottom: 0.75rem;">
+            Using Skills for Livelihood
+          </h3>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1rem;">
+            Trained individuals actively utilizing their acquired vocational skills for income generation in areas including Solar installation, Electrical work, Bike Repairing, and other technical trades.
+          </p>
+          <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+        </div>
+
+        <div class="outcome-box">
+          <div class="big-num">15+</div>
+          <h3 style="font-size: 1.3rem; color: #166534; font-weight: 700; margin-bottom: 0.75rem;">
+            Youth Micro-Enterprises
+          </h3>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 1rem;">
+            Youth who have established their own small businesses, tailoring shops, mobile repair centers, or self-employment activities following completion of training at RC Sindhri.
+          </p>
+          <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: RC Sindhri Youth Groups -->
+    <section id="youth-groups" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            RC Sindhri Youth Groups
+          </h2>
+          <p style="color: #64748b; margin: 0;">Organized Youth Leadership &amp; Community Participation Structure</p>
+        </div>
+        <span class="source-badge blue">
+          🔵 RC Sindhri-Provided Data
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2.8rem;font-weight:800;color:#2e7d32;line-height:1;">8</div>
+          <div style="font-weight:700;color:#166534;margin-top:0.25rem;">Active Youth Groups</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2.8rem;font-weight:800;color:#2e7d32;line-height:1;">175+</div>
+          <div style="font-weight:700;color:#166534;margin-top:0.25rem;">Total Youth Members</div>
+        </div>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri has engaged eight youth groups with more than 175 young members. Representatives from these groups actively participate in various youth leadership, community development, climate change awareness, GBV awareness, education, and cultural activities across UC Sindhri.
+      </p>
+
+      <div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:1.25rem 1.5rem;border-radius:8px;color:#334155;font-size:0.92rem;line-height:1.6;">
+        <i class="fa-solid fa-circle-info" style="color:#3b82f6;margin-right:8px;"></i>
+        <strong>Participation Clarification:</strong> One or two representatives from each youth group typically participate in specific trainings, sessions, or community activities on behalf of their group, rather than all 175+ members attending every individual session.
+      </div>
+    </section>
+
+    <!-- Section 5: PTY Activity Streams -->
+    <section id="activities">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+          PTY Core Activity Streams
+        </h2>
+        <p style="color: #64748b;">Comprehensive activities conducted under PTY at RC Sindhri</p>
+      </div>
+
+      <div class="yg-grid">
+        <div class="yg-card">
+          <i class="fa-solid fa-tools" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Vocational Training</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Technical training across 7 confirmed trades for 240 youth trainees.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-users-gear" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Youth Meetings</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Regular group meetings for 8 youth groups to discuss community development.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-lightbulb" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Entrepreneurship</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Business starter guidance &amp; self-employment mentorship.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-briefcase" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Livelihood Support</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Connecting skilled youth with practical market opportunities.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-leaf" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Climate Awareness</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Sessions on climate resilience, environmental clean-ups &amp; plantation.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-shield-halved" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">GBV Awareness</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Sensitization on gender rights, protection &amp; social equality.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-book-open" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Education Promotion</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Promoting formal education awareness among families and youth.</p>
+        </div>
+
+        <div class="yg-card">
+          <i class="fa-solid fa-hands-holding-circle" style="font-size:1.8rem;color:#2e7d32;margin-bottom:0.75rem;display:block;"></i>
+          <h3 style="font-size:1.2rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Community Activities</h3>
+          <p style="font-size:0.92rem;color:#64748b;line-height:1.6;margin:0;">Over 20+ community awareness sessions and outreach events.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Shared Footer -->
+<footer class="site-footer" style="background: #0d1b2a; color: #cbd5e1; padding: 4rem 0 2rem;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">RC Sindhri</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 1rem;">
+          Rozgar Center Sindhri — Empowering youth and communities in UC Sindhri through skills, leadership, and development.
+        </p>
+        <p style="font-size: 0.85rem; color: #81c784; font-style: italic;">
+          "From Youth Potential to Community Impact"
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="index.html" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+          <li><a href="pty.html" style="color: #cbd5e1; text-decoration: none;">Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" style="color: #cbd5e1; text-decoration: none;">MANZIL</a></li>
+          <li><a href="outreach.html" style="color: #cbd5e1; text-decoration: none;">Community Outreach</a></li>
+          <li><a href="reports.html" style="color: #cbd5e1; text-decoration: none;">Reports &amp; Documents</a></li>
+          <li><a href="gallery.html" style="color: #cbd5e1; text-decoration: none;">Gallery</a></li>
+          <li><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Programs</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="pty.html#training" style="color: #cbd5e1; text-decoration: none;">Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" style="color: #cbd5e1; text-decoration: none;">Youth Groups</a></li>
+          <li><a href="education.html" style="color: #cbd5e1; text-decoration: none;">Education Awareness</a></li>
+          <li><a href="outreach.html#drama" style="color: #cbd5e1; text-decoration: none;">Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" style="color: #cbd5e1; text-decoration: none;">GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" style="color: #cbd5e1; text-decoration: none;">Climate Action</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Contact Info</h4>
+        <p style="font-size: 0.9rem; line-height: 1.8; color: #94a3b8;">
+          <i class="fa-solid fa-location-dot" style="color: #4caf50; width: 20px;"></i> Village Haji Hamer Mangrio, UC Sindhri, Mirpur Khas, Sindh<br />
+          <i class="fa-solid fa-envelope" style="color: #4caf50; width: 20px;"></i> rcsindhri@gmail.com<br />
+          <i class="fa-solid fa-phone" style="color: #4caf50; width: 20px;"></i> 03130333736
+        </p>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid #1e293b; padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #64748b;">
+      <p style="margin: 0;">&copy; 2024-2025 RC Sindhri (Rozgar Center Sindhri) | Website Demo</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Hamburger Toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      mobileNav.hidden = expanded;
+    });
+  }
+
+  // Sticky Header Shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+<script src="lang-switcher.js"></script></body>
+</html>

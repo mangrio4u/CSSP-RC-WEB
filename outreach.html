@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Community Outreach &amp; Social Action | RC Sindhri</title>
+  <meta name="description" content="Community outreach activities by RC Sindhri in UC Sindhri: Health awareness, NADRA MRV facilitation, Stage Drama, GBV awareness, Mach Kachehri, and community events." />
+  <meta name="keywords" content="RC Sindhri Outreach, Health Awareness, NADRA MRV Sindhri, Stage Drama Team, GBV Awareness, Mach Kachehri, Mirpur Khas" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a5c2e'/><ellipse cx='16' cy='18' rx='7' ry='9' fill='%234caf50'/><ellipse cx='16' cy='13' rx='5' ry='7' fill='%232e7d32'/><rect x='14' y='24' width='4' height='5' rx='1' fill='%231a5c2e'/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-bg-outreach {
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 30%, rgba(76,175,80,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 85% 75%, rgba(13,27,42,.6) 0%, transparent 65%),
+        linear-gradient(155deg, #0d2b1a 0%, #1a5c2e 40%, #163d20 70%, #0d1b2a 100%);
+    }
+
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .source-badge.blue { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+    .source-badge.green { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .source-badge.amber { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+
+    .topic-pills { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.25rem 0; }
+    .topic-pill { background: #e8f5e9; color: #1b5e20; padding: 0.45rem 1rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; border: 1.5px solid #a5d6a7; }
+
+    .activity-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .activity-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .activity-card .activity-icon {
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 0.75rem;
+    }
+
+    .villages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .village-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      border-left: 4px solid #2e7d32;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0f172a;
+      position: relative;
+    }
+
+    .village-card .base-badge {
+      background: #2e7d32;
+      color: #ffffff;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      float: right;
+      font-weight: 700;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .event-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .event-card .event-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .event-card h4 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin-bottom: 0.4rem; }
+    .event-card .event-note { font-size: 0.78rem; color: #64748b; font-style: italic; }
+
+    .drama-stats-box {
+      background: linear-gradient(135deg, #0d1b2a, #1a5c2e);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .drama-stat-item .num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #81c784;
+      line-height: 1;
+    }
+
+    .drama-stat-item .lbl {
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Banner -->
+<div class="announcement-banner" role="banner" aria-label="Announcement">
+  🌱 RC Sindhri — Community Outreach, Health, Stage Drama, NADRA Facilitation &amp; Social Awareness in UC Sindhri
+  &nbsp;|&nbsp;
+  <a href="mailto:rcsindhri@gmail.com">rcsindhri@gmail.com</a>
+  &nbsp;|&nbsp;
+  <a href="tel:+923130333736">03130333736</a>
+</div>
+
+<!-- Header Navigation -->
+<header class="site-header" id="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="RC Sindhri — Home">
+      <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="RC Sindhri Logo">
+        <g transform="translate(6,8)">
+          <g stroke="#f5a623" stroke-width="2" stroke-linecap="round">
+            <line x1="30" y1="16" x2="30" y2="5"/>
+            <line x1="30" y1="16" x2="17" y2="7"/>
+            <line x1="30" y1="16" x2="11" y2="16"/>
+            <line x1="30" y1="16" x2="43" y2="7"/>
+            <line x1="30" y1="16" x2="49" y2="16"/>
+          </g>
+          <circle cx="30" cy="16" r="5" fill="#f5a623"/>
+          <rect x="27" y="42" width="6" height="11" rx="2" fill="#2e7d32"/>
+          <ellipse cx="30" cy="40" rx="16" ry="9" fill="#4caf50" opacity=".8"/>
+          <ellipse cx="30" cy="33" rx="12" ry="8" fill="#2e7d32"/>
+          <ellipse cx="30" cy="27" rx="8" ry="6" fill="#1a5c2e"/>
+          <g transform="translate(14,51)">
+            <path d="M0,5 Q8,3 16,5 L16,13 Q8,11 0,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <path d="M16,5 Q24,3 32,5 L32,13 Q24,11 16,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <line x1="16" y1="5" x2="16" y2="13" stroke="#2e7d32" stroke-width="1.4"/>
+          </g>
+        </g>
+        <g transform="translate(76,0)">
+          <text x="0" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="2">RC SINDHRI</text>
+          <text x="2" y="56" font-family="Arial,sans-serif" font-weight="500" font-size="12" fill="#81c784" letter-spacing="1">Rozgar Center Sindhri</text>
+          <rect x="0" y="41" width="176" height="2.5" rx="1.5" fill="#f5a623" opacity=".8"/>
+        </g>
+      </svg>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item" role="none">
+        <a href="#projects" class="nav-link active" aria-haspopup="true" aria-expanded="false">
+          Projects <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Projects submenu">
+          <li><a href="pty.html" role="menuitem"><i class="fa-solid fa-bolt" style="color:#2e7d32;width:20px"></i> Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" role="menuitem"><i class="fa-solid fa-route" style="color:#1a2744;width:20px"></i> MANZIL</a></li>
+          <li><a href="outreach.html" role="menuitem"><i class="fa-solid fa-hands-helping" style="color:#4caf50;width:20px"></i> Community Outreach</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none">
+        <a href="#programs" class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Programs <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Programs submenu">
+          <li><a href="pty.html#training" role="menuitem"><i class="fa-solid fa-tools" style="color:#2e7d32;width:20px"></i> Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" role="menuitem"><i class="fa-solid fa-users" style="color:#2e7d32;width:20px"></i> Youth Groups</a></li>
+          <li><a href="education.html" role="menuitem"><i class="fa-solid fa-book-open" style="color:#2e7d32;width:20px"></i> Education Awareness</a></li>
+          <li><a href="#drama" role="menuitem"><i class="fa-solid fa-theater-masks" style="color:#2e7d32;width:20px"></i> Stage Drama</a></li>
+          <li><a href="#gbv" role="menuitem"><i class="fa-solid fa-shield-halved" style="color:#2e7d32;width:20px"></i> GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" role="menuitem"><i class="fa-solid fa-leaf" style="color:#2e7d32;width:20px"></i> Climate Action</a></li>
+          <li><a href="#health" role="menuitem"><i class="fa-solid fa-heart-pulse" style="color:#2e7d32;width:20px"></i> Health Outreach</a></li>
+          <li><a href="#nadra" role="menuitem"><i class="fa-solid fa-id-card" style="color:#2e7d32;width:20px"></i> NADRA Facilitation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="reports.html" class="nav-link">Reports</a></li>
+      <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link nav-cta">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <ul class="mobile-nav-list" role="list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> About RC Sindhri</a></li>
+    <div class="mobile-nav-group-title">Projects</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html"><i class="fa-solid fa-bolt"></i> Power to Youth (PTY)</a></li>
+      <li><a href="manzil.html"><i class="fa-solid fa-route"></i> MANZIL</a></li>
+      <li><a href="outreach.html"><i class="fa-solid fa-hands-helping"></i> Community Outreach</a></li>
+    </div>
+    <div class="mobile-nav-group-title">Programs</div>
+    <div class="mobile-nav-sub">
+      <li><a href="#drama"><i class="fa-solid fa-theater-masks"></i> Stage Drama</a></li>
+      <li><a href="#gbv"><i class="fa-solid fa-shield-halved"></i> GBV Awareness</a></li>
+      <li><a href="#health"><i class="fa-solid fa-heart-pulse"></i> Health Outreach</a></li>
+      <li><a href="#nadra"><i class="fa-solid fa-id-card"></i> NADRA Facilitation</a></li>
+      <li><a href="reports.html"><i class="fa-solid fa-file-contract"></i> Reports &amp; Documents</a></li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero hero-bg-outreach" style="padding: 4.5rem 1rem 4rem; color: #fff; text-align: center;">
+  <div class="container">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #81c784; margin-bottom: 1rem; padding: 6px 16px; border-radius: 20px; font-weight: 600;">
+      <i class="fa-solid fa-hands-holding-circle"></i> Community Action &amp; Outreach
+    </span>
+    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; color: #ffffff;">
+      Community Awareness &amp; Outreach
+    </h1>
+    <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 760px; margin: 0 auto; color: #e2e8f0; opacity: 0.95;">
+      Health &bull; Awareness &bull; Stage Drama &bull; NADRA Facilitation &bull; GBV &bull; Community Dialogue
+    </p>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main style="background: #f8fafc; padding: 4rem 0;">
+  <div class="container">
+
+    <!-- Section 1: Overview -->
+    <section id="overview" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 3.5rem;">
+      <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 1rem; font-weight: 700;">
+        Reaching Communities Across UC Sindhri
+      </h2>
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri conducts community awareness and outreach activities across 13 core villages in UC Sindhri and surrounding areas. Activities include health awareness, vaccination mobilization, community dialogue, NADRA MRV facilitation, GBV awareness, and cultural stage drama performances.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;">
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:#2e7d32;line-height:1;">20+</div>
+          <div style="font-size:0.88rem;color:#166534;font-weight:600;margin-top:0.35rem;">Awareness Sessions</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:#2e7d32;line-height:1;">13</div>
+          <div style="font-size:0.88rem;color:#166534;font-weight:600;margin-top:0.35rem;">Core Villages</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:#2e7d32;line-height:1;">~300</div>
+          <div style="font-size:0.88rem;color:#166534;font-weight:600;margin-top:0.35rem;">NIC Facilitation</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;text-align:center;">
+          <div style="font-size:2.2rem;font-weight:800;color:#2e7d32;line-height:1;">10</div>
+          <div style="font-size:0.88rem;color:#166534;font-weight:600;margin-top:0.35rem;">Stage Dramas</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Awareness Sessions -->
+    <section id="awareness" style="margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            20+ Community Awareness Sessions
+          </h2>
+          <p style="color: #64748b; margin: 0;">Multi-topic awareness campaigns across UC Sindhri</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <div class="topic-pills">
+        <span class="topic-pill"><i class="fa-solid fa-users"></i> Youth Development</span>
+        <span class="topic-pill"><i class="fa-solid fa-leaf"></i> Climate Change</span>
+        <span class="topic-pill"><i class="fa-solid fa-shield-halved"></i> GBV Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-graduation-cap"></i> Education Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-briefcase"></i> Employment &amp; Livelihoods</span>
+        <span class="topic-pill"><i class="fa-solid fa-comments"></i> Community Issues</span>
+        <span class="topic-pill"><i class="fa-solid fa-scale-balanced"></i> Social Development</span>
+        <span class="topic-pill"><i class="fa-solid fa-heart-pulse"></i> Health &amp; Hygiene</span>
+      </div>
+
+      <p style="font-size: 0.92rem; color: #64748b; font-style: italic; margin-top: 1rem;">
+        RC Sindhri has conducted over 20 awareness sessions across communities. Information is based on RC Sindhri-provided data.
+      </p>
+    </section>
+
+    <!-- Section 3: Stage Drama Team -->
+    <section id="drama" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            RC Sindhri Stage Drama Team
+          </h2>
+          <p style="color: #64748b; margin: 0;">Theatre &amp; Cultural Expression for Social Change</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri's stage drama team uses theatre, performance, comedy, and cultural expression to communicate social messages, promote education, raise GBV and climate awareness, and engage communities constructively.
+      </p>
+
+      <div class="drama-stats-box">
+        <div class="drama-stat-item">
+          <div class="num">8</div>
+          <div class="lbl">Team Members (6 Male, 2 Female)</div>
+        </div>
+        <div class="drama-stat-item">
+          <div class="num">10</div>
+          <div class="lbl">Performances &amp; Events</div>
+        </div>
+        <div class="drama-stat-item">
+          <div class="num">11</div>
+          <div class="lbl">Core Social Topics</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.25rem; color: #0f172a; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem;">
+        Performances &amp; Topics Covered:
+      </h3>
+      <div class="topic-pills">
+        <span class="topic-pill"><i class="fa-solid fa-leaf"></i> Climate Change</span>
+        <span class="topic-pill"><i class="fa-solid fa-shield-halved"></i> GBV Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+        <span class="topic-pill"><i class="fa-solid fa-bullhorn"></i> Youth Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-users"></i> Social Issues</span>
+        <span class="topic-pill"><i class="fa-solid fa-child"></i> Child Rights</span>
+        <span class="topic-pill"><i class="fa-solid fa-briefcase"></i> Employment &amp; Livelihood</span>
+        <span class="topic-pill"><i class="fa-solid fa-ring"></i> Early Child Marriage Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-face-laugh-beam"></i> Comedy &amp; Funny Performances</span>
+        <span class="topic-pill"><i class="fa-solid fa-music"></i> Folk Performances</span>
+        <span class="topic-pill"><i class="fa-solid fa-masks-theater"></i> Sindhi Cultural Performances</span>
+      </div>
+    </section>
+
+    <!-- Section 4: GBV Awareness -->
+    <section id="gbv" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            Gender-Based Violence — GBV Awareness
+          </h2>
+          <p style="color: #64748b; margin: 0;">Promoting Social Protection, Protection &amp; Community Respect</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri conducts sensitive and respectful GBV awareness sessions to promote protection, gender rights, and community harmony among women, youth, and families in UC Sindhri.
+      </p>
+
+      <div class="activity-cards-grid">
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">GBV Awareness Sessions</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Community workshops focusing on rights, social protection, and respect.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-person-dress"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Women &amp; Girls Sessions</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Targeted awareness for women and young girls regarding community safety and empowerment.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Awareness Walks</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Community walks organized to promote message of non-violence and equality.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-masks-theater"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Theatre &amp; Drama</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Stage drama performances on social themes, early marriage, and family protection.</p>
+        </div>
+      </div>
+
+      <div style="background:#f8fafc;border-left:4px solid #818cf8;padding:1.25rem 1.5rem;border-radius:8px;margin-top:2rem;color:#334155;font-size:0.92rem;">
+        <i class="fa-solid fa-lock" style="color:#6366f1;margin-right:8px;"></i>
+        <strong>Privacy &amp; Respect Commitment:</strong> All GBV awareness activities follow strict ethical standards. No private or sensitive survivor information is shared or published.
+      </div>
+    </section>
+
+    <!-- Section 5: Health & Vaccination -->
+    <section id="health" style="margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            Health Awareness &amp; Vaccination Mobilization
+          </h2>
+          <p style="color: #64748b; margin: 0;">Community Mobilization in Support of Public Health Authorities</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri worked with health workers to support awareness and vaccination mobilization activities across surrounding communities in UC Sindhri.
+      </p>
+
+      <div class="activity-cards-grid">
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-syringe"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">COVID-19 Vaccination</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Community awareness and mobilization for COVID-19 vaccination drives.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">MR Vaccination</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Measles-Rubella vaccination awareness and mobilization support.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Polio Vaccination</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">Polio eradication awareness and community mobilization support.</p>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h4 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:0.5rem;">Health Awareness</h4>
+          <p style="font-size:0.92rem;color:#475569;margin:0;">General health awareness sessions for families and local youth.</p>
+        </div>
+      </div>
+
+      <div style="background:#fff8e1;border-left:4px solid #f5a623;border-radius:8px;padding:1.25rem 1.5rem;margin-top:2rem;color:#78350f;font-size:0.92rem;line-height:1.6;">
+        <i class="fa-solid fa-triangle-exclamation" style="color:#d97706;margin-right:8px;"></i>
+        <strong>Role Clarification:</strong> RC Sindhri's role was community awareness, mobilization, and facilitation. Health workers/health authorities administered vaccination services. <strong>RC Sindhri is NOT a healthcare provider.</strong>
+      </div>
+    </section>
+
+    <!-- Section 6: NADRA MRV Facilitation -->
+    <section id="nadra" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            NADRA Mobile Registration Van (MRV) Facilitation
+          </h2>
+          <p style="color: #64748b; margin: 0;">Assisting Residents Access National Identity Services</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        RC Sindhri facilitated the visit of a NADRA Mobile Registration Van (MRV) to Village Haji Hamer Mangrio, assisting residents across 13 core villages and ~15 surrounding villages to access National Identity Card (NIC) registration services.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2.8rem;font-weight:800;color:#2e7d32;line-height:1;">~300</div>
+          <div style="font-weight:700;color:#166534;margin-top:0.35rem;">NICs Facilitated (Approx.)</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2.8rem;font-weight:800;color:#2e7d32;line-height:1;">13</div>
+          <div style="font-weight:700;color:#166534;margin-top:0.35rem;">Core Villages Covered</div>
+        </div>
+
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem;text-align:center;">
+          <div style="font-size:2.8rem;font-weight:800;color:#2e7d32;line-height:1;">~15</div>
+          <div style="font-weight:700;color:#166534;margin-top:0.35rem;">Surrounding Villages</div>
+        </div>
+      </div>
+
+      <div style="background:#f8fafc;border-left:4px solid #3b82f6;padding:1.25rem 1.5rem;border-radius:8px;color:#334155;font-size:0.92rem;">
+        <i class="fa-solid fa-circle-info" style="color:#3b82f6;margin-right:8px;"></i>
+        <strong>Service Delivery Note:</strong> NIC registration services were delivered by NADRA. RC Sindhri provided community mobilization, venue organization, and registration assistance.
+      </div>
+    </section>
+
+    <!-- Section 7: Mach Kachehri -->
+    <section id="mach-kachehri" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 4rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+            Mach Kachehri — Community Dialogue
+          </h2>
+          <p style="color: #64748b; margin: 0;">Traditional Community Forum for Open Dialogue &amp; Problem Solving</p>
+        </div>
+        <span class="source-badge blue">🔵 RC Sindhri-Provided</span>
+      </div>
+
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin-bottom: 1.5rem;">
+        A community dialogue platform where youth, elders, and community members gathered for open discussion on local development, social issues, and youth leadership.
+      </p>
+
+      <h3 style="font-size: 1.2rem; color: #0f172a; font-weight: 700; margin-bottom: 1rem;">Topics Discussed:</h3>
+      <div class="topic-pills">
+        <span class="topic-pill"><i class="fa-solid fa-leaf"></i> Climate Change</span>
+        <span class="topic-pill"><i class="fa-solid fa-shield-halved"></i> GBV Awareness</span>
+        <span class="topic-pill"><i class="fa-solid fa-users"></i> Youth Issues &amp; Leadership</span>
+        <span class="topic-pill"><i class="fa-solid fa-comments"></i> Community Problems</span>
+        <span class="topic-pill"><i class="fa-solid fa-scale-balanced"></i> Social Development</span>
+        <span class="topic-pill"><i class="fa-solid fa-briefcase"></i> Employment &amp; Livelihoods</span>
+      </div>
+    </section>
+
+    <!-- Section 8: Community Coverage -->
+    <section id="coverage" style="margin-bottom: 4rem;">
+      <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 700;">
+        Our Outreach Communities
+      </h2>
+      <p style="color: #64748b; margin-bottom: 1.5rem;">RC Sindhri's core coverage encompasses 13 villages across UC Sindhri and surrounding areas</p>
+
+      <div class="villages-grid">
+        <div class="village-card">
+          <span class="base-badge"><i class="fa-solid fa-star"></i> Base</span>
+          <i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i>
+          Village Haji Hamer Mangrio
+        </div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Mohammed Hassan Mangrio</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Khameso Siyal</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Khani Mangrio</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Qasim Hotel</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Abupota Paro</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Bhel Paro</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Obhayo Mangrio</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Mohammed Ali Shar</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Essa Khan Shar</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Lal Shar</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Qadru Shar</div>
+        <div class="village-card"><i class="fa-solid fa-location-dot" style="color:#2e7d32;margin-right:0.4rem;"></i> Village Qaim Solangi</div>
+        <div class="village-card" style="border-left-color:#3b82f6; background:#eff6ff;">
+          <i class="fa-solid fa-circle-plus" style="color:#3b82f6;margin-right:0.4rem;"></i>
+          <strong>Additional Surrounding Villages</strong><br/>
+          <span style="font-size:0.8rem;color:#475569;font-weight:400;">Surrounding communities reached through Mobile Registration Van &amp; Health campaigns.</span>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;text-align:center;">
+        <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn" style="background:#2e7d32;color:#ffffff;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:8px;">
+          <i class="fa-solid fa-map-location-dot"></i> Open Location in Google Maps ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 9: Community Events -->
+    <section id="events">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0 0 0.5rem; font-weight: 700;">
+          Community Events &amp; Observances
+        </h2>
+        <p style="color: #64748b;">Annual Days &amp; Community Gatherings Conducted by RC Sindhri</p>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-icon">🎉</div>
+          <h4>Youth Day</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">♀️</div>
+          <h4>International Women's Day</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🌿</div>
+          <h4>World Environment Day</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🇵🇰</div>
+          <h4>Independence Day</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🎭</div>
+          <h4>Cultural Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🌅</div>
+          <h4>Climate Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🛡️</div>
+          <h4>GBV Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🎓</div>
+          <h4>Education Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">⚽</div>
+          <h4>Sports Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🏠</div>
+          <h4>Community Events</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon">🗣️</div>
+          <h4>Mach Kachehri</h4>
+          <p class="event-note">Reported by RC Sindhri</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Shared Footer -->
+<footer class="site-footer" style="background: #0d1b2a; color: #cbd5e1; padding: 4rem 0 2rem; margin-top: 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">RC Sindhri</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 1rem;">
+          Rozgar Center Sindhri — Empowering youth and communities in UC Sindhri, Mirpur Khas through skills, leadership, and development.
+        </p>
+        <p style="font-size: 0.85rem; color: #81c784; font-style: italic;">
+          "From Youth Potential to Community Impact"
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="index.html" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+          <li><a href="pty.html" style="color: #cbd5e1; text-decoration: none;">Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" style="color: #cbd5e1; text-decoration: none;">MANZIL</a></li>
+          <li><a href="outreach.html" style="color: #cbd5e1; text-decoration: none;">Community Outreach</a></li>
+          <li><a href="reports.html" style="color: #cbd5e1; text-decoration: none;">Reports &amp; Documents</a></li>
+          <li><a href="gallery.html" style="color: #cbd5e1; text-decoration: none;">Gallery</a></li>
+          <li><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Programs</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="pty.html#training" style="color: #cbd5e1; text-decoration: none;">Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" style="color: #cbd5e1; text-decoration: none;">Youth Groups</a></li>
+          <li><a href="education.html" style="color: #cbd5e1; text-decoration: none;">Education Awareness</a></li>
+          <li><a href="outreach.html#drama" style="color: #cbd5e1; text-decoration: none;">Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" style="color: #cbd5e1; text-decoration: none;">GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" style="color: #cbd5e1; text-decoration: none;">Climate Action</a></li>
+          <li><a href="outreach.html#health" style="color: #cbd5e1; text-decoration: none;">Health Outreach</a></li>
+          <li><a href="outreach.html#nadra" style="color: #cbd5e1; text-decoration: none;">NADRA Facilitation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Contact Info</h4>
+        <p style="font-size: 0.9rem; line-height: 1.8; color: #94a3b8;">
+          <i class="fa-solid fa-location-dot" style="color: #4caf50; width: 20px;"></i> Village Haji Hamer Mangrio, Taluka Sindhri, District Mirpur Khas, Sindh, Pakistan<br />
+          <i class="fa-solid fa-envelope" style="color: #4caf50; width: 20px;"></i> rcsindhri@gmail.com<br />
+          <i class="fa-solid fa-phone" style="color: #4caf50; width: 20px;"></i> 03130333736
+        </p>
+      </div>
+    </div>
+
+    <div style="border-top: 1px solid #1e293b; padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #64748b;">
+      <p style="margin: 0;">&copy; 2024-2025 RC Sindhri (Rozgar Center Sindhri) | Website Demo</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Hamburger Toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      mobileNav.hidden = expanded;
+    });
+  }
+
+  // Sticky Header Shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+<script src="lang-switcher.js"></script></body>
+</html>

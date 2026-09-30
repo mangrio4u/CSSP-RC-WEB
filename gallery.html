@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>Gallery & Media | RC Sindhri (Rozgar Center Sindhri)</title>
+  <meta name="description" content="Visual gallery of RC Sindhri activities in UC Sindhri, Mirpur Khas — Vocational Training, Youth Groups, MANZIL, PTY, Stage Drama, Climate Action, GBV Awareness, NADRA Facilitation & Health Outreach." />
+  <meta name="keywords" content="RC Sindhri Gallery, Rozgar Center Sindhri photos, PTY photos, MANZIL photos, Stage Drama Sindhri, Mirpur Khas youth activities" />
+  <meta name="author" content="RC Sindhri" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a5c2e'/><ellipse cx='16' cy='18' rx='7' ry='9' fill='%234caf50'/><ellipse cx='16' cy='13' rx='5' ry='7' fill='%232e7d32'/><rect x='14' y='24' width='4' height='5' rx='1' fill='%231a5c2e'/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Filter Bar Styles */
+    .filter-wrapper {
+      padding: 1.5rem 0;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .filter-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 0.5rem 1.15rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: #1a5c2e;
+      border-color: #1a5c2e;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(26,92,46,0.25);
+    }
+
+    /* Gallery Card Layout */
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .gallery-img-container {
+      position: relative;
+      height: 220px;
+      background: #0f172a;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-img-container svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15,23,42,0.85);
+      backdrop-filter: blur(4px);
+      color: #4caf50;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(76,175,80,0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .gallery-body {
+      padding: 1.25rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-desc {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .gallery-meta {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px dashed #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* Video section */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .video-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .video-thumb {
+      position: relative;
+      height: 220px;
+      background: linear-gradient(135deg, #0d1b2a, #1a5c2e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-btn {
+      width: 64px;
+      height: 64px;
+      background: #f5a623;
+      color: #0d1b2a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 0 20px rgba(245,166,35,0.6);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Modal Lightbox */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15,23,42,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      background: #ffffff;
+      border-radius: 16px;
+      max-width: 800px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      animation: modalZoom 0.3s ease;
+    }
+
+    @keyframes modalZoom {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+      background: rgba(15,23,42,0.7);
+      color: #fff;
+      border-radius: 50%;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .lightbox-img-wrap {
+      height: 360px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-details {
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Banner -->
+  <div class="announcement-banner" role="banner">
+    🌱 RC Sindhri — Official Gallery &amp; Activity Records &nbsp;|&nbsp; UC Sindhri, District Mirpur Khas &nbsp;|&nbsp; 
+    <a href="tel:03130333736"><i class="fa-solid fa-phone"></i> 03130333736</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="RC Sindhri Home">
+        <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="RC Sindhri Logo">
+          <g transform="translate(6,8)">
+            <g stroke="#f5a623" stroke-width="2" stroke-linecap="round">
+              <line x1="30" y1="16" x2="30" y2="5"/>
+              <line x1="30" y1="16" x2="17" y2="7"/>
+              <line x1="30" y1="16" x2="11" y2="16"/>
+              <line x1="30" y1="16" x2="43" y2="7"/>
+              <line x1="30" y1="16" x2="49" y2="16"/>
+            </g>
+            <circle cx="30" cy="16" r="5" fill="#f5a623"/>
+            <rect x="27" y="42" width="6" height="11" rx="2" fill="#2e7d32"/>
+            <ellipse cx="30" cy="40" rx="16" ry="9" fill="#4caf50" opacity=".8"/>
+            <ellipse cx="30" cy="33" rx="12" ry="8" fill="#2e7d32"/>
+            <ellipse cx="30" cy="27" rx="8" ry="6" fill="#1a5c2e"/>
+            <ellipse cx="26" cy="29" rx="3" ry="4" fill="#81c784" opacity=".5" transform="rotate(-20,26,29)"/>
+            <g transform="translate(14,51)">
+              <path d="M0,5 Q8,3 16,5 L16,13 Q8,11 0,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+              <path d="M16,5 Q24,3 32,5 L32,13 Q24,11 16,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+              <line x1="16" y1="5" x2="16" y2="13" stroke="#2e7d32" stroke-width="1.4"/>
+            </g>
+          </g>
+          <g transform="translate(76,0)">
+            <text x="0" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="2">RC SINDHRI</text>
+            <text x="2" y="56" font-family="Arial,sans-serif" font-weight="500" font-size="12" fill="#81c784" letter-spacing="1">Rozgar Center Sindhri</text>
+            <rect x="0" y="41" width="176" height="2.5" rx="1.5" fill="#f5a623" opacity=".8"/>
+          </g>
+        </svg>
+      </a>
+
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="pty.html" class="nav-link">PTY</a></li>
+        <li class="nav-item"><a href="manzil.html" class="nav-link">MANZIL</a></li>
+        <li class="nav-item"><a href="outreach.html" class="nav-link">Outreach</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
+        <li class="nav-item"><a href="reports.html" class="nav-link">Reports</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link nav-cta"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div style="padding: 1.5rem; text-align: right;">
+      <button id="mobile-close-btn" style="background:none;border:none;font-size:1.5rem;color:#fff;"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-list" style="padding:0 1.5rem;list-style:none;">
+      <li><a href="index.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Home</a></li>
+      <li><a href="about.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">About</a></li>
+      <li><a href="pty.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">PTY</a></li>
+      <li><a href="manzil.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">MANZIL</a></li>
+      <li><a href="outreach.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Outreach</a></li>
+      <li><a href="gallery.html" style="color:#4caf50;font-weight:700;font-size:1.1rem;display:block;padding:0.75rem 0;">Gallery</a></li>
+      <li><a href="reports.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Reports</a></li>
+      <li><a href="contact.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Header -->
+  <section style="background: linear-gradient(135deg, #0d1b2a 0%, #1a5c2e 100%); color:#fff; padding: 4rem 1rem; text-align:center;">
+    <div class="container">
+      <span class="badge" style="background:rgba(76,175,80,0.2); color:#81c784; border:1px solid #4caf50; padding:4px 14px; border-radius:20px; font-size:0.85rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Visual Documentation</span>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-family:'Playfair Display', serif; margin:1rem 0 0.5rem; font-weight:800;">RC Sindhri Activity Gallery</h1>
+      <p style="max-width:700px; margin:0 auto; color:#e2e8f0; font-size:1.1rem;">
+        Documenting youth development, vocational skill trainings, community outreach, climate action, stage drama performances, and health mobilization across UC Sindhri.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Pills Bar -->
+  <div class="filter-wrapper">
+    <div class="container">
+      <div class="filter-pills" id="filter-pills">
+        <button class="filter-pill active" data-filter="all">All Photos</button>
+        <button class="filter-pill" data-filter="pty">PTY &amp; Vocational</button>
+        <button class="filter-pill" data-filter="manzil">MANZIL &amp; Leadership</button>
+        <button class="filter-pill" data-filter="drama">Stage Drama Team</button>
+        <button class="filter-pill" data-filter="climate">Climate Action</button>
+        <button class="filter-pill" data-filter="gbv">GBV Awareness</button>
+        <button class="filter-pill" data-filter="nadra">NADRA MRV Facilitation</button>
+        <button class="filter-pill" data-filter="health">Health &amp; Vaccination</button>
+        <button class="filter-pill" data-filter="community">Mach Kachehri &amp; Events</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Gallery Section -->
+  <section class="section" style="padding: 3rem 0; background:#f1f5f9;">
+    <div class="container">
+
+      <div class="gallery-masonry" id="gallery-masonry">
+
+        <!-- 1: Solar Training -->
+        <div class="gallery-card" data-category="pty">
+          <div class="gallery-img-container" onclick="openLightbox('Solar PV Skill Training Session', 'PTY Vocational Skills Training — 50 youth trained in solar repair & installation.', 'pty')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#1e293b"/>
+              <rect x="50" y="40" width="300" height="150" fill="#0284c7" stroke="#38bdf8" stroke-width="4" rx="6"/>
+              <line x1="150" y1="40" x2="150" y2="190" stroke="#38bdf8" stroke-width="2"/>
+              <line x1="250" y1="40" x2="250" y2="190" stroke="#38bdf8" stroke-width="2"/>
+              <line x1="50" y1="115" x2="350" y2="115" stroke="#38bdf8" stroke-width="2"/>
+              <circle cx="200" cy="80" r="25" fill="#f5a623" opacity="0.8"/>
+              <text x="200" y="225" fill="#cbd5e1" font-size="14" text-anchor="middle" font-weight="bold">Solar Technician Vocational Class</text>
+            </svg>
+            <span class="gallery-tag">PTY Vocational</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">Solar Repair &amp; Installation Training</h3>
+            <p class="gallery-desc">Practical vocational training provided to 50 young trainees equipping them with solar installation and maintenance skills.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Village Haji Hamer Mangrio</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2: Beautician Training -->
+        <div class="gallery-card" data-category="pty">
+          <div class="gallery-img-container" onclick="openLightbox('Beautician Skill Development Class', 'PTY Vocational Skills — 25 female youth trained in beautician trade.', 'pty')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#3b0764"/>
+              <circle cx="200" cy="110" r="60" fill="#a855f7" opacity="0.3"/>
+              <path d="M150 160 Q200 80 250 160" stroke="#f472b6" stroke-width="6" fill="none"/>
+              <text x="200" y="215" fill="#f3e8ff" font-size="14" text-anchor="middle" font-weight="bold">Beautician Trade — 25 Trainees</text>
+            </svg>
+            <span class="gallery-tag">PTY Vocational</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">Beautician Vocational Trade</h3>
+            <p class="gallery-desc">Women empowerment skill session in beautician services, fostering self-employment and home enterprise opportunities.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> RC Sindhri Center</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3: E-Commerce & Digital Skills -->
+        <div class="gallery-card" data-category="pty">
+          <div class="gallery-img-container" onclick="openLightbox('E-Commerce & Digital Literacy Class', 'PTY Vocational Skills — 15 youth completed e-commerce training.', 'pty')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#0f172a"/>
+              <rect x="80" y="50" width="240" height="130" fill="#1e293b" stroke="#4caf50" stroke-width="3" rx="8"/>
+              <rect x="100" y="70" width="200" height="90" fill="#0284c7" opacity="0.4"/>
+              <text x="200" y="120" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">E-Commerce &amp; Freelancing</text>
+            </svg>
+            <span class="gallery-tag">PTY Vocational</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">E-Commerce &amp; Digital Skills Class</h3>
+            <p class="gallery-desc">Young individuals learning digital skills, online marketplaces, and micro-business management basics.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> RC Computer Lab</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4: MANZIL Youth Leadership -->
+        <div class="gallery-card" data-category="manzil">
+          <div class="gallery-img-container" onclick="openLightbox('MANZIL Youth Leadership Session', 'MANZIL Program — Youth leadership and organizational management training.', 'manzil')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#163d20"/>
+              <circle cx="120" cy="120" r="30" fill="#4caf50" opacity="0.8"/>
+              <circle cx="200" cy="100" r="35" fill="#f5a623" opacity="0.9"/>
+              <circle cx="280" cy="120" r="30" fill="#4caf50" opacity="0.8"/>
+              <text x="200" y="210" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="bold">Youth Leadership &amp; Governance</text>
+            </svg>
+            <span class="gallery-tag">MANZIL Project</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">MANZIL Youth Leadership Workshop</h3>
+            <p class="gallery-desc">Youth leaders engaging in strategic planning, organizational governance, and community advocacy development.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> UC Sindhri</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5: Stage Drama Team -->
+        <div class="gallery-card" data-category="drama">
+          <div class="gallery-img-container" onclick="openLightbox('RC Sindhri Stage Drama Team Performance', 'Cultural & Social Awareness Theatre — 8 team members performing across 10 community events.', 'drama')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#451a03"/>
+              <polygon points="50,220 200,40 350,220" fill="#d97706" opacity="0.3"/>
+              <circle cx="160" cy="130" r="20" fill="#fbbf24"/>
+              <circle cx="240" cy="130" r="20" fill="#fbbf24"/>
+              <text x="200" y="210" fill="#fef3c7" font-size="15" text-anchor="middle" font-weight="bold">Social Theatre &amp; Folk Performance</text>
+            </svg>
+            <span class="gallery-tag">Stage Drama</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">Social Drama Performance (10 Events)</h3>
+            <p class="gallery-desc">8-member drama group (6 male, 2 female) performing street theatre on climate change, GBV awareness, education, and child rights.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-masks-theater"></i> 10 Performances</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6: Climate Action -->
+        <div class="gallery-card" data-category="climate">
+          <div class="gallery-img-container" onclick="openLightbox('Community Plantation & Climate Awareness Walk', 'Youth climate group leading tree plantation and environmental clean-up drive.', 'climate')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#064e3b"/>
+              <path d="M200 40 L250 140 L150 140 Z" fill="#10b981"/>
+              <rect x="190" y="140" width="20" height="50" fill="#78350f"/>
+              <text x="200" y="220" fill="#a7f3d0" font-size="14" text-anchor="middle" font-weight="bold">Community Plantation Drive</text>
+            </svg>
+            <span class="gallery-tag">Climate Action</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">Tree Plantation &amp; Clean-up Walk</h3>
+            <p class="gallery-desc">Youth group volunteers mobilizing villagers for local environmental preservation, cleanliness, and tree planting.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Village Mohammed Hassan</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7: GBV Awareness -->
+        <div class="gallery-card" data-category="gbv">
+          <div class="gallery-img-container" onclick="openLightbox('Gender-Based Violence Awareness Session', 'Awareness workshop on women rights, protection, and referral support.', 'gbv')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#4c0519"/>
+              <path d="M200 60 C150 0, 80 80, 200 180 C320 80, 250 0, 200 60 Z" fill="#e11d48" opacity="0.6"/>
+              <text x="200" y="215" fill="#ffe4e6" font-size="14" text-anchor="middle" font-weight="bold">GBV Awareness &amp; Support Session</text>
+            </svg>
+            <span class="gallery-tag">GBV Awareness</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">GBV Awareness &amp; Rights Session</h3>
+            <p class="gallery-desc">Community dialogue focusing on women's safety, prevention of early marriage, legal awareness, and referral channels.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Bhel Paro &amp; Surrounding</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8: NADRA MRV Facilitation -->
+        <div class="gallery-card" data-category="nadra">
+          <div class="gallery-img-container" onclick="openLightbox('NADRA Mobile Registration Van Facilitation', 'RC Sindhri community mobilization facilitating ~300 residents for NIC processing.', 'nadra')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#1e1b4b"/>
+              <rect x="60" y="60" width="280" height="110" fill="#312e81" stroke="#818cf8" stroke-width="3" rx="10"/>
+              <circle cx="120" cy="170" r="22" fill="#0f172a" stroke="#818cf8" stroke-width="3"/>
+              <circle cx="280" cy="170" r="22" fill="#0f172a" stroke="#818cf8" stroke-width="3"/>
+              <text x="200" y="115" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">NADRA MRV Mobile Unit</text>
+              <text x="200" y="215" fill="#c7d2fe" font-size="13" text-anchor="middle">~300 Citizens Facilitated</text>
+            </svg>
+            <span class="gallery-tag">NADRA Facilitation</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">NADRA Mobile Van (300 Approx. NICs)</h3>
+            <p class="gallery-desc">Community mobilization campaign enabling women, elderly, and rural residents across 13 core + 15 surrounding villages to get identity cards.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-id-card"></i> 300 Approx. NICs</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9: Health & Vaccination Outreach -->
+        <div class="gallery-card" data-category="health">
+          <div class="gallery-img-container" onclick="openLightbox('Health & Vaccination Mobilization Campaign', 'Mobilization support for COVID-19, MR (Measles-Rubella), and Polio drives with health department teams.', 'health')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#0c4a6e"/>
+              <path d="M180 50 H220 V100 H270 V140 H220 V190 H180 V140 H130 V100 H180 Z" fill="#38bdf8"/>
+              <text x="200" y="225" fill="#e0f2fe" font-size="14" text-anchor="middle" font-weight="bold">Vaccination Mobilization Drive</text>
+            </svg>
+            <span class="gallery-tag">Health Outreach</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">COVID, MR &amp; Polio Vaccination Drives</h3>
+            <p class="gallery-desc">Awareness sessions and house-to-house mobilization supporting government health workers for childhood and adult immunization.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-hand-holding-medical"></i> Mobilization Partner</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10: Mach Kachehri -->
+        <div class="gallery-card" data-category="community">
+          <div class="gallery-img-container" onclick="openLightbox('Mach Kachehri — Traditional Community Dialogue', 'Community gathering discussing village issues, youth employment, and climate resilience.', 'community')">
+            <svg viewBox="0 0 400 250">
+              <rect width="400" height="250" fill="#451a03"/>
+              <polygon points="200,60 160,150 240,150" fill="#ea580c"/>
+              <polygon points="200,90 180,150 220,150" fill="#facc15"/>
+              <rect x="150" y="150" width="100" height="15" fill="#78350f" rx="3"/>
+              <text x="200" y="210" fill="#ffedd5" font-size="14" text-anchor="middle" font-weight="bold">Mach Kachehri Social Evening</text>
+            </svg>
+            <span class="gallery-tag">Community Events</span>
+          </div>
+          <div class="gallery-body">
+            <h3 class="gallery-title">Mach Kachehri Community Dialogue</h3>
+            <p class="gallery-desc">Traditional bonfire evening bringing together village elders and youth for open dialogue on climate, employment, and local challenges.</p>
+            <div class="gallery-meta">
+              <span><i class="fa-solid fa-fire"></i> 1 Mach Kachehri Event</span>
+              <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Video Gallery Section -->
+  <section class="section" style="padding: 4rem 0; background:#ffffff;">
+    <div class="container">
+      <div style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+        <span class="badge" style="background:#e8f5e9; color:#2e7d32; padding:4px 14px; border-radius:20px; font-weight:700; text-transform:uppercase; font-size:0.8rem;">Video Documentaries</span>
+        <h2 style="font-family:'Playfair Display', serif; font-size:2.2rem; color:#0d1b2a; margin-top:0.5rem;">Stage Drama &amp; Field Videos</h2>
+        <p style="color:#64748b;">Watch short video clips of theatre performances, youth advocacy walks, and vocational skill demonstrations.</p>
+      </div>
+
+      <div class="video-grid">
+
+        <!-- Video 1 -->
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn" onclick="alert('Connecting to official YouTube channel @RC.Sindhri. Visit https://www.facebook.com/share/1HuTKdDLkK/ for full video highlights.')">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div style="padding:1.25rem;">
+            <h3 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin-bottom:0.5rem;">Climate Change Stage Drama Highlights</h3>
+            <p style="font-size:0.88rem; color:#64748b; margin-bottom:1rem;">RC Sindhri Stage Drama team performing a comic-dramatic play highlighting local environmental protection and tree plantation.</p>
+            <a href="https://www.facebook.com/share/1HuTKdDLkK/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;"><i class="fa-brands fa-facebook"></i> Watch on Facebook</a>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+          <div class="video-thumb">
+            <div class="play-btn" onclick="alert('Connecting to official YouTube channel @RC.Sindhri.')">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <div style="padding:1.25rem;">
+            <h3 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin-bottom:0.5rem;">Vocational Trainees Success Stories</h3>
+            <p style="font-size:0.88rem; color:#64748b; margin-bottom:1rem;">Testimonials from youth who completed Solar and Beautician courses under PTY skills initiative.</p>
+            <a href="https://www.facebook.com/share/1HuTKdDLkK/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.85rem; padding:0.4rem 1rem;"><i class="fa-brands fa-youtube" style="color:#ef4444;"></i> Official YouTube @RC.Sindhri</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <div class="lightbox-img-wrap" id="lightbox-img-wrap">
+        <!-- SVG / Image Content dynamically placed here -->
+      </div>
+      <div class="lightbox-details">
+        <h3 id="lightbox-title" style="font-size:1.3rem; font-weight:700; color:#0f172a; margin-bottom:0.5rem;"></h3>
+        <p id="lightbox-desc" style="color:#64748b; font-size:0.95rem; line-height:1.6;"></p>
+        <div style="margin-top:1rem; display:flex; gap:1rem; align-items:center;">
+          <span class="badge" style="background:#e8f5e9; color:#2e7d32; font-weight:700; padding:4px 12px; border-radius:12px;" id="lightbox-tag">RC Sindhri Record</span>
+          <span style="font-size:0.85rem; color:#94a3b8;"><i class="fa-solid fa-check-double" style="color:#4caf50;"></i> Verified Activity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="margin-bottom: 1rem;">
+            <strong style="color:#fff; font-size:1.4rem; font-family:'Playfair Display', serif;">RC SINDHRI</strong><br/>
+            <span style="color:#81c784; font-size:0.9rem;">Rozgar Center Sindhri</span>
+          </div>
+          <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">
+            “From Youth Potential to Community Impact” — Working with youth and communities in UC Sindhri through skills development, livelihood, leadership, and social development.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1HuTKdDLkK/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;">Quick Links</h4>
+          <ul style="list-style:none; padding:0; font-size:0.9rem; line-height:2;">
+            <li><a href="about.html" style="color:#cbd5e1;">About RC Sindhri</a></li>
+            <li><a href="pty.html" style="color:#cbd5e1;">PTY — Power to Youth</a></li>
+            <li><a href="manzil.html" style="color:#cbd5e1;">MANZIL Project</a></li>
+            <li><a href="outreach.html" style="color:#cbd5e1;">Community Outreach</a></li>
+            <li><a href="reports.html" style="color:#cbd5e1;">Reports &amp; Source Verification</a></li>
+            <li><a href="contact.html" style="color:#cbd5e1;">Contact &amp; Google Map Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:#fff; font-size:1.1rem; margin-bottom:1rem;">Contact Info</h4>
+          <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:0.5rem;"><i class="fa-solid fa-location-dot" style="color:#4caf50;"></i> Village Haji Hamer Mangrio, Taluka Sindhri, District Mirpur Khas, Sindh, Pakistan</p>
+          <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:0.5rem;"><i class="fa-solid fa-phone" style="color:#4caf50;"></i> 03130333736</p>
+          <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:1rem;"><i class="fa-solid fa-envelope" style="color:#4caf50;"></i> rcsindhri@gmail.com</p>
+          <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.85rem; padding:0.5rem 1rem;">
+            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.1); margin-top:2.5rem; padding-top:1.5rem; text-align:center; color:#94a3b8; font-size:0.85rem;">
+        &copy; 2026 RC Sindhri (Rozgar Center Sindhri). All rights reserved. &nbsp;|&nbsp; RC Sindhri official identity.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filter & Lightbox JS Script -->
+  <script>
+    // Filter Pills Logic
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const filter = pill.getAttribute('data-filter');
+
+        galleryCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox Logic
+    function openLightbox(title, desc, category) {
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-desc').innerText = desc;
+      document.getElementById('lightbox-tag').innerText = category.toUpperCase() + ' PROGRAM';
+      document.getElementById('lightbox-img-wrap').innerHTML = `
+        <div style="text-align:center; color:#ffffff;">
+          <i class="fa-solid fa-image" style="font-size:4rem; color:#4caf50; margin-bottom:1rem;"></i>
+          <h4 style="font-size:1.2rem;">${title}</h4>
+          <p style="color:#cbd5e1; font-size:0.9rem;">Official Activity Record — UC Sindhri</p>
+        </div>
+      `;
+      document.getElementById('lightbox-modal').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('active');
+    }
+
+    // Mobile Drawer Navigation
+    const mobileBtn = document.getElementById('hamburger-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileClose = document.getElementById('mobile-close-btn');
+
+    if (mobileBtn && mobileDrawer && mobileOverlay) {
+      mobileBtn.addEventListener('click', () => {
+        mobileDrawer.classList.add('active');
+        mobileOverlay.classList.add('active');
+      });
+
+      mobileOverlay.addEventListener('click', () => {
+        mobileDrawer.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+      });
+
+      if (mobileClose) {
+        mobileClose.addEventListener('click', () => {
+          mobileDrawer.classList.remove('active');
+          mobileOverlay.classList.remove('active');
+        });
+      }
+    }
+  </script>
+<script src="lang-switcher.js"></script></body>
+</html>

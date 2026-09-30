@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>RC Sindhri — Rozgar Center Sindhri | Youth Skills &amp; Community Development</title>
+  <meta name="description" content="RC Sindhri is a Rozgar Center in Village Haji Hamer Mangrio, Taluka Sindhri, District Mirpur Khas, supporting youth skills, livelihoods, leadership, education, climate action and community development." />
+  <meta name="keywords" content="RC Sindhri, Rozgar Center Sindhri, UC Sindhri, skills training, youth development, PTY, MANZIL, Mirpur Khas, Sindh, Pakistan" />
+  <meta name="author" content="RC Sindhri" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RC Sindhri | Rozgar Center Sindhri" />
+  <meta property="og:description" content="From Youth Potential to Community Impact — Skills, Livelihoods, Leadership &amp; Development in UC Sindhri." />
+  <meta property="og:url" content="https://rcsindhri.org" />
+  <meta property="og:site_name" content="RC Sindhri" />
+  <meta property="og:locale" content="en_PK" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RC Sindhri | Rozgar Center Sindhri" />
+  <meta name="twitter:description" content="From Youth Potential to Community Impact — Skills, Livelihoods, Leadership &amp; Development in UC Sindhri." />
+
+  <!-- Favicon: inline SVG green leaf -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a5c2e'/><ellipse cx='16' cy='18' rx='7' ry='9' fill='%234caf50'/><ellipse cx='16' cy='13' rx='5' ry='7' fill='%232e7d32'/><rect x='14' y='24' width='4' height='5' rx='1' fill='%231a5c2e'/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ---- Hero background (CSS-only rich pattern) ---- */
+    .hero-bg-pattern {
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 30%, rgba(76,175,80,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 85% 75%, rgba(13,27,42,.6) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 60% 20%, rgba(129,199,132,.1) 0%, transparent 60%),
+        linear-gradient(155deg, #0d2b1a 0%, #1a5c2e 35%, #163d20 65%, #0d1b2a 100%);
+    }
+
+    /* ---- Stat card color variants ---- */
+    .stat-card:nth-child(1) { border-left-color: #2e7d32; }
+    .stat-card:nth-child(2) { border-left-color: #1a2744; }
+    .stat-card:nth-child(3) { border-left-color: #4caf50; }
+    .stat-card:nth-child(4) { border-left-color: #f5a623; }
+    .stat-card:nth-child(5) { border-left-color: #2e7d32; }
+    .stat-card:nth-child(6) { border-left-color: #1a2744; }
+    .stat-card:nth-child(7) { border-left-color: #81c784; }
+    .stat-card:nth-child(8) { border-left-color: #f5a623; }
+
+    /* ---- Feature project cards grid ---- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 575.98px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* Community villages grid */
+    .villages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Social grid */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .social-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 575.98px) {
+      .social-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Success stories */
+    .success-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .success-grid { grid-template-columns: 1fr; }
+    }
+
+    .success-box {
+      background: linear-gradient(135deg, #f8f9fa, #e8f5e9);
+      border: 1px solid #c8e6c9;
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .success-box .big-number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: #2e7d32;
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .success-box h4 { color: #1a5c2e; margin-bottom: 0.75rem; }
+
+    /* About preview section */
+    .about-preview-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 767.98px) {
+      .about-preview-content { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    .about-text-block h3 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: #1a5c2e;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text-block p {
+      margin-bottom: 1rem;
+    }
+
+    /* Timeline phases */
+    .phase-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e8f5e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2e7d32;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* Skills info badge */
+    .skills-info-strip {
+      background: linear-gradient(135deg, #1a5c2e, #2e7d32);
+      color: #fff;
+      border-radius: 12px;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skills-info-strip i { font-size: 1.5rem; color: #ffd54f; flex-shrink: 0; }
+
+    /* Hero btn layout fix */
+    .hero-buttons .btn {
+      padding: 0.85rem 1.75rem;
+    }
+
+    /* Nav logo SVG sizing */
+    .nav-logo-svg {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================================================================
+     ANNOUNCEMENT BANNER
+     ================================================================ -->
+<div class="announcement-banner" role="banner" aria-label="Announcement">
+  🌱 RC Sindhri is actively working with youth and communities in UC Sindhri — Skills, Livelihoods, Leadership &amp; Development
+  &nbsp;|&nbsp;
+  <a href="mailto:rcsindhri@gmail.com">rcsindhri@gmail.com</a>
+  &nbsp;|&nbsp;
+  <a href="tel:+923130333736">03130333736</a>
+</div>
+
+<!-- ================================================================
+     NAVIGATION
+     ================================================================ -->
+<header class="site-header" id="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="RC Sindhri — Home">
+      <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="RC Sindhri Logo">
+        <g transform="translate(6,8)">
+          <!-- Sun rays -->
+          <g stroke="#f5a623" stroke-width="2" stroke-linecap="round">
+            <line x1="30" y1="16" x2="30" y2="5"/>
+            <line x1="30" y1="16" x2="17" y2="7"/>
+            <line x1="30" y1="16" x2="11" y2="16"/>
+            <line x1="30" y1="16" x2="43" y2="7"/>
+            <line x1="30" y1="16" x2="49" y2="16"/>
+          </g>
+          <circle cx="30" cy="16" r="5" fill="#f5a623"/>
+          <!-- Tree trunk -->
+          <rect x="27" y="42" width="6" height="11" rx="2" fill="#2e7d32"/>
+          <!-- Canopy layers -->
+          <ellipse cx="30" cy="40" rx="16" ry="9" fill="#4caf50" opacity=".8"/>
+          <ellipse cx="30" cy="33" rx="12" ry="8" fill="#2e7d32"/>
+          <ellipse cx="30" cy="27" rx="8" ry="6" fill="#1a5c2e"/>
+          <ellipse cx="26" cy="29" rx="3" ry="4" fill="#81c784" opacity=".5" transform="rotate(-20,26,29)"/>
+          <!-- Book -->
+          <g transform="translate(14,51)">
+            <path d="M0,5 Q8,3 16,5 L16,13 Q8,11 0,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <path d="M16,5 Q24,3 32,5 L32,13 Q24,11 16,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <line x1="16" y1="5" x2="16" y2="13" stroke="#2e7d32" stroke-width="1.4"/>
+            <line x1="4" y1="8" x2="14" y2="7.5" stroke="#81c784" stroke-width=".7"/>
+            <line x1="4" y1="10" x2="14" y2="9.5" stroke="#81c784" stroke-width=".7"/>
+            <line x1="18" y1="7.5" x2="28" y2="8" stroke="#81c784" stroke-width=".7"/>
+            <line x1="18" y1="9.5" x2="28" y2="10" stroke="#81c784" stroke-width=".7"/>
+          </g>
+        </g>
+        <!-- Text -->
+        <g transform="translate(76,0)">
+          <text x="0" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="2">RC SINDHRI</text>
+          <text x="2" y="56" font-family="Arial,sans-serif" font-weight="500" font-size="12" fill="#81c784" letter-spacing="1">Rozgar Center Sindhri</text>
+          <rect x="0" y="41" width="176" height="2.5" rx="1.5" fill="#f5a623" opacity=".8"/>
+        </g>
+      </svg>
+    </a>
+
+    <!-- Desktop nav list -->
+    <ul class="nav-list" role="list">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About</a>
+      </li>
+      <!-- Projects dropdown -->
+      <li class="nav-item" role="none">
+        <a href="#projects" class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Projects <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Projects submenu">
+          <li><a href="pty.html" role="menuitem"><i class="fa-solid fa-bolt" style="color:#2e7d32;width:20px"></i> Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" role="menuitem"><i class="fa-solid fa-route" style="color:#1a2744;width:20px"></i> MANZIL</a></li>
+          <li><a href="outreach.html" role="menuitem"><i class="fa-solid fa-hands-helping" style="color:#4caf50;width:20px"></i> Community Outreach</a></li>
+        </ul>
+      </li>
+      <!-- Programs dropdown -->
+      <li class="nav-item" role="none">
+        <a href="#programs" class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Programs <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Programs submenu">
+          <li><a href="pty.html#training" role="menuitem"><i class="fa-solid fa-tools" style="color:#2e7d32;width:20px"></i> Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" role="menuitem"><i class="fa-solid fa-users" style="color:#2e7d32;width:20px"></i> Youth Groups</a></li>
+          <li><a href="outreach.html#drama" role="menuitem"><i class="fa-solid fa-theater-masks" style="color:#2e7d32;width:20px"></i> Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" role="menuitem"><i class="fa-solid fa-shield-halved" style="color:#2e7d32;width:20px"></i> GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" role="menuitem"><i class="fa-solid fa-leaf" style="color:#2e7d32;width:20px"></i> Climate Action</a></li>
+          <li><a href="outreach.html#health" role="menuitem"><i class="fa-solid fa-heart-pulse" style="color:#2e7d32;width:20px"></i> Health Outreach</a></li>
+          <li><a href="outreach.html#nadra" role="menuitem"><i class="fa-solid fa-id-card" style="color:#2e7d32;width:20px"></i> NADRA Facilitation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="gallery.html" class="nav-link">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link nav-cta">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <ul class="mobile-nav-list" role="list">
+    <li><a href="index.html" aria-current="page"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> About RC Sindhri</a></li>
+    <div class="mobile-nav-group-title">Projects</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html"><i class="fa-solid fa-bolt"></i> Power to Youth (PTY)</a></li>
+      <li><a href="manzil.html"><i class="fa-solid fa-route"></i> MANZIL</a></li>
+      <li><a href="outreach.html"><i class="fa-solid fa-hands-helping"></i> Community Outreach</a></li>
+    </div>
+    <div class="mobile-nav-group-title">Programs</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html#training">Skills Training</a></li>
+      <li><a href="pty.html#youth-groups">Youth Groups</a></li>
+      <li><a href="outreach.html#drama">Stage Drama</a></li>
+      <li><a href="outreach.html#gbv">GBV Awareness</a></li>
+      <li><a href="manzil.html#climate">Climate Action</a></li>
+      <li><a href="outreach.html#health">Health Outreach</a></li>
+      <li><a href="outreach.html#nadra">NADRA Facilitation</a></li>
+    </div>
+    <li><a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
+    <li><a href="contact.html" style="color:#81c784;font-weight:700;"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ================================================================
+     HERO SECTION
+     ================================================================ -->
+<main id="main-content">
+<section class="hero" id="home" aria-label="RC Sindhri Hero">
+  <div class="hero-bg-pattern"></div>
+
+  <div class="hero-content">
+    <!-- Eyebrow -->
+    <div class="hero-eyebrow slide-up">
+      <i class="fa-solid fa-location-dot"></i>
+      UC Sindhri, Taluka Sindhri, District Mirpur Khas, Sindh, Pakistan
+    </div>
+
+    <!-- Main title -->
+    <h1 class="slide-up delay-1">RC SINDHRI</h1>
+
+    <!-- Subheading -->
+    <p class="hero-sub slide-up delay-2">From Youth Potential to Community Impact</p>
+
+    <!-- Tag pills -->
+    <div class="hero-tags slide-up delay-3" role="list" aria-label="Focus areas">
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-tools"></i> Skills</span>
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-seedling"></i> Livelihoods</span>
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-star"></i> Leadership</span>
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-book-open"></i> Education</span>
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-leaf"></i> Climate Action</span>
+      <span class="hero-tag" role="listitem"><i class="fa-solid fa-people-group"></i> Community Development</span>
+    </div>
+
+    <!-- Description -->
+    <p class="hero-desc slide-up delay-4">
+      RC Sindhri is a community-focused Rozgar Center working with young people and surrounding
+      communities through skills development, livelihood opportunities, youth leadership, awareness,
+      education, climate action, social development and community outreach.
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons slide-up delay-5">
+      <a href="#impact" class="btn btn-primary">
+        <i class="fa-solid fa-chart-line"></i> Explore Our Work
+      </a>
+      <a href="#projects" class="btn btn-outline-navy">
+        <i class="fa-solid fa-folder-open"></i> Our Projects
+      </a>
+      <a href="contact.html" class="btn btn-outline-white">
+        <i class="fa-solid fa-envelope"></i> Contact RC Sindhri
+      </a>
+      <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac" class="btn btn-accent" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-map-location-dot"></i> View Location
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ================================================================
+     IMPACT STATISTICS
+     ================================================================ -->
+<section class="section bg-off-white" id="impact" aria-labelledby="impact-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Community Impact</span>
+      <h2 id="impact-heading" class="slide-up">Our Impact in Numbers</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">RC Sindhri's work, measured in community change</p>
+    </div>
+
+    <div class="stats-grid" role="list" aria-label="Impact statistics">
+
+      <!-- 1 -->
+      <div class="stat-card slide-up delay-1" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+        <span class="stat-card-number" data-target="240" data-suffix="+">0</span>
+        <span class="stat-card-label">Vocational Trainees</span>
+      </div>
+
+      <!-- 2 -->
+      <div class="stat-card slide-up delay-2" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
+        <span class="stat-card-number" data-target="8">0</span>
+        <span class="stat-card-label">Youth Groups</span>
+      </div>
+
+      <!-- 3 -->
+      <div class="stat-card slide-up delay-3" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
+        <span class="stat-card-number" data-target="175" data-suffix="+">0</span>
+        <span class="stat-card-label">Youth Members</span>
+      </div>
+
+      <!-- 4 -->
+      <div class="stat-card slide-up delay-4" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+        <span class="stat-card-number" data-target="20" data-suffix="+">0</span>
+        <span class="stat-card-label">Awareness Sessions</span>
+      </div>
+
+      <!-- 5 -->
+      <div class="stat-card slide-up delay-1" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-theater-masks"></i></span>
+        <span class="stat-card-number" data-target="10">0</span>
+        <span class="stat-card-label">Stage Drama Performances</span>
+      </div>
+
+      <!-- 6 -->
+      <div class="stat-card slide-up delay-2" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-id-card"></i></span>
+        <span class="stat-card-number" data-prefix="~" data-target="300">0</span>
+        <span class="stat-card-label">NIC Facilitation (approx.)</span>
+      </div>
+
+      <!-- 7 -->
+      <div class="stat-card slide-up delay-3" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span>
+        <span class="stat-card-number" data-target="15" data-suffix="+">0</span>
+        <span class="stat-card-label">Youth Using Skills for Livelihood</span>
+      </div>
+
+      <!-- 8 -->
+      <div class="stat-card slide-up delay-4" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
+        <span class="stat-card-number" data-target="15" data-suffix="+">0</span>
+        <span class="stat-card-label">Youth Entrepreneurs</span>
+      </div>
+
+    </div>
+    <!-- Source note -->
+    <p style="text-align:center;margin-top:1.5rem;" class="fade-in delay-5">
+      <span class="source-badge green">
+        <i class="fa-solid fa-circle-info"></i>
+        Figures based on RC Sindhri-provided information
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- ================================================================
+     FEATURED PROJECTS
+     ================================================================ -->
+<section class="section bg-white" id="projects" aria-labelledby="projects-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Major Initiatives</span>
+      <h2 id="projects-heading" class="slide-up">Major Programs &amp; Projects</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">Structured programs delivering measurable change across UC Sindhri</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- PTY -->
+      <article class="feature-card slide-up delay-1" aria-label="Power to Youth project">
+        <div class="feature-card-header green">
+          <div style="margin-bottom:1rem;opacity:.9;font-size:2.5rem;"><i class="fa-solid fa-bolt"></i></div>
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:.5rem;">Power to Youth</h3>
+          <p style="color:rgba(255,255,255,.8);font-size:.85rem;font-weight:600;letter-spacing:.05em;">PTY PROJECT</p>
+        </div>
+        <div class="feature-card-body">
+          <div class="tag-group" style="margin-bottom:1.25rem;">
+            <span class="tag">Skills</span>
+            <span class="tag">Employment</span>
+            <span class="tag">Entrepreneurship</span>
+            <span class="tag">Youth Development</span>
+          </div>
+          <p style="margin-bottom:1.5rem;font-size:.95rem;">
+            RC Sindhri's flagship youth skills and livelihood initiative, training 240+ young people
+            across 7 vocational trades — e-commerce, beautician, dress making, solar, mobile repairing,
+            embroidery, and masonry — with focus on employment and entrepreneurship.
+          </p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#2e7d32;font-weight:600;">
+              <i class="fa-solid fa-user-graduate"></i> 240+ Trainees
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#1a2744;font-weight:600;">
+              <i class="fa-solid fa-screwdriver-wrench"></i> 7 Trades
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#f5a623;font-weight:600;">
+              <i class="fa-solid fa-users"></i> 8 Youth Groups
+            </span>
+          </div>
+          <a href="pty.html" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Explore PTY <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- MANZIL -->
+      <article class="feature-card slide-up delay-2" aria-label="MANZIL project">
+        <div class="feature-card-header navy">
+          <div style="margin-bottom:1rem;opacity:.9;font-size:2.5rem;"><i class="fa-solid fa-route"></i></div>
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:.5rem;">MANZIL</h3>
+          <p style="color:rgba(255,255,255,.8);font-size:.85rem;font-weight:600;letter-spacing:.05em;">COMMUNITY PROJECT</p>
+        </div>
+        <div class="feature-card-body">
+          <div class="tag-group" style="margin-bottom:1.25rem;">
+            <span class="tag">Youth Leadership</span>
+            <span class="tag">Climate Action</span>
+            <span class="tag">Livelihoods</span>
+            <span class="tag">Community Dev.</span>
+          </div>
+          <p style="margin-bottom:1.5rem;font-size:.95rem;">
+            A comprehensive initiative focused on youth leadership development, climate action awareness,
+            livelihood creation, entrepreneurship, employment, community engagement, and documentation
+            of community activities across UC Sindhri.
+          </p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#1a2744;font-weight:600;">
+              <i class="fa-solid fa-star"></i> Youth Leadership
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#2e7d32;font-weight:600;">
+              <i class="fa-solid fa-leaf"></i> Climate Action
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#f5a623;font-weight:600;">
+              <i class="fa-solid fa-handshake"></i> Community Org.
+            </span>
+          </div>
+          <a href="manzil.html" class="btn btn-secondary" style="width:100%;justify-content:center;">
+            Explore MANZIL <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Community Outreach -->
+      <article class="feature-card slide-up delay-3" aria-label="Community Outreach project">
+        <div class="feature-card-header warm">
+          <div style="margin-bottom:1rem;opacity:.9;font-size:2.5rem;"><i class="fa-solid fa-hands-holding-heart"></i></div>
+          <h3 style="color:#fff;font-size:1.5rem;margin-bottom:.5rem;">Community Outreach</h3>
+          <p style="color:rgba(255,255,255,.8);font-size:.85rem;font-weight:600;letter-spacing:.05em;">RC SINDHRI PROGRAM</p>
+        </div>
+        <div class="feature-card-body">
+          <div class="tag-group" style="margin-bottom:1.25rem;">
+            <span class="tag">Health</span>
+            <span class="tag">Awareness</span>
+            <span class="tag">Youth</span>
+            <span class="tag">Community Services</span>
+          </div>
+          <p style="margin-bottom:1.5rem;font-size:.95rem;">
+            RC Sindhri's outreach arm covering health awareness campaigns, vaccination mobilization,
+            GBV awareness, stage drama performances, NADRA MRV facilitation, and community dialogue
+            across surrounding villages.
+          </p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#2e7d32;font-weight:600;">
+              <i class="fa-solid fa-heart-pulse"></i> Health Outreach
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#1a2744;font-weight:600;">
+              <i class="fa-solid fa-theater-masks"></i> Stage Drama
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:#f5a623;font-weight:600;">
+              <i class="fa-solid fa-id-card"></i> NADRA Services
+            </span>
+          </div>
+          <a href="outreach.html" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Explore Outreach <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     ABOUT RC SINDHRI PREVIEW
+     ================================================================ -->
+<section class="section bg-green-xpale" id="about-preview" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-preview-content">
+
+      <!-- Left: About text -->
+      <div class="about-text-block slide-in-left">
+        <span class="section-eyebrow" style="display:inline-block;margin-bottom:1rem;">About Us</span>
+        <h3>RC Sindhri — Rozgar Center Sindhri</h3>
+        <p>
+          RC Sindhri (Rozgar Center Sindhri) serves as a platform for youth skills development,
+          livelihood opportunities, entrepreneurship, leadership, awareness and community development
+          in <strong>Village Haji Hamer Mangrio, UC Sindhri, Taluka Sindhri, District Mirpur Khas, Sindh.</strong>
+        </p>
+        <p>
+          The center's work has included activities connected with the <strong>PTY (Power to Youth)</strong>
+          and <strong>MANZIL</strong> projects, as well as independent community outreach and skills
+          initiatives serving young people and communities across the union council.
+        </p>
+        <p>
+          Through structured vocational training, youth group formation, awareness sessions, and
+          community engagement, RC Sindhri bridges the gap between youth potential and real community
+          impact.
+        </p>
+        <div style="margin-top:1.75rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">
+            Read Full About <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="contact.html" class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Mini timeline summary -->
+      <div class="slide-in-right">
+        <h4 style="color:#1a5c2e;margin-bottom:1.5rem;font-size:1.15rem;">
+          <i class="fa-solid fa-timeline" style="margin-right:.5rem;"></i>
+          Development at a Glance
+        </h4>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div class="phase-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h5 style="color:#1a5c2e;font-size:.95rem;">Power to Youth (PTY)</h5>
+              <p style="font-size:.85rem;margin-top:.25rem;">Vocational training, youth groups, entrepreneurship &amp; livelihood focus</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div class="phase-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <h5 style="color:#1a5c2e;font-size:.95rem;">Youth Groups</h5>
+              <p style="font-size:.85rem;margin-top:.25rem;">8 active youth groups involving 175+ young people across UC Sindhri</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div class="phase-icon"><i class="fa-solid fa-route"></i></div>
+            <div>
+              <h5 style="color:#1a5c2e;font-size:.95rem;">MANZIL Project</h5>
+              <p style="font-size:.85rem;margin-top:.25rem;">Youth leadership, climate action, livelihoods &amp; community engagement</p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div class="phase-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div>
+              <h5 style="color:#1a5c2e;font-size:.95rem;">Community Outreach</h5>
+              <p style="font-size:.85rem;margin-top:.25rem;">Health awareness, NADRA facilitation, stage drama &amp; community dialogue</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     DEVELOPMENT JOURNEY TIMELINE
+     ================================================================ -->
+<section class="section bg-white" id="timeline" aria-labelledby="timeline-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Our Journey</span>
+      <h2 id="timeline-heading" class="slide-up">RC Sindhri's Development Journey</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">From community engagement to structured youth development and outreach</p>
+    </div>
+
+    <div class="timeline" aria-label="Development phases">
+
+      <!-- Phase 1 -->
+      <div class="timeline-item slide-up delay-1">
+        <div class="timeline-dot" aria-hidden="true">1</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 1 · Power to Youth (PTY)</p>
+          <h4><i class="fa-solid fa-bolt" style="color:#f5a623;"></i> Power to Youth (PTY)</h4>
+          <p>
+            RC Sindhri emerged in connection with PTY activities — a program designed to empower young
+            people through vocational skills, livelihood support, and entrepreneurship. This phase laid
+            the foundation for structured youth development activities at the center.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-item slide-up delay-2">
+        <div class="timeline-dot" aria-hidden="true">2</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 2 · Skills &amp; Livelihood Development</p>
+          <h4><i class="fa-solid fa-tools" style="color:#2e7d32;"></i> Skills &amp; Livelihood Development</h4>
+          <p>
+            Vocational and technical training was delivered across multiple trades — including
+            e-commerce, solar, mobile repairing, dress making, masonry, embroidery and beautician
+            services — reaching 240+ trainees in training years 2023 and 2025.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="timeline-item slide-up delay-3">
+        <div class="timeline-dot" aria-hidden="true">3</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 3 · Youth Group Formation</p>
+          <h4><i class="fa-solid fa-users" style="color:#2e7d32;"></i> Youth Groups</h4>
+          <p>
+            8 structured youth groups were established involving 175+ young people across UC Sindhri,
+            creating a network for peer engagement, leadership development, community activities,
+            and collective action within the union council.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="timeline-item slide-up delay-4">
+        <div class="timeline-dot" aria-hidden="true">4</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 4 · MANZIL</p>
+          <h4><i class="fa-solid fa-route" style="color:#1a2744;"></i> MANZIL Project</h4>
+          <p>
+            The MANZIL project expanded RC Sindhri's scope to include youth leadership, livelihood
+            and entrepreneurship support, employment facilitation, climate action awareness,
+            community engagement, and systematic documentation of community-level activities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 5 -->
+      <div class="timeline-item slide-up delay-5">
+        <div class="timeline-dot" aria-hidden="true">5</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 5 · Community Outreach</p>
+          <h4><i class="fa-solid fa-hands-holding-heart" style="color:#2e7d32;"></i> Community Outreach</h4>
+          <p>
+            A dedicated outreach program covering health awareness, vaccination mobilization, NADRA
+            MRV facilitation (approx. 300 beneficiaries), GBV awareness, 10+ stage drama performances,
+            20+ awareness sessions, and community dialogue across surrounding villages.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SKILLS TRAINING DASHBOARD
+     ================================================================ -->
+<section class="section bg-off-white" id="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Vocational Training</span>
+      <h2 id="skills-heading" class="slide-up">Skills That Create Opportunities</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">PTY Vocational Training — 240 Trainees across 7 trades (2023 &amp; 2025)</p>
+    </div>
+
+    <!-- Info strip -->
+    <div class="skills-info-strip slide-up delay-2">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <div>
+        <strong>PTY Vocational Training Program</strong>
+        <p style="color:rgba(255,255,255,.8);font-size:.85rem;margin:0;">
+          Training conducted in two years: 2023 and 2025 | Total: 240 trainees across 7 trades
+        </p>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+
+      <!-- E-Commerce -->
+      <div class="skill-card slide-up delay-1">
+        <span class="skill-icon"><i class="fa-solid fa-shop"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">E-Commerce</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Digital trade &amp; online marketing</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 15 Trainees
+        </span>
+      </div>
+
+      <!-- Beautician -->
+      <div class="skill-card slide-up delay-2">
+        <span class="skill-icon"><i class="fa-solid fa-spa"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Beautician</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Beauty &amp; grooming skills</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 25 Trainees
+        </span>
+      </div>
+
+      <!-- Dress Making -->
+      <div class="skill-card slide-up delay-3">
+        <span class="skill-icon"><i class="fa-solid fa-scissors"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Dress Making</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Tailoring &amp; garment construction</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 50 Trainees
+        </span>
+      </div>
+
+      <!-- Solar -->
+      <div class="skill-card slide-up delay-4">
+        <span class="skill-icon"><i class="fa-solid fa-solar-panel"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Solar</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Solar panel installation &amp; maintenance</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 50 Trainees
+        </span>
+      </div>
+
+      <!-- Mobile Repairing -->
+      <div class="skill-card slide-up delay-1">
+        <span class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Mobile Repairing</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Phone repair &amp; electronics</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 25 Trainees
+        </span>
+      </div>
+
+      <!-- Embroidery -->
+      <div class="skill-card slide-up delay-2">
+        <span class="skill-icon"><i class="fa-solid fa-pen-nib"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Embroidery</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Traditional &amp; modern embroidery</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 25 Trainees
+        </span>
+      </div>
+
+      <!-- Masonry -->
+      <div class="skill-card slide-up delay-3">
+        <span class="skill-icon"><i class="fa-solid fa-trowel-bricks"></i></span>
+        <h5 style="color:#212529;margin-bottom:.5rem;">Masonry</h5>
+        <p style="font-size:.8rem;color:#6c757d;margin-bottom:.75rem;">Construction &amp; building skills</p>
+        <span class="skill-count-badge">
+          <i class="fa-solid fa-user"></i> 50 Trainees
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Source badge & link -->
+    <div style="text-align:center;margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:center;" class="slide-up delay-4">
+      <span class="source-badge">
+        <i class="fa-solid fa-circle-info"></i>
+        🔵 RC Sindhri-provided information
+      </span>
+      <a href="pty.html#training" class="btn btn-ghost">
+        View Full Training Details <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SUCCESS STORIES PREVIEW
+     ================================================================ -->
+<section class="section bg-white" id="success" aria-labelledby="success-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Livelihood Impact</span>
+      <h2 id="success-heading" class="slide-up">From Training to Opportunity</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">Skills development at RC Sindhri has been connected with livelihood opportunities and self-employment</p>
+    </div>
+
+    <div class="success-grid">
+
+      <div class="success-box slide-up delay-1">
+        <span class="big-number">15<span style="font-size:2.5rem;">+</span></span>
+        <h4>Using Skills for Livelihood</h4>
+        <p style="font-size:.9rem;color:#495057;">
+          Trained individuals are using their acquired skills for income generation in their
+          communities. Areas include solar installation, electrical work, bike repairing, and other
+          vocational skills.
+        </p>
+        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;">
+          <span class="badge badge-green"><i class="fa-solid fa-solar-panel"></i> Solar</span>
+          <span class="badge badge-green"><i class="fa-solid fa-bolt"></i> Electrical</span>
+          <span class="badge badge-green"><i class="fa-solid fa-motorcycle"></i> Bike Repairing</span>
+          <span class="badge badge-green"><i class="fa-solid fa-tools"></i> Vocational</span>
+        </div>
+      </div>
+
+      <div class="success-box slide-up delay-2">
+        <span class="big-number">15<span style="font-size:2.5rem;">+</span></span>
+        <h4>Youth Entrepreneurs</h4>
+        <p style="font-size:.9rem;color:#495057;">
+          Individuals who have started their own businesses or income-generating activities following
+          vocational training at RC Sindhri — a direct measure of entrepreneurship development.
+        </p>
+        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;">
+          <span class="badge badge-orange"><i class="fa-solid fa-store"></i> Self-Employed</span>
+          <span class="badge badge-orange"><i class="fa-solid fa-shop"></i> Small Business</span>
+          <span class="badge badge-orange"><i class="fa-solid fa-seedling"></i> Enterprise</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer slide-up delay-3">
+      <strong>Note:</strong> Not all trainees are represented in livelihood data. These figures reflect
+      reported cases from RC Sindhri. Skills development has been connected with livelihood opportunities
+      and self-employment in the community.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     DEMO MANAGEMENT BODY
+     ================================================================ -->
+<section class="section bg-white" id="team" aria-labelledby="team-heading">
+  <div class="container">
+    <div class="section-header text-center" style="text-align:center;">
+      <span class="section-eyebrow">Organization Management</span>
+      <h2 id="team-heading" class="slide-up">RC Sindhri Management Body</h2>
+      <span class="section-divider"></span>
+      <div style="background:#fef3c7;border:1px solid #fde68a;color:#b45309;padding:10px 16px;border-radius:8px;font-weight:700;display:inline-block;margin-top:10px;font-size:0.88rem;">
+        ⚠️ DEMO TEAM — Replace with officially confirmed names before publication.
+      </div>
+      <p class="slide-up delay-1" style="margin-top:12px;color:#64748b;font-size:0.95rem;">
+        This section represents a website demo team structure with placeholder profiles.
+      </p>
+    </div>
+
+    <div class="team-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));gap:1.5rem;margin-top:2.5rem;">
+
+      <div class="team-card slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Ahsan Ahmed</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">President / صدر</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-2" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Sana Ali</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Vice President / نائب صدر</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-3" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-user-gear"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Imran Hussain</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">General Secretary</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-4" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Bilal Ahmed</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Treasurer</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Hina Khan</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Media Coordinator</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-2" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-users-line"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Salman Ali</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Youth Coordinator</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-3" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Rabia Ahmed</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Climate &amp; Community Coordinator</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+      <div class="team-card slide-up delay-4" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+          <i class="fa-solid fa-masks-theater"></i>
+        </div>
+        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Faisal Mangrio</h4>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Drama &amp; Cultural Coordinator</p>
+        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
+          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     COMMUNITY COVERAGE
+     ================================================================ -->
+<section class="section bg-off-white" id="communities" aria-labelledby="communities-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Geographic Reach</span>
+      <h2 id="communities-heading" class="slide-up">Our Communities</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">RC Sindhri serves 13 core villages across UC Sindhri and surrounding areas</p>
+    </div>
+
+    <div class="villages-grid">
+
+      <!-- Base village -->
+      <div class="village-card base-village slide-up delay-1" aria-label="RC Sindhri base village">
+        <div class="village-icon star" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+        <div>
+          <strong style="font-size:.9rem;color:#1a5c2e;">Village Haji Hamer Mangrio</strong>
+          <p style="font-size:.75rem;margin:0;color:#2e7d32;font-weight:600;">📍 RC Sindhri Base</p>
+        </div>
+      </div>
+
+      <!-- Other villages -->
+      <div class="village-card slide-up delay-1">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Mohammed Hassan Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Khameso Siyal</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Khani Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Qasim Hotel</strong>
+      </div>
+
+      <div class="village-card slide-up delay-1">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Abupota Paro</strong>
+      </div>
+
+      <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Bhel Paro</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Obhayo Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Mohammed Ali Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-1">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Essa Khan Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Lal Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Qadru Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Village Qaim Solangi</strong>
+      </div>
+
+    </div>
+
+    <!-- Additional note -->
+    <div style="text-align:center;margin-top:2rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;" class="fade-in delay-5">
+      <p style="color:#6c757d;font-size:.9rem;">
+        <i class="fa-solid fa-plus-circle" style="color:#2e7d32;"></i>
+        <strong>Additional surrounding villages</strong> also receive support through RC Sindhri's outreach activities
+      </p>
+      <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac"
+         class="map-btn"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Open RC Sindhri location in Google Maps">
+        <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SOCIAL MEDIA HUB
+     ================================================================ -->
+<section class="section bg-white" id="social" aria-labelledby="social-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Stay Connected</span>
+      <h2 id="social-heading" class="slide-up">Follow RC Sindhri</h2>
+      <span class="section-divider"></span>
+      <p class="slide-up delay-1">Follow our work, stories and community activities on social media</p>
+    </div>
+
+    <div class="social-grid">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1HuTKdDLkK/"
+         class="social-card facebook slide-up delay-1"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="RC Sindhri on Facebook">
+        <i class="fa-brands fa-facebook social-card-icon"></i>
+        <div class="social-card-name">Facebook</div>
+        <div class="social-card-handle">@RC.Sindhri</div>
+        <span class="btn btn-outline-white btn-sm">Follow Us</span>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/rc.sindhri"
+         class="social-card instagram slide-up delay-2"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="RC Sindhri on Instagram">
+        <i class="fa-brands fa-instagram social-card-icon"></i>
+        <div class="social-card-name">Instagram</div>
+        <div class="social-card-handle">@RC.Sindhri</div>
+        <span class="btn btn-outline-white btn-sm">Follow Us</span>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@RC.Sindhri"
+         class="social-card youtube slide-up delay-3"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="RC Sindhri on YouTube">
+        <i class="fa-brands fa-youtube social-card-icon"></i>
+        <div class="social-card-name">YouTube</div>
+        <div class="social-card-handle">@RC.Sindhri</div>
+        <span class="btn btn-outline-white btn-sm">Subscribe</span>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@rc.sindhri"
+         class="social-card tiktok slide-up delay-4"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="RC Sindhri on TikTok">
+        <i class="fa-brands fa-tiktok social-card-icon"></i>
+        <div class="social-card-name">TikTok</div>
+        <div class="social-card-handle">@RC.Sindhri</div>
+        <span class="btn btn-outline-white btn-sm">Follow Us</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CONTACT STRIP
+     ================================================================ -->
+<section class="contact-strip" id="contact-info" aria-label="Contact information">
+  <div class="container">
+    <div class="contact-strip-grid">
+
+      <div class="contact-item">
+        <div class="contact-item-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+        <div class="contact-item-text">
+          <p>Phone</p>
+          <a href="tel:+923130333736"><strong>03130333736</strong></a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-item-text">
+          <p>Email</p>
+          <a href="mailto:rcsindhri@gmail.com"><strong>rcsindhri@gmail.com</strong></a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="contact-item-text">
+          <p>Address</p>
+          <strong>Village Haji Hamer Mangrio, Taluka Sindhri, District Mirpur Khas, Sindh, Pakistan</strong>
+        </div>
+      </div>
+
+      <div class="contact-item" style="justify-content:flex-end;">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Column 1: Logo + About -->
+        <div>
+          <!-- Footer logo (text-based for dark bg) -->
+          <div style="margin-bottom:1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 55" width="200" height="50" aria-label="RC Sindhri">
+              <g transform="translate(4,5)">
+                <g stroke="#f5a623" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="22" y1="12" x2="22" y2="4"/>
+                  <line x1="22" y1="12" x2="13" y2="6"/>
+                  <line x1="22" y1="12" x2="7" y2="12"/>
+                  <line x1="22" y1="12" x2="31" y2="6"/>
+                  <line x1="22" y1="12" x2="37" y2="12"/>
+                </g>
+                <circle cx="22" cy="12" r="4" fill="#f5a623"/>
+                <rect x="19.5" y="30" width="5" height="9" rx="1.5" fill="#2e7d32"/>
+                <ellipse cx="22" cy="29" rx="12" ry="7" fill="#4caf50" opacity=".8"/>
+                <ellipse cx="22" cy="23" rx="9" ry="6" fill="#2e7d32"/>
+                <ellipse cx="22" cy="18" rx="6" ry="5" fill="#1a5c2e"/>
+              </g>
+              <g transform="translate(52,5)">
+                <text x="0" y="26" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="18" fill="#ffffff" letter-spacing="1.5">RC SINDHRI</text>
+                <text x="1" y="40" font-family="Arial,sans-serif" font-size="10" fill="#81c784" letter-spacing=".8">Rozgar Center Sindhri</text>
+                <rect x="0" y="29" width="140" height="2" rx="1" fill="#f5a623" opacity=".7"/>
+              </g>
+            </svg>
+          </div>
+          <p class="footer-desc">
+            A community-focused Rozgar Center working with young people and surrounding communities
+            in UC Sindhri through skills, livelihoods, leadership, awareness and outreach.
+          </p>
+          <span class="footer-tagline">From Youth Potential to Community Impact</span>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/share/1HuTKdDLkK/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/rc.sindhri" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@RC.Sindhri" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@rc.sindhri" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h5 class="footer-col-title">Quick Links</h5>
+          <nav class="footer-links" aria-label="Quick links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About RC Sindhri</a>
+            <a href="pty.html">Power to Youth (PTY)</a>
+            <a href="manzil.html">MANZIL</a>
+            <a href="outreach.html">Community Outreach</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Programs -->
+        <div>
+          <h5 class="footer-col-title">Programs</h5>
+          <nav class="footer-links" aria-label="Programs links">
+            <a href="pty.html#training">Skills Training</a>
+            <a href="pty.html#youth-groups">Youth Groups</a>
+            <a href="outreach.html#drama">Stage Drama</a>
+            <a href="outreach.html#gbv">GBV Awareness</a>
+            <a href="manzil.html#climate">Climate Action</a>
+            <a href="outreach.html#health">Health Outreach</a>
+            <a href="outreach.html#nadra">NADRA Facilitation</a>
+          </nav>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div>
+          <h5 class="footer-col-title">Contact Info</h5>
+          <div class="footer-contact-list">
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span><a href="tel:+923130333736">03130333736</a></span>
+            </div>
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span><a href="mailto:rcsindhri@gmail.com">rcsindhri@gmail.com</a></span>
+            </div>
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>
+                Village Haji Hamer Mangrio,<br>
+                UC Sindhri, Taluka Sindhri,<br>
+                District Mirpur Khas, Sindh, Pakistan
+              </span>
+            </div>
+
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>
+                <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac" target="_blank" rel="noopener noreferrer">
+                  View on Google Maps ↗
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom bar -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>
+          &copy; 2024–2025 RC Sindhri (Rozgar Center Sindhri) |
+          Village Haji Hamer Mangrio, UC Sindhri, District Mirpur Khas, Sindh, Pakistan
+        </p>
+        <p>
+          <i class="fa-solid fa-circle-info" style="color:#f5a623;"></i>
+          Website Demo — Contact information and statistics subject to official verification
+        </p>
+        <p class="footer-green-note">
+          RC Sindhri on social media: @RC.Sindhri (also known as Green Sindhri on social platforms)
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ----------------------------------------------------------------
+     1. MOBILE MENU TOGGLE
+     ---------------------------------------------------------------- */
+  const hamburger  = document.getElementById('hamburger');
+  const mobileNav  = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function () {
+      const isOpen = hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      mobileNav.classList.toggle('open', isOpen);
+      mobileNav.hidden = !isOpen;
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        mobileNav.hidden = true;
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        mobileNav.hidden = true;
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     2. DROPDOWN NAVIGATION (desktop)
+     ---------------------------------------------------------------- */
+  const navItems = document.querySelectorAll('.nav-item');
+
+  navItems.forEach(function (item) {
+    const dropdown = item.querySelector('.dropdown');
+    if (!dropdown) return;
+
+    const link = item.querySelector('.nav-link');
+    let closeTimer;
+
+    function openDropdown() {
+      clearTimeout(closeTimer);
+      item.classList.add('open');
+      if (link) link.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+      closeTimer = setTimeout(function () {
+        item.classList.remove('open');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      }, 150);
+    }
+
+    item.addEventListener('mouseenter', openDropdown);
+    item.addEventListener('mouseleave', closeDropdown);
+    dropdown.addEventListener('mouseenter', openDropdown);
+    dropdown.addEventListener('mouseleave', closeDropdown);
+
+    // Keyboard support
+    if (link) {
+      link.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const isOpen = item.classList.toggle('open');
+          link.setAttribute('aria-expanded', String(isOpen));
+        }
+        if (e.key === 'Escape') {
+          item.classList.remove('open');
+          link.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+
+  // Close all dropdowns when clicking outside
+  document.addEventListener('click', function (e) {
+    navItems.forEach(function (item) {
+      if (!item.contains(e.target)) {
+        item.classList.remove('open');
+        const link = item.querySelector('.nav-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  /* ----------------------------------------------------------------
+     3. STICKY HEADER SHADOW ON SCROLL
+     ---------------------------------------------------------------- */
+  const siteHeader = document.getElementById('site-header');
+  let lastScroll = 0;
+
+  function handleHeaderScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (siteHeader) {
+      siteHeader.classList.toggle('scrolled', currentScroll > 10);
+    }
+    lastScroll = currentScroll;
+  }
+
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
+
+  /* ----------------------------------------------------------------
+     4. INTERSECTION OBSERVER — ANIMATIONS (fade-in, slide-up, etc.)
+     ---------------------------------------------------------------- */
+  const animatedElements = document.querySelectorAll(
+    '.fade-in, .slide-up, .slide-in-left, .slide-in-right'
+  );
+
+  if ('IntersectionObserver' in window) {
+    const animObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            animObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    animatedElements.forEach(function (el) {
+      animObserver.observe(el);
+    });
+  } else {
+    // Fallback: show all immediately
+    animatedElements.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     5. COUNTER ANIMATION
+     ---------------------------------------------------------------- */
+  const counterElements = document.querySelectorAll('[data-target]');
+  let countersStarted = false;
+
+  function animateCounter(el) {
+    const target    = parseInt(el.getAttribute('data-target'), 10);
+    const prefix    = el.getAttribute('data-prefix') || '';
+    const suffix    = el.getAttribute('data-suffix') || '';
+    const duration  = 1800;
+    const stepTime  = 16;
+    const steps     = duration / stepTime;
+    const increment = target / steps;
+    let current     = 0;
+
+    const timer = setInterval(function () {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+    }, stepTime);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const statsSection = document.getElementById('impact');
+
+    if (statsSection) {
+      const statsObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !countersStarted) {
+              countersStarted = true;
+              counterElements.forEach(animateCounter);
+              statsObserver.disconnect();
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+      statsObserver.observe(statsSection);
+    }
+  } else {
+    counterElements.forEach(function (el) {
+      const prefix = el.getAttribute('data-prefix') || '';
+      const suffix = el.getAttribute('data-suffix') || '';
+      el.textContent = prefix + el.getAttribute('data-target') + suffix;
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     6. SMOOTH SCROLL FOR ANCHOR LINKS
+     ---------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
+        const announcementBanner = document.querySelector('.announcement-banner');
+        const bannerHeight = announcementBanner ? announcementBanner.offsetHeight : 0;
+        const offset = headerHeight + bannerHeight + 16;
+        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({ top: top, behavior: 'smooth' });
+
+        // Close mobile nav if open
+        if (hamburger && hamburger.classList.contains('open')) {
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          if (mobileNav) { mobileNav.classList.remove('open'); mobileNav.hidden = true; }
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  });
+
+  /* ----------------------------------------------------------------
+     7. ACTIVE NAV LINK HIGHLIGHTING (Scroll Spy)
+     ---------------------------------------------------------------- */
+  const sections = document.querySelectorAll('section[id], main > section[id]');
+  const navLinks = document.querySelectorAll('.nav-list .nav-link:not([aria-haspopup])');
+
+  const sectionMap = {
+    'home':           'index.html',
+    'impact':         'index.html',
+    'projects':       'index.html',
+    'about-preview':  'index.html',
+    'timeline':       'index.html',
+    'skills':         'index.html',
+    'success':        'index.html',
+    'communities':    'index.html',
+    'social':         'index.html',
+  };
+
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const spyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(function (link) {
+              link.classList.remove('active');
+              link.removeAttribute('aria-current');
+            });
+
+            // Highlight "Home" when on homepage sections
+            const homeLink = document.querySelector('.nav-list a[href="index.html"]');
+            if (homeLink && sectionMap[id] === 'index.html') {
+              homeLink.classList.add('active');
+              homeLink.setAttribute('aria-current', 'page');
+            }
+          }
+        });
+      },
+      { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
+    );
+
+    sections.forEach(function (sec) { spyObserver.observe(sec); });
+  }
+
+  /* ----------------------------------------------------------------
+     8. PROGRESS BAR ANIMATION (for any .progress-bar-fill elements)
+     ---------------------------------------------------------------- */
+  const progressBars = document.querySelectorAll('.progress-bar-fill');
+
+  if ('IntersectionObserver' in window && progressBars.length > 0) {
+    const progressObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const width = entry.target.getAttribute('data-width') || '0';
+            entry.target.style.width = width + '%';
+            progressObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    progressBars.forEach(function (bar) { progressObserver.observe(bar); });
+  }
+
+})();
+</script>
+
+<script src="lang-switcher.js"></script></body>
+</html>

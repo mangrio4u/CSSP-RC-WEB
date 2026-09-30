@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Education Awareness | RC Sindhri</title>
+  <meta name="description" content="Education awareness and community engagement activities conducted by RC Sindhri in UC Sindhri, Mirpur Khas, Sindh." />
+  <meta name="keywords" content="RC Sindhri Education, Education Awareness, Youth Education, Mirpur Khas, Sindh, Rozgar Center Sindhri" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231a5c2e'/><ellipse cx='16' cy='18' rx='7' ry='9' fill='%234caf50'/><ellipse cx='16' cy='13' rx='5' ry='7' fill='%232e7d32'/><rect x='14' y='24' width='4' height='5' rx='1' fill='%231a5c2e'/></svg>" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hero-bg-education {
+      background:
+        radial-gradient(ellipse 70% 60% at 15% 30%, rgba(76,175,80,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 85% 75%, rgba(13,27,42,.6) 0%, transparent 65%),
+        linear-gradient(155deg, #0d2b1a 0%, #1a5c2e 40%, #163d20 70%, #0d1b2a 100%);
+    }
+
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .source-badge.blue {
+      background: #dbeafe;
+      color: #1e40af;
+      border: 1px solid #93c5fd;
+    }
+
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .activities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 767.98px) {
+      .activities-grid { grid-template-columns: 1fr; }
+    }
+
+    .activity-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .activity-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .activity-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+
+    .activity-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .note-box {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 2.5rem;
+      color: #334155;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .drama-section {
+      background: linear-gradient(135deg, #f0fdf4, #e8f5e9);
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    @media (max-width: 767.98px) {
+      .drama-section { flex-direction: column; text-align: center; }
+    }
+
+    .key-message-box {
+      background: linear-gradient(135deg, #0d1b2a, #1a5c2e);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      margin-top: 4rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .key-message-quote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.4;
+      color: #f0fdf4;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Banner -->
+<div class="announcement-banner" role="banner" aria-label="Announcement">
+  🌱 RC Sindhri is actively working with youth and communities in UC Sindhri — Education Awareness &amp; Youth Empowerment
+  &nbsp;|&nbsp;
+  <a href="mailto:rcsindhri@gmail.com">rcsindhri@gmail.com</a>
+  &nbsp;|&nbsp;
+  <a href="tel:+923130333736">03130333736</a>
+</div>
+
+<!-- Navigation Header -->
+<header class="site-header" id="site-header" role="banner">
+  <nav class="nav-inner" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="RC Sindhri — Home">
+      <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="RC Sindhri Logo">
+        <g transform="translate(6,8)">
+          <g stroke="#f5a623" stroke-width="2" stroke-linecap="round">
+            <line x1="30" y1="16" x2="30" y2="5"/>
+            <line x1="30" y1="16" x2="17" y2="7"/>
+            <line x1="30" y1="16" x2="11" y2="16"/>
+            <line x1="30" y1="16" x2="43" y2="7"/>
+            <line x1="30" y1="16" x2="49" y2="16"/>
+          </g>
+          <circle cx="30" cy="16" r="5" fill="#f5a623"/>
+          <rect x="27" y="42" width="6" height="11" rx="2" fill="#2e7d32"/>
+          <ellipse cx="30" cy="40" rx="16" ry="9" fill="#4caf50" opacity=".8"/>
+          <ellipse cx="30" cy="33" rx="12" ry="8" fill="#2e7d32"/>
+          <ellipse cx="30" cy="27" rx="8" ry="6" fill="#1a5c2e"/>
+          <g transform="translate(14,51)">
+            <path d="M0,5 Q8,3 16,5 L16,13 Q8,11 0,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <path d="M16,5 Q24,3 32,5 L32,13 Q24,11 16,13 Z" fill="#fff" stroke="#2e7d32" stroke-width=".9"/>
+            <line x1="16" y1="5" x2="16" y2="13" stroke="#2e7d32" stroke-width="1.4"/>
+          </g>
+        </g>
+        <g transform="translate(76,0)">
+          <text x="0" y="38" font-family="'Arial Black',Arial,sans-serif" font-weight="900" font-size="24" fill="#ffffff" letter-spacing="2">RC SINDHRI</text>
+          <text x="2" y="56" font-family="Arial,sans-serif" font-weight="500" font-size="12" fill="#81c784" letter-spacing="1">Rozgar Center Sindhri</text>
+          <rect x="0" y="41" width="176" height="2.5" rx="1.5" fill="#f5a623" opacity=".8"/>
+        </g>
+      </svg>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item" role="none">
+        <a href="#projects" class="nav-link" aria-haspopup="true" aria-expanded="false">
+          Projects <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Projects submenu">
+          <li><a href="pty.html" role="menuitem"><i class="fa-solid fa-bolt" style="color:#2e7d32;width:20px"></i> Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" role="menuitem"><i class="fa-solid fa-route" style="color:#1a2744;width:20px"></i> MANZIL</a></li>
+          <li><a href="outreach.html" role="menuitem"><i class="fa-solid fa-hands-helping" style="color:#4caf50;width:20px"></i> Community Outreach</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none">
+        <a href="#programs" class="nav-link active" aria-haspopup="true" aria-expanded="false">
+          Programs <i class="fa-solid fa-chevron-down arrow"></i>
+        </a>
+        <ul class="dropdown" role="menu" aria-label="Programs submenu">
+          <li><a href="pty.html#training" role="menuitem"><i class="fa-solid fa-tools" style="color:#2e7d32;width:20px"></i> Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" role="menuitem"><i class="fa-solid fa-users" style="color:#2e7d32;width:20px"></i> Youth Groups</a></li>
+          <li><a href="education.html#programs" role="menuitem"><i class="fa-solid fa-book-open" style="color:#2e7d32;width:20px"></i> Education Awareness</a></li>
+          <li><a href="outreach.html#drama" role="menuitem"><i class="fa-solid fa-theater-masks" style="color:#2e7d32;width:20px"></i> Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" role="menuitem"><i class="fa-solid fa-shield-halved" style="color:#2e7d32;width:20px"></i> GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" role="menuitem"><i class="fa-solid fa-leaf" style="color:#2e7d32;width:20px"></i> Climate Action</a></li>
+          <li><a href="outreach.html#health" role="menuitem"><i class="fa-solid fa-heart-pulse" style="color:#2e7d32;width:20px"></i> Health Outreach</a></li>
+          <li><a href="outreach.html#nadra" role="menuitem"><i class="fa-solid fa-id-card" style="color:#2e7d32;width:20px"></i> NADRA Facilitation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="reports.html" class="nav-link">Reports</a></li>
+      <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link nav-cta">
+          <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+  <ul class="mobile-nav-list" role="list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-info-circle"></i> About RC Sindhri</a></li>
+    <div class="mobile-nav-group-title">Projects</div>
+    <div class="mobile-nav-sub">
+      <li><a href="pty.html"><i class="fa-solid fa-bolt"></i> Power to Youth (PTY)</a></li>
+      <li><a href="manzil.html"><i class="fa-solid fa-route"></i> MANZIL</a></li>
+      <li><a href="outreach.html"><i class="fa-solid fa-hands-helping"></i> Community Outreach</a></li>
+    </div>
+    <div class="mobile-nav-group-title">Programs</div>
+    <div class="mobile-nav-sub">
+      <li><a href="education.html#programs"><i class="fa-solid fa-book-open"></i> Education Awareness</a></li>
+      <li><a href="reports.html"><i class="fa-solid fa-file-contract"></i> Reports &amp; Documents</a></li>
+      <li><a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    </div>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero hero-bg-education" style="padding: 4.5rem 1rem 4rem; color: #fff; text-align: center;">
+  <div class="container">
+    <span class="badge" style="background: rgba(255,255,255,0.15); color: #81c784; margin-bottom: 1rem; padding: 6px 16px; border-radius: 20px; font-weight: 600;">
+      <i class="fa-solid fa-graduation-cap"></i> Community Upliftment
+    </span>
+    <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem; color: #ffffff;">
+      Education &amp; Awareness
+    </h1>
+    <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 720px; margin: 0 auto; color: #e2e8f0; opacity: 0.95;">
+      Empowering Communities Through Knowledge &amp; Educational Engagement in UC Sindhri
+    </p>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main class="section" style="padding: 4rem 0; background: #f8fafc;">
+  <div class="container">
+
+    <!-- Section 1: About Education Activities -->
+    <div id="about" style="background: #ffffff; border-radius: 16px; padding: 2.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 14px rgba(0,0,0,0.04); margin-bottom: 3rem;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <h2 style="font-size: 1.75rem; color: #0f172a; margin: 0; font-weight: 700;">
+          About Education Activities
+        </h2>
+        <span class="source-badge blue">
+          <i class="fa-solid fa-circle-info"></i> RC Sindhri-provided
+        </span>
+      </div>
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7; margin: 0;">
+        RC Sindhri conducts education awareness activities as part of its community development work. These activities aim to promote the importance of education among youth, families and communities in UC Sindhri and surrounding areas.
+      </p>
+    </div>
+
+    <!-- Section 2: Education Activities / Programs Anchor Target -->
+    <div id="programs">
+      <h2 style="font-size: 1.75rem; color: #0f172a; margin-bottom: 0.5rem; font-weight: 700;">
+        Confirmed Education Initiatives
+      </h2>
+      <p style="color: #64748b; margin-bottom: 1.5rem;">Key awareness &amp; engagement streams active across UC Sindhri</p>
+
+      <div class="activities-grid">
+        <!-- Activity 1 -->
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="activity-title">Education Awareness Sessions</h3>
+          <p class="activity-desc">
+            RC Sindhri has conducted education awareness sessions in communities, promoting the value and importance of education.
+          </p>
+          <span class="source-badge blue">
+            <i class="fa-solid fa-circle-info"></i> RC Sindhri-provided
+          </span>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3 class="activity-title">School / Community Meetings</h3>
+          <p class="activity-desc">
+            School and community meetings have been held to engage parents, teachers and community members on education topics.
+          </p>
+          <span class="source-badge blue">
+            <i class="fa-solid fa-circle-info"></i> RC Sindhri-provided
+          </span>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-card">
+          <div class="activity-icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <h3 class="activity-title">Youth Education Activities</h3>
+          <p class="activity-desc">
+            Youth groups have been engaged in education-related activities, including awareness and promotion of continuing education.
+          </p>
+          <span class="source-badge blue">
+            <i class="fa-solid fa-circle-info"></i> RC Sindhri-provided
+          </span>
+        </div>
+      </div>
+
+      <!-- Note Box -->
+      <div class="note-box">
+        <i class="fa-solid fa-circle-exclamation" style="color: #3b82f6; margin-right: 8px;"></i>
+        <strong>Documentation Note:</strong> RC Sindhri's education activities focus on awareness. Information is based on RC Sindhri-provided data. No specific session numbers are claimed beyond general activity confirmation.
+      </div>
+    </div>
+
+    <!-- Section 3: Stage Drama & Education -->
+    <div id="drama" class="drama-section">
+      <div>
+        <h3 style="font-size: 1.5rem; color: #166534; font-weight: 700; margin-bottom: 0.75rem;">
+          <i class="fa-solid fa-theater-masks"></i> Stage Drama &amp; Education
+        </h3>
+        <p style="color: #365314; font-size: 1rem; line-height: 1.6; margin: 0; max-width: 650px;">
+          RC Sindhri's Stage Drama team has performed on education themes, using theatre to communicate messages about the importance of education.
+        </p>
+      </div>
+      <a href="outreach.html#drama" class="btn" style="background: #2e7d32; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;">
+        View Stage Drama Team <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- Section 4: Key Message -->
+    <div id="message" class="key-message-box">
+      <div style="font-size: 2.5rem; color: #81c784; margin-bottom: 1rem;">
+        <i class="fa-solid fa-quote-left"></i>
+      </div>
+      <div class="key-message-quote">
+        "Education is the foundation of community development. RC Sindhri promotes education awareness as part of its commitment to youth and community upliftment."
+      </div>
+      <p style="color: #a7f3d0; font-size: 0.95rem; margin-top: 1rem; font-weight: 500;">
+        — RC Sindhri Community &amp; Youth Initiative
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- Shared Footer -->
+<footer class="site-footer" style="background: #0d1b2a; color: #cbd5e1; padding: 4rem 0 2rem; margin-top: 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem;">
+      <!-- Col 1 -->
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">RC Sindhri</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; margin-bottom: 1rem;">
+          Rozgar Center Sindhri — Empowering youth and communities in UC Sindhri, Mirpur Khas through skills, leadership, and development.
+        </p>
+        <p style="font-size: 0.85rem; color: #81c784; font-style: italic;">
+          "From Youth Potential to Community Impact"
+        </p>
+      </div>
+
+      <!-- Col 2 -->
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="index.html" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+          <li><a href="pty.html" style="color: #cbd5e1; text-decoration: none;">Power to Youth (PTY)</a></li>
+          <li><a href="manzil.html" style="color: #cbd5e1; text-decoration: none;">MANZIL</a></li>
+          <li><a href="outreach.html" style="color: #cbd5e1; text-decoration: none;">Community Outreach</a></li>
+          <li><a href="reports.html" style="color: #cbd5e1; text-decoration: none;">Reports &amp; Documents</a></li>
+          <li><a href="gallery.html" style="color: #cbd5e1; text-decoration: none;">Gallery</a></li>
+          <li><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Programs</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 2;">
+          <li><a href="pty.html#training" style="color: #cbd5e1; text-decoration: none;">Skills Training</a></li>
+          <li><a href="pty.html#youth-groups" style="color: #cbd5e1; text-decoration: none;">Youth Groups</a></li>
+          <li><a href="education.html#programs" style="color: #cbd5e1; text-decoration: none;">Education Awareness</a></li>
+          <li><a href="outreach.html#drama" style="color: #cbd5e1; text-decoration: none;">Stage Drama</a></li>
+          <li><a href="outreach.html#gbv" style="color: #cbd5e1; text-decoration: none;">GBV Awareness</a></li>
+          <li><a href="manzil.html#climate" style="color: #cbd5e1; text-decoration: none;">Climate Action</a></li>
+          <li><a href="outreach.html#health" style="color: #cbd5e1; text-decoration: none;">Health Outreach</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div>
+        <h4 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 1rem;">Contact Info</h4>
+        <p style="font-size: 0.9rem; line-height: 1.8; color: #94a3b8;">
+          <i class="fa-solid fa-location-dot" style="color: #4caf50; width: 20px;"></i> Village Haji Hamer Mangrio, Taluka Sindhri, District Mirpur Khas, Sindh, Pakistan<br />
+          <i class="fa-solid fa-envelope" style="color: #4caf50; width: 20px;"></i> rcsindhri@gmail.com<br />
+          <i class="fa-solid fa-phone" style="color: #4caf50; width: 20px;"></i> 03130333736
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div style="border-top: 1px solid #1e293b; padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #64748b;">
+      <p style="margin: 0;">&copy; 2024-2025 RC Sindhri (Rozgar Center Sindhri) | Website Demo</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Hamburger Toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      mobileNav.hidden = expanded;
+    });
+  }
+
+  // Sticky Header Shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+<script src="lang-switcher.js"></script></body>
+</html>
