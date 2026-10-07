@@ -310,6 +310,7 @@
         <li class="nav-item"><a href="gallery.html" class="nav-link active" aria-current="page">Gallery</a></li>
         <li class="nav-item"><a href="reports.html" class="nav-link">Reports</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link nav-cta"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li class="nav-item"><a href="admin/login.html" class="nav-link nav-admin" title="Admin Portal"><i class="fa-solid fa-shield-halved"></i> Admin</a></li>
       </ul>
 
       <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation">
@@ -333,17 +334,27 @@
       <li><a href="gallery.html" style="color:#4caf50;font-weight:700;font-size:1.1rem;display:block;padding:0.75rem 0;">Gallery</a></li>
       <li><a href="reports.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Reports</a></li>
       <li><a href="contact.html" style="color:#fff;font-size:1.1rem;display:block;padding:0.75rem 0;">Contact</a></li>
+      <li style="margin-top:0.75rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:0.75rem;">
+        <a href="admin/login.html" style="color:#a5d6a7;font-weight:600;font-size:1.1rem;display:flex;align-items:center;gap:0.5rem;padding:0.75rem 0;">
+          <i class="fa-solid fa-shield-halved"></i> Admin Portal
+        </a>
+      </li>
     </ul>
   </div>
 
   <!-- Hero Header -->
-  <section style="background: linear-gradient(135deg, #0d1b2a 0%, #1a5c2e 100%); color:#fff; padding: 4rem 1rem; text-align:center;">
-    <div class="container">
-      <span class="badge" style="background:rgba(76,175,80,0.2); color:#81c784; border:1px solid #4caf50; padding:4px 14px; border-radius:20px; font-size:0.85rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;">Visual Documentation</span>
-      <h1 style="font-size: clamp(2rem, 4vw, 3rem); font-family:'Playfair Display', serif; margin:1rem 0 0.5rem; font-weight:800;">RC Sindhri Activity Gallery</h1>
-      <p style="max-width:700px; margin:0 auto; color:#e2e8f0; font-size:1.1rem;">
+  <section style="background: linear-gradient(135deg, #0d1b2a 0%, #1a5c2e 100%); color:#fff; padding: 4.5rem 1rem 4rem; text-align:center; position: relative; z-index: 2;">
+    <div class="container" style="position: relative; z-index: 4;">
+      <span class="badge" style="background:rgba(76,175,80,0.25); color:#a5d6a7; border:1px solid #4caf50; padding:6px 16px; border-radius:20px; font-size:0.85rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; display: inline-block;">Visual Documentation</span>
+      <h1 style="font-size: clamp(2rem, 4.5vw, 3.2rem); font-family:'Playfair Display', serif; margin:1rem 0 0.75rem; font-weight:800; color:#ffffff; text-shadow: 0 2px 12px rgba(0,0,0,0.7);">RC Sindhri Activity Gallery</h1>
+      <p style="max-width:760px; margin:0 auto 1.5rem; color:#ffffff; font-size:1.15rem; line-height: 1.6; text-shadow: 0 1px 8px rgba(0,0,0,0.6);">
         Documenting youth development, vocational skill trainings, community outreach, climate action, stage drama performances, and health mobilization across UC Sindhri.
       </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a href="upload-photo.html" class="btn btn-primary" style="background:#f5a623; color:#0d1b2a; font-weight:700; border-radius:30px; padding:0.6rem 1.4rem; display:inline-flex; align-items:center; gap:0.5rem; box-shadow:0 4px 14px rgba(245,166,35,0.4);"><i class="fa-solid fa-cloud-arrow-up"></i> Submit Your Activity Photo</a>
+        <a href="#gallery-masonry" class="btn btn-outline" style="color:#ffffff; border-color:rgba(255,255,255,0.4); border-radius:30px; padding:0.6rem 1.4rem; display:inline-flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-images"></i> Explore Gallery</a>
+        <a href="admin/login.html" class="btn btn-outline" style="color:#81c784; border-color:rgba(129,199,132,0.45); background:rgba(0,0,0,0.25); border-radius:30px; padding:0.6rem 1.4rem; display:inline-flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</a>
+      </div>
     </div>
   </section>
 
@@ -523,22 +534,22 @@
 
         <!-- 8: NADRA MRV Facilitation -->
         <div class="gallery-card" data-category="nadra">
-          <div class="gallery-img-container" onclick="openLightbox('NADRA Mobile Registration Van Facilitation', 'RC Sindhri community mobilization facilitating ~300 residents for NIC processing.', 'nadra')">
+          <div class="gallery-img-container" onclick="openLightbox('NADRA Mobile Registration Van Facilitation', 'RC Sindhri community mobilization facilitating 400 tokens and 160 NIC cards processed across 2 days.', 'nadra')">
             <svg viewBox="0 0 400 250">
               <rect width="400" height="250" fill="#1e1b4b"/>
               <rect x="60" y="60" width="280" height="110" fill="#312e81" stroke="#818cf8" stroke-width="3" rx="10"/>
               <circle cx="120" cy="170" r="22" fill="#0f172a" stroke="#818cf8" stroke-width="3"/>
               <circle cx="280" cy="170" r="22" fill="#0f172a" stroke="#818cf8" stroke-width="3"/>
               <text x="200" y="115" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">NADRA MRV Mobile Unit</text>
-              <text x="200" y="215" fill="#c7d2fe" font-size="13" text-anchor="middle">~300 Citizens Facilitated</text>
+              <text x="200" y="215" fill="#c7d2fe" font-size="13" text-anchor="middle">160 NICs Processed (400 Tokens)</text>
             </svg>
             <span class="gallery-tag">NADRA Facilitation</span>
           </div>
           <div class="gallery-body">
-            <h3 class="gallery-title">NADRA Mobile Van (300 Approx. NICs)</h3>
-            <p class="gallery-desc">Community mobilization campaign enabling women, elderly, and rural residents across 13 core + 15 surrounding villages to get identity cards.</p>
+            <h3 class="gallery-title">NADRA Mobile Van (160 NICs Processed)</h3>
+            <p class="gallery-desc">Community mobilization campaign enabling women, elderly, and rural residents across 18 covered villages to get identity cards (400 tokens issued across 2 days).</p>
             <div class="gallery-meta">
-              <span><i class="fa-solid fa-id-card"></i> 300 Approx. NICs</span>
+              <span><i class="fa-solid fa-id-card"></i> 160 NICs Processed</span>
               <span><i class="fa-solid fa-check-circle" style="color:#4caf50;"></i> Verified</span>
             </div>
           </div>
@@ -681,6 +692,7 @@
             <li><a href="outreach.html" style="color:#cbd5e1;">Community Outreach</a></li>
             <li><a href="reports.html" style="color:#cbd5e1;">Reports &amp; Source Verification</a></li>
             <li><a href="contact.html" style="color:#cbd5e1;">Contact &amp; Google Map Location</a></li>
+            <li><a href="admin/login.html" style="color:#81c784; font-weight:600;"><i class="fa-solid fa-lock"></i> Admin Panel Login</a></li>
           </ul>
         </div>
 
@@ -695,8 +707,13 @@
         </div>
       </div>
 
-      <div style="border-top:1px solid rgba(255,255,255,0.1); margin-top:2.5rem; padding-top:1.5rem; text-align:center; color:#94a3b8; font-size:0.85rem;">
-        &copy; 2026 RC Sindhri (Rozgar Center Sindhri). All rights reserved. &nbsp;|&nbsp; RC Sindhri official identity.
+      <div style="border-top:1px solid rgba(255,255,255,0.1); margin-top:2.5rem; padding-top:1.5rem; text-align:center; color:#94a3b8; font-size:0.85rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>&copy; 2026 RC Sindhri (Rozgar Center Sindhri). All rights reserved.</div>
+        <div>
+          <a href="admin/login.html" class="btn btn-outline" style="color:#81c784; border-color:rgba(129,199,132,0.4); font-size:0.8rem; padding:0.35rem 0.85rem; border-radius:20px;">
+            <i class="fa-solid fa-shield-halved"></i> Admin Portal
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -704,43 +721,97 @@
   <!-- Filter & Lightbox JS Script -->
   <script>
     // Filter Pills Logic
-    const filterPills = document.querySelectorAll('.filter-pill');
-    const galleryCards = document.querySelectorAll('.gallery-card');
+    function setupFilterListeners() {
+      const filterPills = document.querySelectorAll('.filter-pill');
+      const galleryCards = document.querySelectorAll('.gallery-card');
 
-    filterPills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        filterPills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
+      filterPills.forEach(pill => {
+        pill.onclick = () => {
+          filterPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
 
-        const filter = pill.getAttribute('data-filter');
+          const filter = pill.getAttribute('data-filter');
 
-        galleryCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+          document.querySelectorAll('.gallery-card').forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (filter === 'all' || cardCat === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        };
       });
-    });
+    }
 
     // Lightbox Logic
-    function openLightbox(title, desc, category) {
+    function openLightbox(title, desc, category, imageUrl = null) {
       document.getElementById('lightbox-title').innerText = title;
       document.getElementById('lightbox-desc').innerText = desc;
-      document.getElementById('lightbox-tag').innerText = category.toUpperCase() + ' PROGRAM';
-      document.getElementById('lightbox-img-wrap').innerHTML = `
-        <div style="text-align:center; color:#ffffff;">
-          <i class="fa-solid fa-image" style="font-size:4rem; color:#4caf50; margin-bottom:1rem;"></i>
-          <h4 style="font-size:1.2rem;">${title}</h4>
-          <p style="color:#cbd5e1; font-size:0.9rem;">Official Activity Record — UC Sindhri</p>
-        </div>
-      `;
+      document.getElementById('lightbox-tag').innerText = (category || 'COMMUNITY').toUpperCase() + ' PROGRAM';
+      
+      const wrap = document.getElementById('lightbox-img-wrap');
+      if (imageUrl) {
+        wrap.innerHTML = `<img src="${imageUrl}" style="max-height:100%; max-width:100%; object-fit:contain;" alt="${title}" />`;
+      } else {
+        wrap.innerHTML = `
+          <div style="text-align:center; color:#ffffff;">
+            <i class="fa-solid fa-image" style="font-size:4rem; color:#4caf50; margin-bottom:1rem;"></i>
+            <h4 style="font-size:1.2rem;">${title}</h4>
+            <p style="color:#cbd5e1; font-size:0.9rem;">Official Activity Record — UC Sindhri</p>
+          </div>
+        `;
+      }
       document.getElementById('lightbox-modal').classList.add('active');
     }
 
     function closeLightbox() {
       document.getElementById('lightbox-modal').classList.remove('active');
+    }
+
+    // Dynamic Live Gallery Fetch
+    async function fetchLiveGallery() {
+      try {
+        const res = await fetch('/api/gallery');
+        if (!res.ok) return;
+        const data = await res.json();
+        
+        if (data.photos && data.photos.length > 0) {
+          const masonry = document.getElementById('gallery-masonry');
+          
+          data.photos.forEach(photo => {
+            const slug = photo.album_slug || 'community';
+            const card = document.createElement('div');
+            card.className = 'gallery-card';
+            card.setAttribute('data-category', slug);
+            
+            const thumbUrl = photo.image_url || photo.thumbnail_url;
+            const titleSafe = (photo.title || 'RC Sindhri Activity').replace(/'/g, "\\'");
+            const descSafe = (photo.description || 'Community outreach activity in UC Sindhri').replace(/'/g, "\\'");
+            
+            card.innerHTML = `
+              <div class="gallery-img-container" onclick="openLightbox('${titleSafe}', '${descSafe}', '${slug}', '${photo.image_url}')">
+                <img src="${thumbUrl}" alt="${photo.title}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+                <span class="gallery-tag">${photo.album_title || 'RC Sindhri'}</span>
+              </div>
+              <div class="gallery-body">
+                <h3 class="gallery-title">${photo.title}</h3>
+                <p class="gallery-desc">${photo.description || 'Community activity recorded in UC Sindhri, Mirpur Khas.'}</p>
+                <div class="gallery-meta">
+                  <span><i class="fa-solid fa-location-dot"></i> ${photo.location || 'UC Sindhri'}</span>
+                  <span><i class="fa-solid fa-circle-check" style="color:#4caf50;"></i> Official</span>
+                </div>
+              </div>
+            `;
+            // Prepend new live photos at the top of the gallery
+            masonry.insertBefore(card, masonry.firstChild);
+          });
+        }
+      } catch (err) {
+        console.warn('Live gallery sync notice:', err);
+      } finally {
+        setupFilterListeners();
+      }
     }
 
     // Mobile Drawer Navigation
@@ -767,6 +838,11 @@
         });
       }
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupFilterListeners();
+      fetchLiveGallery();
+    });
   </script>
 <script src="lang-switcher.js"></script></body>
 </html>

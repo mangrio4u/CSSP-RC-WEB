@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/admin/login", "destination": "/admin/login.html" },
+    { "source": "/admin/submissions", "destination": "/admin/submissions.html" },
+    { "source": "/admin/albums", "destination": "/admin/albums.html" },
+    { "source": "/admin/photos", "destination": "/admin/photos.html" },
+    { "source": "/admin/settings", "destination": "/admin/settings.html" },
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/upload-photo", "destination": "/upload-photo.html" }
+  ],
+  "headers": [
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}

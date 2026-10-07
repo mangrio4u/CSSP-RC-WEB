@@ -59,6 +59,7 @@
     .stat-card:nth-child(6) { border-left-color: #1a2744; }
     .stat-card:nth-child(7) { border-left-color: #81c784; }
     .stat-card:nth-child(8) { border-left-color: #f5a623; }
+    .stat-card:nth-child(9) { border-left-color: #2e7d32; }
 
     /* ---- Feature project cards grid ---- */
     .projects-grid {
@@ -278,7 +279,7 @@
       </li>
       <!-- Programs dropdown -->
       <li class="nav-item" role="none">
-        <a href="#programs" class="nav-link" aria-haspopup="true" aria-expanded="false">
+        <a href="programs.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
           Programs <i class="fa-solid fa-chevron-down arrow"></i>
         </a>
         <ul class="dropdown" role="menu" aria-label="Programs submenu">
@@ -297,6 +298,11 @@
       <li class="nav-item">
         <a href="contact.html" class="nav-link nav-cta">
           <i class="fa-solid fa-envelope"></i> Contact Us
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="admin/login.html" class="nav-link nav-admin" title="Admin Portal">
+          <i class="fa-solid fa-shield-halved"></i> Admin
         </a>
       </li>
     </ul>
@@ -331,6 +337,11 @@
     </div>
     <li><a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
     <li><a href="contact.html" style="color:#81c784;font-weight:700;"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    <li style="margin-top:0.75rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:0.75rem;">
+      <a href="admin/login.html" style="color:#a5d6a7; font-weight:600; display:flex; align-items:center; gap:0.5rem;">
+        <i class="fa-solid fa-shield-halved"></i> Admin Portal
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -426,14 +437,14 @@
       <!-- 3 -->
       <div class="stat-card slide-up delay-3" role="listitem">
         <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
-        <span class="stat-card-number" data-target="175" data-suffix="+">0</span>
+        <span class="stat-card-number" data-target="200">0</span>
         <span class="stat-card-label">Youth Members</span>
       </div>
 
       <!-- 4 -->
       <div class="stat-card slide-up delay-4" role="listitem">
         <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
-        <span class="stat-card-number" data-target="20" data-suffix="+">0</span>
+        <span class="stat-card-number" data-target="50" data-suffix="+">0</span>
         <span class="stat-card-label">Awareness Sessions</span>
       </div>
 
@@ -447,8 +458,8 @@
       <!-- 6 -->
       <div class="stat-card slide-up delay-2" role="listitem">
         <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-id-card"></i></span>
-        <span class="stat-card-number" data-prefix="~" data-target="300">0</span>
-        <span class="stat-card-label">NIC Facilitation (approx.)</span>
+        <span class="stat-card-number" data-target="160">0</span>
+        <span class="stat-card-label">NIC Cards Processed</span>
       </div>
 
       <!-- 7 -->
@@ -465,12 +476,19 @@
         <span class="stat-card-label">Youth Entrepreneurs</span>
       </div>
 
+      <!-- 9 -->
+      <div class="stat-card slide-up delay-1" role="listitem">
+        <span class="stat-card-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></span>
+        <span class="stat-card-number" data-target="18">0</span>
+        <span class="stat-card-label">Villages Covered</span>
+      </div>
+
     </div>
     <!-- Source note -->
     <p style="text-align:center;margin-top:1.5rem;" class="fade-in delay-5">
       <span class="source-badge green">
         <i class="fa-solid fa-circle-info"></i>
-        Figures based on RC Sindhri-provided information
+        Figures are based on RC Sindhri-provided records and documented community activities. Where activities involved government departments or partner organizations, RC Sindhri's role was community mobilization, facilitation, advocacy and participation.
       </span>
     </p>
   </div>
@@ -658,7 +676,7 @@
             <div class="phase-icon"><i class="fa-solid fa-users"></i></div>
             <div>
               <h5 style="color:#1a5c2e;font-size:.95rem;">Youth Groups</h5>
-              <p style="font-size:.85rem;margin-top:.25rem;">8 active youth groups involving 175+ young people across UC Sindhri</p>
+              <p style="font-size:.85rem;margin-top:.25rem;">8 active youth groups with 200 young people (25 per group, including 2 girls' groups) across UC Sindhri</p>
             </div>
           </div>
 
@@ -703,7 +721,21 @@
       <div class="timeline-item slide-up delay-1">
         <div class="timeline-dot" aria-hidden="true">1</div>
         <div class="timeline-content">
-          <p class="timeline-phase">Phase 1 · Power to Youth (PTY)</p>
+          <p class="timeline-phase">Phase 1 · Community Outreach</p>
+          <h4><i class="fa-solid fa-hands-holding-heart" style="color:#2e7d32;"></i> Community Outreach</h4>
+          <p>
+            A dedicated outreach program covering health awareness, vaccination mobilization, NADRA
+            MRV facilitation (160 NIC cards processed across 400 tokens), GBV awareness, 10 stage drama performances,
+            50+ awareness sessions, and community dialogue across 18 villages.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-item slide-up delay-2">
+        <div class="timeline-dot" aria-hidden="true">2</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 2 · Power to Youth (PTY)</p>
           <h4><i class="fa-solid fa-bolt" style="color:#f5a623;"></i> Power to Youth (PTY)</h4>
           <p>
             RC Sindhri emerged in connection with PTY activities — a program designed to empower young
@@ -713,11 +745,11 @@
         </div>
       </div>
 
-      <!-- Phase 2 -->
-      <div class="timeline-item slide-up delay-2">
-        <div class="timeline-dot" aria-hidden="true">2</div>
+      <!-- Phase 3 -->
+      <div class="timeline-item slide-up delay-3">
+        <div class="timeline-dot" aria-hidden="true">3</div>
         <div class="timeline-content">
-          <p class="timeline-phase">Phase 2 · Skills &amp; Livelihood Development</p>
+          <p class="timeline-phase">Phase 3 · Skills &amp; Livelihood Development</p>
           <h4><i class="fa-solid fa-tools" style="color:#2e7d32;"></i> Skills &amp; Livelihood Development</h4>
           <p>
             Vocational and technical training was delivered across multiple trades — including
@@ -727,25 +759,25 @@
         </div>
       </div>
 
-      <!-- Phase 3 -->
-      <div class="timeline-item slide-up delay-3">
-        <div class="timeline-dot" aria-hidden="true">3</div>
-        <div class="timeline-content">
-          <p class="timeline-phase">Phase 3 · Youth Group Formation</p>
-          <h4><i class="fa-solid fa-users" style="color:#2e7d32;"></i> Youth Groups</h4>
-          <p>
-            8 structured youth groups were established involving 175+ young people across UC Sindhri,
-            creating a network for peer engagement, leadership development, community activities,
-            and collective action within the union council.
-          </p>
-        </div>
-      </div>
-
       <!-- Phase 4 -->
       <div class="timeline-item slide-up delay-4">
         <div class="timeline-dot" aria-hidden="true">4</div>
         <div class="timeline-content">
-          <p class="timeline-phase">Phase 4 · MANZIL</p>
+          <p class="timeline-phase">Phase 4 · Youth Group Formation</p>
+          <h4><i class="fa-solid fa-users" style="color:#2e7d32;"></i> Youth Groups</h4>
+          <p>
+            8 structured youth groups were established with 200 young people across UC Sindhri —
+            25 members per group, including 2 girls' groups — creating a network for peer engagement,
+            leadership development, community activities, and collective action within the union council.
+          </p>
+        </div>
+      </div>
+
+      <!-- Phase 5 -->
+      <div class="timeline-item slide-up delay-5">
+        <div class="timeline-dot" aria-hidden="true">5</div>
+        <div class="timeline-content">
+          <p class="timeline-phase">Phase 5 · MANZIL</p>
           <h4><i class="fa-solid fa-route" style="color:#1a2744;"></i> MANZIL Project</h4>
           <p>
             The MANZIL project expanded RC Sindhri's scope to include youth leadership, livelihood
@@ -755,19 +787,6 @@
         </div>
       </div>
 
-      <!-- Phase 5 -->
-      <div class="timeline-item slide-up delay-5">
-        <div class="timeline-dot" aria-hidden="true">5</div>
-        <div class="timeline-content">
-          <p class="timeline-phase">Phase 5 · Community Outreach</p>
-          <h4><i class="fa-solid fa-hands-holding-heart" style="color:#2e7d32;"></i> Community Outreach</h4>
-          <p>
-            A dedicated outreach program covering health awareness, vaccination mobilization, NADRA
-            MRV facilitation (approx. 300 beneficiaries), GBV awareness, 10+ stage drama performances,
-            20+ awareness sessions, and community dialogue across surrounding villages.
-          </p>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -939,112 +958,59 @@
 </section>
 
 <!-- ================================================================
-     DEMO MANAGEMENT BODY
+     MANAGEMENT BODY
      ================================================================ -->
 <section class="section bg-white" id="team" aria-labelledby="team-heading">
   <div class="container">
     <div class="section-header text-center" style="text-align:center;">
       <span class="section-eyebrow">Organization Management</span>
-      <h2 id="team-heading" class="slide-up">RC Sindhri Management Body</h2>
+      <h2 id="team-heading" class="slide-up">RC Sindhri Management Committee</h2>
       <span class="section-divider"></span>
-      <div style="background:#fef3c7;border:1px solid #fde68a;color:#b45309;padding:10px 16px;border-radius:8px;font-weight:700;display:inline-block;margin-top:10px;font-size:0.88rem;">
-        ⚠️ DEMO TEAM — Replace with officially confirmed names before publication.
+      <div style="background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;padding:16px 24px;border-radius:12px;font-weight:600;display:inline-block;margin-top:16px;font-size:0.92rem;max-width:600px;">
+        <i class="fa-solid fa-info-circle" style="margin-right:6px;"></i>
+        Management Committee — To Be Updated with Officially Confirmed Names
       </div>
-      <p class="slide-up delay-1" style="margin-top:12px;color:#64748b;font-size:0.95rem;">
-        This section represents a website demo team structure with placeholder profiles.
+      <p class="slide-up delay-1" style="margin-top:16px;color:#64748b;font-size:0.95rem;">
+        RC Sindhri is managed by a community management committee. Official names and designations will be published once confirmed by RC Sindhri.
       </p>
     </div>
 
-    <div class="team-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));gap:1.5rem;margin-top:2.5rem;">
-
-      <div class="team-card slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:1.25rem;margin-top:2rem;">
+      <div class="slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .75rem;">
           <i class="fa-solid fa-user-tie"></i>
         </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Ahsan Ahmed</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">President / صدر</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.85rem;margin:0;">President / صدر</p>
+        <p style="font-size:.75rem;color:#94a3b8;margin:.25rem 0 0;">To be confirmed</p>
       </div>
-
-      <div class="team-card slide-up delay-2" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+      <div class="slide-up delay-2" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .75rem;">
           <i class="fa-solid fa-user-tie"></i>
         </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Sana Ali</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Vice President / نائب صدر</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.85rem;margin:0;">Vice President / نائب صدر</p>
+        <p style="font-size:.75rem;color:#94a3b8;margin:.25rem 0 0;">To be confirmed</p>
       </div>
-
-      <div class="team-card slide-up delay-3" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+      <div class="slide-up delay-3" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .75rem;">
           <i class="fa-solid fa-user-gear"></i>
         </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Imran Hussain</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">General Secretary</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.85rem;margin:0;">General Secretary</p>
+        <p style="font-size:.75rem;color:#94a3b8;margin:.25rem 0 0;">To be confirmed</p>
       </div>
-
-      <div class="team-card slide-up delay-4" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+      <div class="slide-up delay-4" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .75rem;">
           <i class="fa-solid fa-coins"></i>
         </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Bilal Ahmed</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Treasurer</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.85rem;margin:0;">Treasurer</p>
+        <p style="font-size:.75rem;color:#94a3b8;margin:.25rem 0 0;">To be confirmed</p>
       </div>
-
-      <div class="team-card slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
-          <i class="fa-solid fa-bullhorn"></i>
-        </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Hina Khan</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Media Coordinator</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
-      </div>
-
-      <div class="team-card slide-up delay-2" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
+      <div class="slide-up delay-1" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.25rem;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto .75rem;">
           <i class="fa-solid fa-users-line"></i>
         </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Salman Ali</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Youth Coordinator</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
+        <p style="color:#2e7d32;font-weight:700;font-size:0.85rem;margin:0;">Members &amp; Coordinators</p>
+        <p style="font-size:.75rem;color:#94a3b8;margin:.25rem 0 0;">To be confirmed</p>
       </div>
-
-      <div class="team-card slide-up delay-3" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
-          <i class="fa-solid fa-leaf"></i>
-        </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Rabia Ahmed</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Climate &amp; Community Coordinator</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
-      </div>
-
-      <div class="team-card slide-up delay-4" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;text-align:center;">
-        <div style="width:70px;height:70px;border-radius:50%;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1rem;">
-          <i class="fa-solid fa-masks-theater"></i>
-        </div>
-        <h4 style="margin:0 0 4px;font-size:1.1rem;color:#0f172a;">Faisal Mangrio</h4>
-        <p style="color:#2e7d32;font-weight:700;font-size:0.88rem;margin-bottom:8px;">Drama &amp; Cultural Coordinator</p>
-        <span style="font-size:0.75rem;background:#fee2e2;color:#991b1b;padding:3px 8px;border-radius:12px;font-weight:600;display:inline-block;">
-          Demo / Placeholder — Not an Official RC Sindhri Office-Bearer
-        </span>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1058,7 +1024,7 @@
       <span class="section-eyebrow">Geographic Reach</span>
       <h2 id="communities-heading" class="slide-up">Our Communities</h2>
       <span class="section-divider"></span>
-      <p class="slide-up delay-1">RC Sindhri serves 13 core villages across UC Sindhri and surrounding areas</p>
+      <p class="slide-up delay-1">RC Sindhri's activities cover 18 villages across UC Sindhri and surrounding areas through different community activities</p>
     </div>
 
     <div class="villages-grid">
@@ -1075,78 +1041,248 @@
       <!-- Other villages -->
       <div class="village-card slide-up delay-1">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Mohammed Hassan Mangrio</strong>
+        <strong style="font-size:.875rem;">Lal Khan Shar</strong>
       </div>
 
       <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Essa Khan Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Qadru Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Satar Shar</strong>
+      </div>
+
+      <div class="village-card slide-up delay-1">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Ali Khan Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Jani Rasti</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Ghafor Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Qasim Hotel</strong>
+      </div>
+
+      <div class="village-card slide-up delay-1">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Khani Mangrio</strong>
+      </div>
+
+      <div class="village-card slide-up delay-2">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Dost Mohammed Abupoto</strong>
+      </div>
+
+      <div class="village-card slide-up delay-3">
+        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
+        <strong style="font-size:.875rem;">Per Bux Mari</strong>
+      </div>
+
+      <div class="village-card slide-up delay-4">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
         <strong style="font-size:.875rem;">Khameso Siyal</strong>
       </div>
 
-      <div class="village-card slide-up delay-3">
-        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Khani Mangrio</strong>
-      </div>
-
-      <div class="village-card slide-up delay-4">
-        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Qasim Hotel</strong>
-      </div>
-
       <div class="village-card slide-up delay-1">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Abupota Paro</strong>
+        <strong style="font-size:.875rem;">Abdul Kareem Shar</strong>
       </div>
 
       <div class="village-card slide-up delay-2">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Bhel Paro</strong>
+        <strong style="font-size:.875rem;">Ghuneso Bhel</strong>
       </div>
 
       <div class="village-card slide-up delay-3">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Obhayo Mangrio</strong>
+        <strong style="font-size:.875rem;">Jani Rasti Bheel</strong>
       </div>
 
       <div class="village-card slide-up delay-4">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Mohammed Ali Shar</strong>
+        <strong style="font-size:.875rem;">Mohammed Hassan Mangrio</strong>
       </div>
 
       <div class="village-card slide-up delay-1">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Essa Khan Shar</strong>
+        <strong style="font-size:.875rem;">Tando Gondal</strong>
       </div>
 
       <div class="village-card slide-up delay-2">
         <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Lal Shar</strong>
-      </div>
-
-      <div class="village-card slide-up delay-3">
-        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Qadru Shar</strong>
-      </div>
-
-      <div class="village-card slide-up delay-4">
-        <div class="village-icon"><i class="fa-solid fa-house"></i></div>
-        <strong style="font-size:.875rem;">Village Qaim Solangi</strong>
+        <strong style="font-size:.875rem;">Mohammed Ibrahim Mangrio</strong>
       </div>
 
     </div>
 
-    <!-- Additional note -->
+    <!-- Geographic Context Map Card -->
+    <div style="margin-top: 2.5rem; background: #0c1a14; border: 1px solid #1e3a2b; border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25);" class="slide-up delay-2">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; border-bottom:1px solid #1a3325; padding-bottom:0.75rem;">
+        <div>
+          <h3 style="color:#ffffff; font-size:1.15rem; margin:0; font-weight:700;">
+            <i class="fa-solid fa-satellite-dish" style="color:#4caf50; margin-right:8px;"></i> Geographic Context &amp; Surrounding UCs
+          </h3>
+          <span style="color:#94a3b8; font-size:0.82rem;">Satellite Orientation &amp; Village Settlement Clusters — UC Sindhri</span>
+        </div>
+        <span class="source-badge green" style="background:#132e1e; color:#86efac; border:1px solid #22c55e;">
+          🛰️ Orientation Map
+        </span>
+      </div>
+
+      <!-- SVG Map -->
+      <div style="width:100%; overflow-x:auto;">
+        <svg viewBox="0 0 880 480" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:680px; height:auto; display:block; background:#08130e; border-radius:12px;">
+          <defs>
+            <!-- Radial gradient for center glow -->
+            <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#4caf50" stop-opacity="0.35"/>
+              <stop offset="60%" stop-color="#2e7d32" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="#08130e" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Pattern for terrain grid -->
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#132a1e" stroke-width="0.75"/>
+            </pattern>
+          </defs>
+
+          <!-- Grid Background -->
+          <rect width="880" height="480" fill="url(#grid)"/>
+
+          <!-- Topographic Contour Hints -->
+          <ellipse cx="440" cy="240" rx="340" ry="180" fill="none" stroke="#143022" stroke-width="1.2" stroke-dasharray="6,6"/>
+          <ellipse cx="440" cy="240" rx="220" ry="120" fill="none" stroke="#1b402e" stroke-width="1.2" stroke-dasharray="4,4"/>
+
+          <!-- Central Hub Glow -->
+          <circle cx="440" cy="240" r="140" fill="url(#hubGlow)"/>
+
+          <!-- Compass / North Arrow -->
+          <g transform="translate(800, 50)">
+            <circle cx="0" cy="0" r="28" fill="#0d2417" stroke="#2e7d32" stroke-width="1.5"/>
+            <!-- North needle -->
+            <polygon points="0,-22 -7,0 0,-4 7,0" fill="#ef4444"/>
+            <!-- South needle -->
+            <polygon points="0,22 -7,0 0,4 7,0" fill="#94a3b8"/>
+            <text x="0" y="-26" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">N</text>
+            <text x="0" y="4" fill="#81c784" font-size="8" font-weight="bold" text-anchor="middle">NORTH</text>
+          </g>
+
+          <!-- Surrounding Context Labels (Requirements) -->
+          <!-- North: UC Loan Khan, Sanghar -->
+          <g transform="translate(440, 32)">
+            <rect x="-140" y="-16" width="280" height="30" rx="15" fill="#132a1e" stroke="#22c55e" stroke-width="1.2"/>
+            <text x="0" y="4" fill="#a7f3d0" font-size="12" font-weight="bold" text-anchor="middle">▲ North: UC Loan Khan, Sanghar</text>
+          </g>
+
+          <!-- North-East: UC Kandyari, District Sanghar -->
+          <g transform="translate(710, 115)">
+            <rect x="-145" y="-15" width="290" height="30" rx="15" fill="#132a1e" stroke="#22c55e" stroke-width="1.2"/>
+            <text x="0" y="4" fill="#a7f3d0" font-size="11.5" font-weight="bold" text-anchor="middle">↗ North-East: UC Kandyari, Sanghar</text>
+          </g>
+
+          <!-- East: UC Khero (beyond Sindhri) -->
+          <g transform="translate(740, 240)">
+            <rect x="-125" y="-15" width="250" height="30" rx="15" fill="#132a1e" stroke="#38bdf8" stroke-width="1.2"/>
+            <text x="0" y="4" fill="#bae6fd" font-size="11.5" font-weight="bold" text-anchor="middle">▶ East: UC Khero (beyond Sindhri)</text>
+          </g>
+
+          <!-- South-East: UC Khero -->
+          <g transform="translate(710, 375)">
+            <rect x="-115" y="-15" width="230" height="30" rx="15" fill="#132a1e" stroke="#38bdf8" stroke-width="1.2"/>
+            <text x="0" y="4" fill="#bae6fd" font-size="11.5" font-weight="bold" text-anchor="middle">↘ South-East: UC Khero</text>
+          </g>
+
+          <!-- South: UC Khero -->
+          <g transform="translate(440, 452)">
+            <rect x="-110" y="-16" width="220" height="30" rx="15" fill="#132a1e" stroke="#38bdf8" stroke-width="1.2"/>
+            <text x="0" y="4" fill="#bae6fd" font-size="12" font-weight="bold" text-anchor="middle">▼ South: UC Khero</text>
+          </g>
+
+          <!-- Connecting Lines to Surrounding Village Clusters -->
+          <line x1="440" y1="240" x2="330" y2="180" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="550" y2="180" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="310" y2="280" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="570" y2="280" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="250" y2="230" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="440" y2="340" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+          <line x1="440" y1="240" x2="440" y2="135" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+
+          <!-- Village Points -->
+          <!-- Khani Mangrio (NW) -->
+          <circle cx="330" cy="180" r="5" fill="#81c784"/>
+          <text x="330" y="165" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Khani Mangrio (GBPS School)</text>
+
+          <!-- Lal Khan Shar (North) -->
+          <circle cx="440" cy="135" r="5" fill="#81c784"/>
+          <text x="440" y="122" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Lal Khan Shar</text>
+
+          <!-- Essa Khan Shar (NE) -->
+          <circle cx="550" cy="180" r="5" fill="#81c784"/>
+          <text x="550" y="165" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Essa Khan Shar</text>
+
+          <!-- Qadru Shar & Satar Shar (West) -->
+          <circle cx="250" cy="230" r="5" fill="#81c784"/>
+          <text x="250" y="218" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Qadru Shar / Satar Shar</text>
+
+          <!-- Ali Khan Mangrio & Jani Rasti (SW) -->
+          <circle cx="310" cy="280" r="5" fill="#81c784"/>
+          <text x="310" y="300" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Ali Khan Mangrio / Jani Rasti</text>
+
+          <!-- Dost Mohammed Abupoto (South) -->
+          <circle cx="440" cy="340" r="5" fill="#81c784"/>
+          <text x="440" y="360" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Dost Mohammed Abupoto</text>
+
+          <!-- Qasim Hotel / Tando Gondal (SE) -->
+          <circle cx="570" cy="280" r="5" fill="#81c784"/>
+          <text x="570" y="300" fill="#cbd5e1" font-size="10.5" font-weight="600" text-anchor="middle">Qasim Hotel / Tando Gondal</text>
+
+          <!-- Center Pin: RC SINDHRI (Haji Hamer Mangrio) -->
+          <circle cx="440" cy="240" r="24" fill="#166534" stroke="#4caf50" stroke-width="2.5" opacity="0.85"/>
+          <circle cx="440" cy="240" r="12" fill="#f5a623"/>
+          <circle cx="440" cy="240" r="4" fill="#ffffff"/>
+
+          <!-- Label Box for Center Hub -->
+          <g transform="translate(440, 240)">
+            <rect x="-120" y="16" width="240" height="34" rx="8" fill="#0f2b1d" stroke="#f5a623" stroke-width="1.5"/>
+            <text x="0" y="32" fill="#ffffff" font-size="11.5" font-weight="800" text-anchor="middle">★ RC SINDHRI</text>
+            <text x="0" y="44" fill="#86efac" font-size="9" font-weight="600" text-anchor="middle">Village Haji Hamer Mangrio</text>
+          </g>
+
+          <!-- Footnote Disclaimer -->
+          <text x="20" y="468" fill="#64748b" font-size="10">
+            Note: Geographic orientation of activity coverage. Does not represent official administrative GIS boundary demarcations.
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Additional note & Action Buttons -->
     <div style="text-align:center;margin-top:2rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;" class="fade-in delay-5">
-      <p style="color:#6c757d;font-size:.9rem;">
-        <i class="fa-solid fa-plus-circle" style="color:#2e7d32;"></i>
-        <strong>Additional surrounding villages</strong> also receive support through RC Sindhri's outreach activities
+      <p style="color:#6c757d;font-size:.9rem;max-width:750px;margin:0 auto;">
+        <i class="fa-solid fa-circle-check" style="color:#2e7d32;"></i>
+        <strong>18 Villages Covered Through PTY Activities</strong> — Haji Hamer Mangrio serves as the central hub, with community outreach, skills trainings, youth leadership, and registration drives covering 18 rural settlements across UC Sindhri.
       </p>
       <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac"
          class="map-btn"
          target="_blank"
          rel="noopener noreferrer"
          aria-label="Open RC Sindhri location in Google Maps">
-        <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps ↗
+        <i class="fa-solid fa-map-location-dot"></i> Open Exact Location in Google Maps ↗
       </a>
     </div>
   </div>
@@ -1327,6 +1463,7 @@
             <a href="outreach.html">Community Outreach</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact Us</a>
+            <a href="admin/login.html" style="color:#81c784;"><i class="fa-solid fa-shield-halved" style="font-size:0.8rem; margin-right:4px;"></i> Admin Portal</a>
           </nav>
         </div>
 
@@ -1387,18 +1524,22 @@
   <!-- Footer bottom bar -->
   <div class="footer-bottom">
     <div class="container">
-      <div class="footer-bottom-inner">
-        <p>
-          &copy; 2024–2025 RC Sindhri (Rozgar Center Sindhri) |
-          Village Haji Hamer Mangrio, UC Sindhri, District Mirpur Khas, Sindh, Pakistan
-        </p>
-        <p>
-          <i class="fa-solid fa-circle-info" style="color:#f5a623;"></i>
-          Website Demo — Contact information and statistics subject to official verification
-        </p>
-        <p class="footer-green-note">
-          RC Sindhri on social media: @RC.Sindhri (also known as Green Sindhri on social platforms)
-        </p>
+      <div class="footer-bottom-inner" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <p>
+            &copy; 2026 RC Sindhri (Rozgar Center Sindhri) |
+            Village Haji Hamer Mangrio, UC Sindhri, District Mirpur Khas, Sindh, Pakistan
+          </p>
+          <p>
+            <i class="fa-solid fa-circle-info" style="color:#f5a623;"></i>
+            RC Sindhri on social media: @RC.Sindhri
+          </p>
+        </div>
+        <div>
+          <a href="admin/login.html" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.4rem 0.9rem; background:rgba(255,255,255,0.08); border:1px solid rgba(129,199,132,0.4); border-radius:20px; color:#81c784; font-size:0.8rem; text-decoration:none;">
+            <i class="fa-solid fa-shield-halved"></i> Admin Portal
+          </a>
+        </div>
       </div>
     </div>
   </div>

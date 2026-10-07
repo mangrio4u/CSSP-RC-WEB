@@ -453,6 +453,31 @@ small { font-size: var(--text-sm); }
   transform: translateY(-1px);
 }
 
+/* Nav Admin Button */
+.nav-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(129, 199, 132, 0.45);
+  color: #a5d6a7 !important;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  margin-left: var(--space-2);
+}
+
+.nav-admin:hover {
+  background: rgba(129, 199, 132, 0.22);
+  border-color: #81c784;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -678,11 +703,12 @@ small { font-size: var(--text-sm); }
 }
 
 .hero-desc {
-  color: rgba(255,255,255,.85);
+  color: #ffffff;
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
   max-width: 720px;
   margin: 0 auto var(--space-10);
+  text-shadow: 0 1px 10px rgba(0,0,0,.6);
 }
 
 /* Hero buttons */

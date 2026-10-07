@@ -1,0 +1,19 @@
+{
+  "name": "rc-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build_switcher.js",
+  "scripts": {
+    "test": "node test/test_api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "bcryptjs": "^3.0.3",
+    "cookie": "^2.0.1",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

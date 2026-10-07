@@ -351,13 +351,15 @@
       line-height: 1.1;
       margin-bottom: 18px;
       letter-spacing: -.01em;
+      text-shadow: 0 2px 14px rgba(0,0,0,.5);
     }
     .page-hero h1 span { color: #6fcf7a; }
     .page-hero p {
       font-size: clamp(1rem, 2vw, 1.2rem);
-      color: rgba(255,255,255,.78);
+      color: #ffffff;
       max-width: 600px;
       margin: 0 auto;
+      text-shadow: 0 1px 8px rgba(0,0,0,.5);
     }
 
     /* ============================================================
@@ -1022,6 +1024,9 @@
           <li class="nav-item">
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
+          <li class="nav-item">
+            <a href="admin/login.html" class="nav-link nav-admin" title="Admin Portal"><i class="fa-solid fa-shield-halved"></i> Admin</a>
+          </li>
         </ul>
 
         <!-- Hamburger (mobile) -->
@@ -1054,6 +1059,7 @@
       </div>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
+      <a href="admin/login.html" style="color:#81c784;font-weight:600;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</a>
     </nav>
   </header>
 
@@ -1182,30 +1188,129 @@
     <!-- ============================================================
          SECTION 3: MISSION & VISION
     ============================================================ -->
-    <section class="section section-alt" id="mission-vision" aria-labelledby="mvTitle">
-      <div class="container">
-        <div class="section-header centered">
-          <span class="section-label">Mission & Vision</span>
-          <h2 class="section-title" id="mvTitle">What We Stand For</h2>
-          <p class="section-subtitle">The guiding principles behind every program and community initiative at RC Sindhri.</p>
-        </div>
-        <div class="mv-grid">
+    <section id="mission-vision" aria-labelledby="mvTitle" style="padding: 0; background: var(--off-white);">
 
-          <div class="mv-card mission reveal">
-            <div class="mv-card-icon">🎯</div>
-            <h3>Our Mission</h3>
-            <p>To empower young people in UC Sindhri and surrounding areas through skills development, livelihood opportunities, leadership, awareness and community engagement, enabling them to contribute positively to their families and communities.</p>
-          </div>
-
-          <div class="mv-card vision reveal">
-            <div class="mv-card-icon">🔭</div>
-            <h3>Our Vision</h3>
-            <p>A skilled, aware, empowered and active youth community in Sindhri — driving social development, economic opportunity and positive change.</p>
-          </div>
-
+      <!-- Section Header Banner -->
+      <div style="background: linear-gradient(135deg, #0d1b2a 0%, #1a3a25 50%, #0d2b1a 100%); padding: 60px 20px 56px; text-align: center; position: relative; overflow: hidden;">
+        <div style="position:absolute;top:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:rgba(46,125,50,.12);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-60px;right:-30px;width:260px;height:260px;border-radius:50%;background:rgba(67,160,71,.08);pointer-events:none;"></div>
+        <div style="position:relative;z-index:1;">
+          <span style="display:inline-block;background:rgba(76,175,80,.2);color:#81c784;border:1px solid rgba(76,175,80,.35);border-radius:20px;padding:5px 18px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;">Our Foundation</span>
+          <h2 id="mvTitle" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#ffffff;margin-bottom:12px;line-height:1.15;">Mission &amp; <span style="color:#6fcf7a;">Vision</span></h2>
+          <p style="color:rgba(255,255,255,.72);font-size:1.05rem;max-width:580px;margin:0 auto;">The guiding principles behind every program, initiative and community action at RC Sindhri.</p>
         </div>
       </div>
+
+      <!-- Cards Row -->
+      <div class="container" style="padding-top: 0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;" class="mv-split-grid">
+
+          <!-- MISSION Card -->
+          <div class="reveal" style="background:#ffffff;padding:48px 44px;border-right:1px solid #e5e7eb;border-bottom:4px solid #2e7d32;">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#2e7d32,#43a047);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;box-shadow:0 4px 14px rgba(46,125,50,.3);">🎯</div>
+              <div>
+                <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2e7d32;margin-bottom:3px;">Our Mission</div>
+                <h3 style="font-size:1.5rem;font-weight:900;color:#0d1b2a;line-height:1.1;">What We Do</h3>
+              </div>
+            </div>
+            <p style="font-size:1.05rem;color:#374151;line-height:1.8;margin-bottom:24px;">
+              To <strong style="color:#2e7d32;">empower young people</strong> in UC Sindhri and surrounding areas through skills development, livelihood opportunities, leadership, awareness and community engagement — enabling them to contribute positively to their families and communities.
+            </p>
+            <div style="border-top:1px solid #e8f5e9;padding-top:20px;">
+              <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:12px;">Mission Pillars</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">💼</span>
+                  Youth Skills &amp; Vocational Training
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">👥</span>
+                  Leadership &amp; Youth Groups
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">🌱</span>
+                  Livelihoods &amp; Entrepreneurship
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e8f5e9;color:#2e7d32;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">🤝</span>
+                  Community Awareness &amp; Outreach
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VISION Card -->
+          <div class="reveal" style="background:#f0f4f8;padding:48px 44px;border-bottom:4px solid #0d1b2a;">
+            <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+              <div style="width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#0d1b2a,#1a3a55);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;box-shadow:0 4px 14px rgba(13,27,42,.3);">🔭</div>
+              <div>
+                <div style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1a3a55;margin-bottom:3px;">Our Vision</div>
+                <h3 style="font-size:1.5rem;font-weight:900;color:#0d1b2a;line-height:1.1;">Where We're Going</h3>
+              </div>
+            </div>
+            <p style="font-size:1.05rem;color:#374151;line-height:1.8;margin-bottom:24px;">
+              A <strong style="color:#0d1b2a;">skilled, aware, empowered and active</strong> youth community in Sindhri — driving social development, economic opportunity and positive change for all families in UC Sindhri and beyond.
+            </p>
+            <div style="border-top:1px solid #d1dbe6;padding-top:20px;">
+              <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:12px;">Vision Goals</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e2eaf3;color:#0d1b2a;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">🌍</span>
+                  Climate-Aware &amp; Resilient Communities
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e2eaf3;color:#0d1b2a;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">📚</span>
+                  Educated &amp; Literate Youth
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e2eaf3;color:#0d1b2a;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">⚖️</span>
+                  GBV-Free &amp; Equal Society
+                </div>
+                <div style="display:flex;align-items:center;gap:10px;font-size:.93rem;color:#374151;">
+                  <span style="width:28px;height:28px;border-radius:8px;background:#e2eaf3;color:#0d1b2a;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;">💡</span>
+                  Self-Sufficient Local Economy
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Core Values Row -->
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 16px 16px;padding:32px 44px;text-align:center;">
+          <div style="font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b7280;margin-bottom:16px;">Our Core Values</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">🌟 Integrity</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">🤝 Inclusion</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">💪 Empowerment</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">🌱 Sustainability</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">🏘️ Community First</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">📖 Education</span>
+            <span style="background:#e8f5e9;color:#1b5e20;border:1.5px solid #a5d6a7;padding:7px 18px;border-radius:24px;font-size:.85rem;font-weight:600;">🕊️ Dignity &amp; Respect</span>
+          </div>
+        </div>
+
+        <!-- Tagline Quote -->
+        <div style="margin-top:32px;background:linear-gradient(135deg,#2e7d32,#0d1b2a);border-radius:14px;padding:32px 40px;text-align:center;position:relative;overflow:hidden;" class="reveal">
+          <div style="position:absolute;top:-20px;left:-20px;font-size:8rem;color:rgba(255,255,255,.05);font-family:Georgia,serif;line-height:1;pointer-events:none;">"</div>
+          <p style="font-size:clamp(1.1rem,2.5vw,1.45rem);font-weight:700;color:#ffffff;margin:0;line-height:1.5;position:relative;z-index:1;">
+            "From Youth Potential to <span style="color:#81c784;">Community Impact</span>"
+          </p>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.6);margin-top:10px;position:relative;z-index:1;">— RC Sindhri, Rozgar Center Sindhri</p>
+        </div>
+
+      </div>
+
+      <div style="padding-bottom: 64px;"></div>
     </section>
+
+    <style>
+      @media (max-width: 720px) {
+        .mv-split-grid { grid-template-columns: 1fr !important; }
+        .mv-split-grid > div { border-right: none !important; padding: 36px 24px !important; }
+      }
+    </style>
 
     <!-- ============================================================
          SECTION 4: FOCUS AREAS
@@ -1301,9 +1406,9 @@
             <div class="timeline-dot" aria-hidden="true">P1</div>
             <div class="timeline-body">
               <p class="timeline-phase">Phase 1</p>
-              <h3>Power to Youth (PTY)</h3>
-              <p>RC Sindhri emerged in connection with PTY (Power to Youth) activities. PTY is a youth-focused project associated with CSSP and its partners, with NCA Pakistan as lead partner, supported by EU funding. RC Sindhri participated in PTY activities including vocational training, youth development and community awareness.</p>
-              <span class="source-badge official">🟢 Officially documented — CSSP/NCA PTY materials</span>
+              <h3>Community Outreach</h3>
+              <p>RC Sindhri conducted community outreach activities including health awareness, vaccination mobilization (COVID-19, MR, Polio), NADRA MRV facilitation, awareness sessions and community dialogue across 18 villages of UC Sindhri.</p>
+              <span class="source-badge provided">🔵 RC Sindhri-provided information</span>
             </div>
           </div>
 
@@ -1312,9 +1417,9 @@
             <div class="timeline-dot" aria-hidden="true">P2</div>
             <div class="timeline-body">
               <p class="timeline-phase">Phase 2</p>
-              <h3>Skills &amp; Livelihood Development</h3>
-              <p>Vocational and technical training was conducted across <strong>7 trades</strong>: E-Commerce, Beautician, Dress Making, Solar, Mobile Repairing, Embroidery and Masonry. A total of <strong>240 trainees</strong> participated across training years 2023 and 2025.</p>
-              <span class="source-badge provided">🔵 RC Sindhri-provided information</span>
+              <h3>Power to Youth (PTY)</h3>
+              <p>RC Sindhri emerged in connection with PTY (Power to Youth) activities. PTY is a youth-focused project associated with CSSP and its partners, with NCA Pakistan as lead partner, supported by EU funding. RC Sindhri participated in PTY activities including vocational training, youth development and community awareness.</p>
+              <span class="source-badge official">🟢 Officially documented — CSSP/NCA PTY materials</span>
             </div>
           </div>
 
@@ -1323,11 +1428,8 @@
             <div class="timeline-dot" aria-hidden="true">P3</div>
             <div class="timeline-body">
               <p class="timeline-phase">Phase 3</p>
-              <h3>Youth Groups</h3>
-              <p>RC Sindhri established <strong>8 youth groups</strong> with <strong>175+ youth members</strong>. Representatives from these groups participate in youth, community, climate, GBV, education and development activities.</p>
-              <div class="timeline-note">
-                ⚠️ The youth groups currently do not have separate official names. Not all 175+ members attended every activity.
-              </div>
+              <h3>Skills &amp; Livelihood Development</h3>
+              <p>Vocational and technical training was conducted across <strong>7 trades</strong>: E-Commerce, Beautician, Dress Making, Solar, Mobile Repairing, Embroidery and Masonry. A total of <strong>240 trainees</strong> participated across training years 2023 and 2025.</p>
               <span class="source-badge provided">🔵 RC Sindhri-provided information</span>
             </div>
           </div>
@@ -1337,8 +1439,11 @@
             <div class="timeline-dot" aria-hidden="true">P4</div>
             <div class="timeline-body">
               <p class="timeline-phase">Phase 4</p>
-              <h3>MANZIL</h3>
-              <p>RC Sindhri participated in MANZIL activities including youth leadership, livelihoods, entrepreneurship, employment, climate action, community engagement and organization/documentation. A separate MANZIL body/structure was formed.</p>
+              <h3>Youth Groups</h3>
+              <p>RC Sindhri established <strong>8 youth groups</strong> with <strong>200 youth members</strong> (25 members per group, including 2 girls' groups). Representatives from these groups participate in youth, community, climate, GBV, education and development activities.</p>
+              <div class="timeline-note">
+                ⚠️ Not all 200 members attended every activity; designated group representatives participated in specific sessions on behalf of their groups.
+              </div>
               <span class="source-badge provided">🔵 RC Sindhri-provided information</span>
             </div>
           </div>
@@ -1348,11 +1453,12 @@
             <div class="timeline-dot" aria-hidden="true">P5</div>
             <div class="timeline-body">
               <p class="timeline-phase">Phase 5</p>
-              <h3>Community Outreach</h3>
-              <p>RC Sindhri expanded into community outreach activities including health awareness, vaccination mobilization (COVID-19, MR, Polio), NADRA MRV facilitation, awareness sessions and community dialogue.</p>
+              <h3>MANZIL</h3>
+              <p>RC Sindhri participated in MANZIL activities including youth leadership, livelihoods, entrepreneurship, employment, climate action, community engagement and organization/documentation. A separate MANZIL body/structure was formed.</p>
               <span class="source-badge provided">🔵 RC Sindhri-provided information</span>
             </div>
           </div>
+
 
         </div>
       </div>
@@ -1416,32 +1522,64 @@
           <p class="section-subtitle">RC Sindhri is based in the heart of Sindhri, Mirpur Khas, Sindh.</p>
         </div>
 
-        <div class="location-wrapper reveal">
-          <div class="location-card">
+        <div class="reveal" style="display:grid;grid-template-columns:320px 1fr;gap:28px;margin-top:48px;align-items:stretch;">
+
+          <!-- Address Card -->
+          <div class="location-card" style="display:flex;flex-direction:column;">
             <div class="location-card-header">
               <h3>📍 RC Sindhri — Address</h3>
             </div>
-            <div class="location-card-body">
+            <div class="location-card-body" style="flex:1;display:flex;flex-direction:column;justify-content:space-between;">
               <ul class="address-list" aria-label="Full address">
-                <li><span class="addr-icon">📍</span> Village Haji Hamer Mangrio</li>
+                <li><span class="addr-icon">🏘️</span> Village Haji Hamer Mangrio</li>
                 <li><span class="addr-icon">📍</span> UC Sindhri</li>
-                <li><span class="addr-icon">📍</span> Taluka Sindhri</li>
-                <li><span class="addr-icon">📍</span> District Mirpur Khas</li>
-                <li><span class="addr-icon">📍</span> Sindh, Pakistan</li>
+                <li><span class="addr-icon">🗺️</span> Taluka Sindhri</li>
+                <li><span class="addr-icon">🏙️</span> District Mirpur Khas</li>
+                <li><span class="addr-icon">🇵🇰</span> Sindh, Pakistan</li>
               </ul>
-              <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="btn btn-primary"
-                 aria-label="Open RC Sindhri location in Google Maps (opens in new tab)">
-                Open in Google Maps ↗
-              </a>
+              <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
+                <a href="https://maps.app.goo.gl/GorNj5ny3Z6reLhm9?g_st=ac"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-primary"
+                   style="justify-content:center;"
+                   aria-label="Open RC Sindhri location in Google Maps (opens in new tab)">
+                  🗺️ Open in Google Maps ↗
+                </a>
+                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;font-size:.82rem;color:#166534;">
+                  <strong>CSSP RC Center</strong> — Sindhri, UC Sindhri, Mirpur Khas
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Google Maps Embed -->
+          <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.14);border:1px solid #e2e8f0;min-height:380px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.3149125833262!2d69.09185881211184!3d25.741353937597427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39495128f51d296f%3A0x6cb6825b7fba164d!2zQ1NTUCBSQyBDZW50ZXIg2LPZiiDYp9mK2LMg2KfZitizINm-2Yog2LHZiNiy2q_Yp9ixINiz2YrZhtm92LE!5e0!3m2!1sen!2s!4v1791297822825!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style="border:0;display:block;min-height:380px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="RC Sindhri — CSSP RC Center location on Google Maps"
+              aria-label="Google Maps showing RC Sindhri location">
+            </iframe>
+          </div>
+
         </div>
+
+        <style>
+          @media (max-width: 780px) {
+            #location .reveal > div:first-child,
+            #location .reveal { grid-template-columns: 1fr !important; }
+          }
+        </style>
 
       </div>
     </section>
+
 
   </main>
 
@@ -1479,6 +1617,7 @@
             <li><a href="outreach.html">Community Outreach</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin/login.html" style="color:#81c784;font-weight:600;"><i class="fa-solid fa-shield-halved"></i> Admin Portal</a></li>
           </ul>
         </div>
 
@@ -1521,8 +1660,13 @@
     </div>
 
     <div class="footer-bottom">
-      <div class="container">
-        &copy; 2024–2025 RC Sindhri (Rozgar Center Sindhri) | Village Haji Hamer Mangrio, UC Sindhri, District Mirpur Khas, Sindh, Pakistan
+      <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>&copy; 2026 RC Sindhri (Rozgar Center Sindhri) | Village Haji Hamer Mangrio, UC Sindhri, District Mirpur Khas, Sindh, Pakistan</div>
+        <div>
+          <a href="admin/login.html" style="color:#81c784; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem; padding:0.35rem 0.85rem; border:1px solid rgba(129,199,132,0.4); border-radius:20px; font-size:0.8rem;">
+            <i class="fa-solid fa-shield-halved"></i> Admin Portal
+          </a>
+        </div>
       </div>
     </div>
   </footer>
